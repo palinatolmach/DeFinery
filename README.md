@@ -237,4 +237,4 @@ Our modified version of SCRepair relies on our symbolic engine, **DeFinery-see**
 * The path to a smart contract or a file with several smart contracts to be analyzed, e.g., `/contracts/CONTRACT_NAME.sol`. This file has to be located in the /contracts folder. There should also be an `/experiments` folder to store the results.
 * The name of a vulnerable smart contract to be repaired: `CONTRACT_NAME`
 
-`./definery-see -symexe-main ~/contracts/CONTRACT_NAME.sol CONTRACT_NAME`
+`./definery-see -symexe-main ./contracts/CONTRACT_NAME.sol CONTRACT_NAME`
