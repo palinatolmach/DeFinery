@@ -30,8 +30,10 @@ docker run -it --rm -v ~/Desktop/test:/experiments/ definery Unprotected
 ## Local Build
 
 As an alternative to using Docker, you can also build the tool locally.
-We have prepared a one-click script that performs the installation of the tool and its dependencies to your system (the script is tested on Ubuntu 18:04).
-The script installs the necessary C++, Python, and Node dependencies (build-essential, libboost-all-dev, cmake, curl, zip, unzip, tar, vcpkg, Z3, nvm). It assumes that Python 3.7, pip, and Git are installed in the system — if not, please uncomment their installation in the script. It also unpacks the binary of `definery-see` from the archive and moves it to the `/SCRepair` folder. Both components in DeFinery are configured to read and write files from/to `./contracts/` (we move the contracts from `/contracts/eval` there) and `./experiments` folders located within `/SCRepair`. The script also builds the repair module of DeFinery using `npm`.
+We have prepared a one-click script [build.sh](./build.sh) that performs the installation of the tool and its dependencies to your system (the script is tested on Ubuntu 18:04).
+
+The script installs the necessary C++, Python, and Node dependencies (build-essential, libboost-all-dev, cmake, curl, zip, unzip, tar, vcpkg, Z3, nvm). It assumes that Python 3.7, pip, and Git are installed in the system — if not, please uncomment their installation in the script.
+The script also unpacks the binary of `definery-see` from the archive and moves it to the `/SCRepair` folder. Both components in DeFinery are configured to read and write files from/to `./contracts/` (we move the contracts from `/contracts/eval` there) and `./experiments` folders located within `/SCRepair`. The script also builds the repair module of DeFinery using `npm`.
 
 You can run the script as follows:
 
