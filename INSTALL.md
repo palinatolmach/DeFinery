@@ -63,7 +63,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 python3.7 ./CLI.py --targetContractName xForce repair ./experiments/xForce/xForce.sol
 ```
 
-Once completed, the first command should output the results of the symbolic analysis:
+Once completed, the command calling `./definery-see` should output the results of the symbolic analysis:
 ```
 result context [1]: 
 Is possibly reentrant: 0
@@ -82,7 +82,7 @@ Summary file is /experiments/xForce/summary.txt
 [2022-08-04 10:22:25.762851] INFO: CLI: Start repairing problems
 ```
 
-The second command will identify the correct patch for a smart contract and will save it in the `./experiments/xForce/patched/` folder.
+The last command will identify the correct patch for a smart contract and will save it in the `./experiments/xForce/patched/` folder.
 ```
                   	     	                               fitness values                               	    	                                 	                                              
                   	     	----------------------------------------------------------------------------	    	                                 	                                              
