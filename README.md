@@ -10,9 +10,11 @@
 This reporitory demonstrates how **DeFinery** can be used to automatically repair smart contracts that do not satisfy their functional specification. **DeFinery** takes a user-defined correctness property and a trace leading to its violation as input, based on which it automatically generates a diverse set of patches for a smart contract, while providing formal correctness guarantees w.r.t. the intended behavior. It combines search-based patch generation with semantic analysis of an original program to efficiently navigate the search space and generate higher-quality patches that cannot be obtained by other smart contract repair tools.
 
 This README describes the [prerequisites](#prerequisites) for running DeFinery.
-In the [Quick Start](#quick-start) section of the README, we show how to run the pre-built Docker image of DeFinery to reproduce the results shown in the paper. The information on the smart contract dataset used for the evaluation is provided in [Experimental Data](#experimental-data). More details on the prototype implementation are shown in [Prototype Implementation](#prototype-implementation).
+In the [Quick Start](#quick-start) section of the README, we show how to run the pre-built Docker image of DeFinery to reproduce the results shown in the paper.
 
-The instructions on how to build the tool from scratch are provided in the [INSTALL.md](./INSTALL.md) file.
+The information on the smart contract dataset used for the evaluation is provided in [Experimental Data](#experimental-data). More details on the prototype implementation are shown in [Prototype Implementation](#prototype-implementation).
+
+The instructions on how to build the tool from scratch are provided separately in the [INSTALL.md](./INSTALL.md) file.
 
 ## **Content**
 
