@@ -46,9 +46,13 @@ You can run the script as follows:
 bash ./build.sh
 ```
 
-To make sure that both symbolic-execution and repair components work as expected, you may run the following two commands in the provided order:
+To make sure that both symbolic-execution and repair components work as expected, you may run the following commands in the provided order:
 ```
+# Moving to the /SCRepair folder
 cd SCRepair
+
+# Making sure that 'node' and 'nvm' commands are accessible
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")" && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 # Performing symbolic analysis of the xForce smart contract
 # Results of the analysis should be saved in the ./experiments/xForce folder 
