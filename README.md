@@ -94,6 +94,7 @@ The scripts included in this repository have been tested on Ubuntu 18:04. The bi
 ## **Quick Start**
 
 The easiest way to run **DeFinery** is by a public Docker image using the following command:
+
 `docker run -it --rm -v  YOUR_PATH/experiments:/experiments/ definerysc/definery CONTRACT_NAME`
 
 The command will pull the Docker container and execute both symbolic analysis and patch generation for a given smart contract, which can be one of the following: [`xForce`, `iToken`, `cToken`, `Value`, `Uranium`, `Unprotected`, `Refund_NoSub`, `Confused_Sign`, `EtherBank`]. Please make sure that `YOUR_PATH` is an absolute path.
@@ -104,7 +105,9 @@ Running this command will add files produced by symbolic engine and patch genera
 
 For example, you can run the following command to repair the `xForce` smart contract:
 
+
 `docker run -it --rm -v  ~/Desktop/experiments:/experiments/ definerysc/definery xForce`
+
 
 The tool will, first, start the symbolic analysis of the given smart contract:
 ```
