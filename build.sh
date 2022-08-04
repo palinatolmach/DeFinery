@@ -23,8 +23,8 @@ cd ../../..
 git clone https://github.com/polinatolmach/DeFinery.git
 cd DeFinery
 
-RUN unzip definery-see.zip
-RUN chmod +x ./definery-see
+unzip definery-see.zip
+chmod +x ./definery-see
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash &&\
     export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")" &&\
