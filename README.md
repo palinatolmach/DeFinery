@@ -87,7 +87,7 @@ We use Docker 20.10.14 that can be obtained from the Docker [website](https://do
 
 DeFinery also uses Python 3.7 and Node v14.20.0.
 
-The scripts included in this repository have been tested on Ubuntu 18:04. The binary of a symbolic execution component ([definery-see.zip](/.definery-see.zip)) is also built for Linux-AMD64 (Ubuntu 18.04).
+The scripts included in this repository have been tested on Ubuntu 18:04. The binary of a symbolic execution component ([definery-see.zip](./definery-see.zip)) is also built for Linux-AMD64 (Ubuntu 18.04).
 
 ## **Quick Start**
 
