@@ -1,6 +1,6 @@
 # **DeFinery**: Property-Based Automated Program Repair of DeFi Protocols
 
-- This artifact has been archived at the following permanent location: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6962498.svg)](https://doi.org/10.5281/zenodo.6962336)
+- This artifact has been archived at the following permanent location: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6962498.svg)](https://doi.org/10.5281/zenodo.6962498)
 
 - This repository serves as a submission for the Available and Reusable badges.
 
