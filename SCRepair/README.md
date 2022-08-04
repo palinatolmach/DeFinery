@@ -26,7 +26,7 @@ Use the following command
 python3 CLI.py --targetContractName CONTRACT_NAME repair PATH_TO_CONTRACT
 ```
 
-The modified version used in **DeFinery** relies on our symbolic engine, the binary for which is available [for download](https://drive.google.com/file/d/1eDVyjNiSIqzFPpMXj0bTFRKAxTHkzsVY/view), and assumes that semantic analysis results are available in the `/experiments/CONTRACT_NAME` folder.
+The modified version used in **DeFinery** relies on our symbolic engine, the binary for which is available in this repository, and assumes that semantic analysis results are available in the `./experiments/CONTRACT_NAME` folder.
 
 Original SCRepair Publication
 ===

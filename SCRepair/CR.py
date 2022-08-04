@@ -543,8 +543,8 @@ class CR(RepairCore):
                         stdout = data_stdout.decode(utf_8.getregentry().name)
                         output = stdout
 
-                        if ignoreVar:
-                            print(output)
+                        # if ignoreVar:
+                        #     print(output)
 
                         if "EQUIVALENT" in output:
                             if "Not Equivalent" in output:
