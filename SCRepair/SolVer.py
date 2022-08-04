@@ -83,7 +83,7 @@ class SolVer(ProblemDetector):
         self.contractName = targetContractName
 
         if (len(self.paths_tc) == 0):
-            tcPath = F'/experiments/{targetContractName}'
+            tcPath = F'../experiments/{targetContractName}'
             print(F'tcPath {tcPath}')
 
             dirTestCases = Path(tcPath)
