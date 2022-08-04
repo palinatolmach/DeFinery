@@ -22,10 +22,10 @@ docker build -t definery .
 
 Once the image is created, you can verify the tool installation by repairing one of the smart contracts used for the evaluation, e.g.,
 ```
-docker run -it --rm -v ~/Desktop/test:/experiments/ definery xForce
+docker run -it --rm -v ~/Desktop/experiments:/experiments/ definery xForce
 ```
 
-`~/Desktop/test:/experiments/` mounts a local folder (`/Desktop/test`) to the Docker container to facilitate the exploration of patched smart contracts—you can, then, view the results produced by the tool in this folder.
+`~/Desktop/test:/experiments/` mounts a local folder (`/Desktop/experiments`) to the Docker container to facilitate the exploration of patched smart contracts—you can, then, view the results produced by the tool in this folder.
 
 The output produced by the container should be similar to the one described in [README.md](./README.md).
 
