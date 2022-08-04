@@ -191,7 +191,7 @@ If you inspect the generated file, you will notice that the fix `require(res);` 
     }
 ```
 
-The instructions for **building the tool from the source code** contained in this repo are described in the INSTALL.md file.
+The instructions for **building the tool from the source code** contained in this repo are described in the [INSTALL.md](./INSTALL.md) file.
 
 ## Reproducing Experimental Results
 
