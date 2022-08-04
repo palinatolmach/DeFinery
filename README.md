@@ -102,7 +102,119 @@ Running this command will add files produced by symbolic engine and patch genera
 
 `The valid implementation is EQUIVALENT: /experiments/CONTRACT_NAME/patched/patched_0.sol`
 
-The instructions for building the tool from the source code contained in this repo are described in the INSTALL.md file.
+For example, you can run the following command to repair the `xForce` smart contract:
+
+`docker run -it --rm -v  ~/Desktop/experiments:/experiments/ definerysc/definery xForce`
+
+The tool will, first, start the symbolic analysis of the given smart contract:
+```
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+dumping contract information: 
+Contract: _MAIN_
+	Constructor: _MAIN_()
+	State Variables:
+		force
+		$var_0
+		$var_1
+		user
+		xforce
+	Modifiers:
+	Functions:
+		_MAIN_:::function ()
+		_MAIN_::declare_property:function (bool)
+...
+```
+
+The result of the analysis will be saved in the `~/Desktop/experiments/xForce` folder to be reused during repair, after which the repair process will start:
+```
+result context [1]: 
+Is possibly reentrant: 0
+RESULT: 0
+The trace is INVALID
+$var_0 = 0
+$var_1 = 97
+result context [2]: 
+Is possibly reentrant: 0
+RESULT: 1
+The trace is VALID
+$var_0 = 2
+$var_1 = 2
+Recording summary, validCount: 1
+Summary file is /experiments/xForce/summary.txt
+[2022-08-04 10:22:25.762851] INFO: CLI: Start repairing problems
+```
+
+The repair component will output the information on the patch searching process, such as identified plausible patches, fitness values for the evaluated generation, etc. Once the valid (equivalent) patch is identified, it will show the name of the repaired smart contract located in the `~/Desktop/experiments/xForce/patched/` folder.
+
+```
+                  	     	                               fitness values                               	    	                                 	                                              
+                  	     	----------------------------------------------------------------------------	    	                                 	                                              
+gen               	evals	min                                  	max                                 	op  	#targetedVuls                    	#targetedVuls(detailed)vuls-best-patch(max: 3)
+0                 	11   	{'hard': '(-1.0,)', 'soft': '(1.0,)'}	{'hard': '(0.0,)', 'soft': '(1.0,)'}	init	(0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1)	                                              
+plausible-last-gen	6    	{'hard': '(0.0,)', 'soft': '(2.0,)'} 	{'hard': '(0.0,)', 'soft': '(1.0,)'}	init	(0, 0, 0, 0, 0, 0)               	                                              
+[2022-08-04 10:22:41.192624] INFO: CR.py: Plausible patches details:
+...
+[2022-08-04 10:22:41.192737] INFO: CR.py: Evaluated 10 patches
+Testing equivalence... 0
+Testing equivalence... 1
+The valid implementation is EQUIVALENT: /experiments/xForce/patched/patched_1.sol
+Testing equivalence... 2
+Testing equivalence... 3
+Testing equivalence... 4
+Testing equivalence... 5
+```
+
+If you inspect the generated file, you will notice that the fix `require(res);` is now included in the `deposit()` function of the xForce smart contract:
+```
+-> % cat ~/Desktop/experiments/xForce/patched/patched_1.sol 
+...
+    function deposit(uint256 amount) external {
+        // Gets the amount of Force locked in the contract
+        uint256 totalForce;
+        totalForce = force.balanceOf(address(this));
+        // Gets the amount of xForce in existence
+        uint256 totalShares = totalSupply;
+        // If no xForce exists, mint it 1:1 to the amount put in
+        if (totalShares == 0 || totalForce == 0) {
+            _mint(msg.sender, amount);
+        } else {
+            uint256 what = (amount * totalShares) / totalForce;
+            _mint(msg.sender, what);
+        }
+        // Lock the Force in the contract; Missing check on return value of transferFrom();
+        bool res;
+        res = force.transferFrom(msg.sender, address(this), amount);
+        require(res);
+    }
+```
+
+The instructions for **building the tool from the source code** contained in this repo are described in the INSTALL.md file.
+
+## Reproducing Experimental Results
+
+To reproduce the results of the evaluation shown in the paper using Docker, you may simply repeat the process described above for the 9 smart contracts used in the experiments: `xForce`, `iToken`, `cToken`, `Value`, `Uranium`, `Unprotected`, `Refund_NoSub`, `Confused_Sign`, `EtherBank`.
+
+The commands to be run would look as follows:
+
+`docker run -it --rm -v ~/Desktop/experiments:/experiments/ definerysc/definery Confused_Sign`
+
+`docker run -it --rm -v ~/Desktop/experiments:/experiments/ definerysc/definery xForce`
+
+`docker run -it --rm -v ~/Desktop/experiments:/experiments/ definerysc/definery Unprotected`
+
+`docker run -it --rm -v ~/Desktop/experiments:/experiments/ definerysc/definery cToken`
+
+`docker run -it --rm -v ~/Desktop/experiments:/experiments/ definerysc/definery iToken`
+
+`docker run -it --rm -v ~/Desktop/experiments:/experiments/ definerysc/definery Value`
+
+`docker run -it --rm -v ~/Desktop/experiments:/experiments/ definerysc/definery Refund_NoSub`
+
+`docker run -it --rm -v ~/Desktop/experiments:/experiments/ definerysc/definery EtherBank`
+
+`docker run -it --rm -v ~/Desktop/experiments:/experiments/ definerysc/definery Uranium`
+
+The output of the tool will suggest the name of the valid (equivalent) patch for the contract, which will be located in, e.g. `~/Deskop/experiments/CONTRACT_NAME/patched/` folder.
 
 ## Experimental Data
 
