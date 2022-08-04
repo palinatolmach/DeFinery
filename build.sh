@@ -19,7 +19,6 @@ cd ..
 
 cd ../../..
 
-
 git clone https://github.com/polinatolmach/DeFinery.git
 cd DeFinery
 
@@ -47,5 +46,5 @@ pip install attrs charset_normalizer logbook deap docker
 
 mkdir contracts && mkdir experiments
 cd ..
-cp -r contracts/eval/* /SCRepair/contracts/
+cp -r contracts/eval/* SCRepair/contracts/
 cp definery-see SCRepair/
