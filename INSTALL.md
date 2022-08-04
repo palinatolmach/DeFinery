@@ -29,6 +29,8 @@ docker run -it --rm -v ~/Desktop/test:/experiments/ definery xForce
 
 The output produced by the container should be similar to the one described in [README.md](./README.md).
 
+To reproduce the result of the evaluation shown in the paper, run the same command while substituting the name of the contract (e.g., `xForce`) with one of the following contract names: [xForce, iToken, cToken, Value, Uranium, Unprotected, Refund_NoSub, Confused_Sign, EtherBank]. 
+
 ## Local Build
 
 As an alternative to using Docker, you can also build the tool locally.
