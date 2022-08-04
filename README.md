@@ -9,8 +9,8 @@
 
 This reporitory demonstrates how **DeFinery** can be used to automatically repair smart contracts that do not satisfy their functional specification. **DeFinery** takes a user-defined correctness property and a trace leading to its violation as input, based on which it automatically generates a diverse set of patches for a smart contract, while providing formal correctness guarantees w.r.t. the intended behavior. It combines search-based patch generation with semantic analysis of an original program to efficiently navigate the search space and generate higher-quality patches that cannot be obtained by other smart contract repair tools.
 
-
-In the [Quick Start](#quick-start) section of this README, we show how to run the pre-built Docker image of DeFinery to reproduce the results shown in the paper. The information on the smart contract dataset used for the evaluation is provided in [Experimental Data](#experimental-data). More details on the prototype implementation are shown in [Prototype Implementation](#prototype-implementation).
+This README describes the [prerequisites](#prerequisites) for running DeFinery.
+In the [Quick Start](#quick-start) section of the README, we show how to run the pre-built Docker image of DeFinery to reproduce the results shown in the paper. The information on the smart contract dataset used for the evaluation is provided in [Experimental Data](#experimental-data). More details on the prototype implementation are shown in [Prototype Implementation](#prototype-implementation).
 
 The instructions on how to build the tool from scratch are provided in the [INSTALL.md](./INSTALL.md) file.
 
@@ -84,7 +84,10 @@ A companion website for the paper submission can also be found at: https://sites
 ## Prerequisites
 
 We use Docker 20.10.14 that can be obtained from the Docker [website](https://docs.docker.com/get-docker/).
+
 DeFinery also uses Python 3.7 and Node v14.20.0.
+
+The scripts included in this repository have been tested on Ubuntu 18:04. The binary of a symbolic execution component ([definery-see.zip](/.definery-see.zip)) is also built for Linux-AMD64 (Ubuntu 18.04).
 
 ## **Quick Start**
 
