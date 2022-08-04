@@ -358,7 +358,7 @@ class CR(RepairCore):
         )
 
         if self.fault_space_specifier is None:
-            func_seq = F'../experiments/{targetContractName}/invalid_0/funcSeq.txt'
+            func_seq = F'./experiments/{targetContractName}/invalid_0/funcSeq.txt'
             # logger.info(F'Processing fault specifiers: {func_seq}')
             # logger.info(F'Contract Name: {targetContractName}')
             my_file = open(func_seq, "r")
@@ -457,7 +457,7 @@ class CR(RepairCore):
 
                     equivalentPatchFound = False
 
-                    folder = '../experiments/' + contractName
+                    folder = './experiments/' + contractName
                     patchedFolder = folder + '/patched/'
                     nextPatchNum = 0
 
@@ -500,9 +500,9 @@ class CR(RepairCore):
 
                         args_execTC = ''
                         if ignoreVar:
-                            args_execTC = F'../definery-see -symexe-eqcheck {newPath} {contractName} {ignoreVarName}'
-                            referencePath = F'../contracts/{contractName}.sol'
-                            args_execSummary= F'../definery-see -symexe-main {referencePath} {contractName} {ignoreVarName}'
+                            args_execTC = F'./definery-see -symexe-eqcheck {newPath} {contractName} {ignoreVarName}'
+                            referencePath = F'./contracts/{contractName}.sol'
+                            args_execSummary= F'./definery-see -symexe-main {referencePath} {contractName} {ignoreVarName}'
 
                             # logger.info(F'Args for ignoring var {args_execSummary}')
                             # logger.info(F'Args are {args_execTC}')
@@ -523,7 +523,7 @@ class CR(RepairCore):
                                     execSummaryRun.kill()
 
                         else:
-                            args_execTC = F'../definery-see -symexe-eqcheck {newPath} {contractName}'
+                            args_execTC = F'./definery-see -symexe-eqcheck {newPath} {contractName}'
 
                         # logger.info(F'Args are {args_execTC}')
 

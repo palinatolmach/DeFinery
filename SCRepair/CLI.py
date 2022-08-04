@@ -143,7 +143,7 @@ async def repair(args, parsed: dict):
     targetLoc = args.targetLoc
 
 
-    reentrancy_file = F'../experiments/{targetContractName}/invalid_0/reentrant.txt'
+    reentrancy_file = F'./experiments/{targetContractName}/invalid_0/reentrant.txt'
 
     my_file = open(reentrancy_file, "r")
     content = my_file.readlines()

@@ -83,7 +83,7 @@ class SolVer(ProblemDetector):
         self.contractName = targetContractName
 
         if (len(self.paths_tc) == 0):
-            tcPath = F'../experiments/{targetContractName}'
+            tcPath = F'./experiments/{targetContractName}'
             print(F'tcPath {tcPath}')
 
             dirTestCases = Path(tcPath)
@@ -143,7 +143,7 @@ class SolVer(ProblemDetector):
         output_file.close()
         scan.close()
 
-        args_execTC = F'../definery-see -symexe-check {newPath} {self.contractName}'
+        args_execTC = F'./definery-see -symexe-check {newPath} {self.contractName}'
 
         try:
             execTCRun = await asyncio.create_subprocess_shell(

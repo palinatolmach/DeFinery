@@ -47,8 +47,11 @@ RUN cd SCRepair &&\
 RUN cd SCRepair &&\
     pip install attrs charset_normalizer logbook deap docker
 
-RUN mkdir contracts && mkdir experiments
+RUN cd SCRepair &&\
+    mkdir experiments && mkdir contracts
 
-RUN cp /app/contracts/eval/* /app/contracts/
+RUN cp definery-see /app/SCRepair/
+
+RUN cp /app/contracts/eval/* /app/SCRepair/contracts
 
 ENTRYPOINT ["/bin/bash", "/app/start.sh"]
