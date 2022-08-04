@@ -107,7 +107,6 @@ Running this command will add files produced by symbolic engine and patch genera
 
 For example, you can run the following command to repair the `xForce` smart contract:
 
-
 `docker run -it --rm -v  ~/Desktop/experiments:/experiments/ definerysc/definery xForce`
 
 
@@ -198,6 +197,7 @@ The instructions for **building the tool from the source code** contained in thi
 ## Reproducing Experimental Results
 
 To reproduce the results of the evaluation shown in the paper using Docker, you may simply repeat the process described above for the 9 smart contracts used in the experiments: `xForce`, `iToken`, `cToken`, `Value`, `Uranium`, `Unprotected`, `Refund_NoSub`, `Confused_Sign`, `EtherBank`.
+Please note that while most of the smart contracts are usually repaired in under 1 minute, `Uranium` may take several minutes to be processed (due to the non-linear arithemtic expressions used in a smart contract, which SMT solvers struggle with).
 
 The commands to be run would look as follows:
 
