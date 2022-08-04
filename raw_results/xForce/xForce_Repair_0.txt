@@ -1,0 +1,207 @@
+-> % time python3 CLI.py --targetContractName xForce repair ../DeFi/SolVer/experiment/xForce/xForce.sol
+
+[2022-05-30 00:27:02.422859] INFO: CLI: Start repairing problems
+[2022-05-30 00:27:02.423299] INFO: CLI: ['0']
+[2022-05-30 00:27:02.423360] INFO: CLI: False
+[2022-05-30 00:27:02.423403] INFO: CR.py: in CR is reentrant is False
+[2022-05-30 00:27:02.424685] INFO: CR.py: Executing REPAIR
+[2022-05-30 00:27:02.424864] INFO: CR.py: Evaluating the population in CR
+Path source is (PosixPath('/Users/hidden/DeFi/SolVer/experiment/xForce/xForce.sol'),)
+tcPath ../DeFi/SolVer/experiment/xForce
+[2022-05-30 00:27:02.425755] INFO: SolVer.py: Start executing 2 test cases using SolVer with symbex
+[2022-05-30 00:27:02.426374] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8b_tz0f6/invalid_0_xForce.sol xForce for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/xForce/invalid_0 and (PosixPath('/Users/hidden/DeFi/SolVer/experiment/xForce/xForce.sol'),)
+[2022-05-30 00:27:02.431192] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8b_tz0f6/valid_0_xForce.sol xForce for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/xForce/valid_0 and (PosixPath('/Users/hidden/DeFi/SolVer/experiment/xForce/xForce.sol'),)
+[2022-05-30 00:27:02.744554] INFO: SolVer.py: Results for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/xForce/invalid_0 are []
+[2022-05-30 00:27:02.881141] INFO: SolVer.py: Results for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/xForce/valid_0 are []
+The test cases execution result for xForce.sol is [FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/xForce/invalid_0', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/xForce/valid_0', additionalInfo=None)]
+[2022-05-30 00:27:02.881958] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 00:27:02.882132] INFO: CR.py: Calling fitnessFn_ProblemDection function
+[2022-05-30 00:27:02.882370] INFO: CR.py: Initial subject contract has the following targeted vulnerabilities:
+{'SolVer': [FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/xForce/invalid_0', additionalInfo=None)]}
+[2022-05-30 00:27:02.882655] INFO: CR.py: Generated init fault space specifier: TYPE:xForce._mint-Block;TYPE:xForce.deposit-Block;
+[2022-05-30 00:27:02.882843] INFO: SolidityM.py: Constructed base args for sm: ['/Users/hidden/DeFinery/sm/build/main/utils/bin.js', 'iter-gen-mutations', '--only-compilable=true', '/Users/hidden/DeFi/SolVer/experiment/xForce/xForce.sol', '--mutation-space=TYPE:xForce._mint-Block;TYPE:xForce.deposit-Block;']
+[2022-05-30 00:27:02.882989] INFO: SolidityM.py: Start sm for space ('InsertionM',) with args: ['/Users/hidden/DeFinery/sm/build/main/utils/bin.js', 'iter-gen-mutations', '--only-compilable=true', '/Users/hidden/DeFi/SolVer/experiment/xForce/xForce.sol', '--mutation-space=TYPE:xForce._mint-Block;TYPE:xForce.deposit-Block;', '--patched-src-dir=/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpznsl2xji', '--mutation_types', 'InsertionM', '--must-include-mutation-types', 'InsertionM']
+[2022-05-30 00:27:02.888847] INFO: SolidityM.py: Start sm for space ('ReplacementM',) with args: ['/Users/hidden/DeFinery/sm/build/main/utils/bin.js', 'iter-gen-mutations', '--only-compilable=true', '/Users/hidden/DeFi/SolVer/experiment/xForce/xForce.sol', '--mutation-space=TYPE:xForce._mint-Block;TYPE:xForce.deposit-Block;', '--patched-src-dir=/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_', '--mutation_types', 'ReplacementM', '--must-include-mutation-types', 'ReplacementM']
+[2022-05-30 00:27:02.893308] INFO: SolidityM.py: Start sm for space ('InsertionM', 'ReplacementM') with args: ['/Users/hidden/DeFinery/sm/build/main/utils/bin.js', 'iter-gen-mutations', '--only-compilable=true', '/Users/hidden/DeFi/SolVer/experiment/xForce/xForce.sol', '--mutation-space=TYPE:xForce._mint-Block;TYPE:xForce.deposit-Block;', '--patched-src-dir=/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpc8g6_lpr', '--mutation_types', 'InsertionM', 'ReplacementM', '--must-include-mutation-types', 'InsertionM', 'ReplacementM']
+[2022-05-30 00:27:02.901977] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:27:04.076Z info:     Using seed "lucky-seed" as type string
+2022-05-30T00:27:04.081Z info:     Using seed "lucky-seed" as type string
+2022-05-30T00:27:04.086Z info:     Using seed "lucky-seed" as type string
+(node:71907) Warning: Accessing non-existent property 'INVALID_ALT_NUMBER' of module exports inside circular dependency
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:71907) Warning: Accessing non-existent property 'INVALID_ALT_NUMBER' of module exports inside circular dependency
+(node:71905) Warning: Accessing non-existent property 'INVALID_ALT_NUMBER' of module exports inside circular dependency
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:71905) Warning: Accessing non-existent property 'INVALID_ALT_NUMBER' of module exports inside circular dependency
+(node:71906) Warning: Accessing non-existent property 'INVALID_ALT_NUMBER' of module exports inside circular dependency
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:71906) Warning: Accessing non-existent property 'INVALID_ALT_NUMBER' of module exports inside circular dependency
+2022-05-30T00:27:07.223Z info:     Generated 1 patches for current task
+2022-05-30T00:27:07.253Z info:     Patched source file #0 written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/0.sol
+2022-05-30T00:27:07.254Z info:     Mutation sequence file #0 for /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/0.sol written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/0.sol.mutation.json
+2022-05-30T00:27:07.310Z info:     Termination requested
+2022-05-30T00:27:07.569Z info:     Termination requested
+[2022-05-30 00:27:07.570946] INFO: CR.py: Evaluating the population in CR
+Path source is ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/0.sol',)
+[2022-05-30 00:27:07.571829] INFO: SolVer.py: Start executing 2 test cases using SolVer with symbex
+[2022-05-30 00:27:07.572532] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpsedren5s/invalid_0_0.sol xForce for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/xForce/invalid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/0.sol',)
+[2022-05-30 00:27:07.578142] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpsedren5s/valid_0_0.sol xForce for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/xForce/valid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/0.sol',)
+The test cases execution result for 0.sol is [PassedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/xForce/invalid_0', additionalInfo=None, detected=False), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/xForce/valid_0', additionalInfo=None)]
+[2022-05-30 00:27:07.833899] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 00:27:07.834202] INFO: CR.py: Calling fitnessFn_ProblemDection function
+[2022-05-30 00:27:07.834895] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:27:08.446Z info:     Generated 1 patches for current task
+2022-05-30T00:27:08.463Z info:     Patched source file #1 written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/1.sol
+2022-05-30T00:27:08.463Z info:     Mutation sequence file #1 for /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/1.sol written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/1.sol.mutation.json
+2022-05-30T00:27:08.574Z info:     Generated 1 patches for current task
+2022-05-30T00:27:08.594Z info:     Patched source file #0 written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpznsl2xji/0.sol
+2022-05-30T00:27:08.595Z info:     Mutation sequence file #0 for /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpznsl2xji/0.sol written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpznsl2xji/0.sol.mutation.json
+2022-05-30T00:27:08.672Z info:     Termination requested
+[2022-05-30 00:27:08.673162] INFO: CR.py: Evaluating the population in CR
+[2022-05-30 00:27:08.673391] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+[2022-05-30 00:27:08.673490] INFO: CR.py: Evaluating the population in CR
+[2022-05-30 00:27:08.673585] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+Path source is ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpznsl2xji/0.sol',)
+[2022-05-30 00:27:08.674497] INFO: SolVer.py: Start executing 2 test cases using SolVer with symbex
+Path source is ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/1.sol',)
+[2022-05-30 00:27:08.674906] INFO: SolVer.py: Start executing 2 test cases using SolVer with symbex
+[2022-05-30 00:27:08.675695] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp35ydxrzs/invalid_0_0.sol xForce for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/xForce/invalid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpznsl2xji/0.sol',)
+[2022-05-30 00:27:08.680758] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp35ydxrzs/valid_0_0.sol xForce for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/xForce/valid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpznsl2xji/0.sol',)
+[2022-05-30 00:27:08.685595] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmppxavb5ct/invalid_0_1.sol xForce for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/xForce/invalid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/1.sol',)
+[2022-05-30 00:27:08.691049] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmppxavb5ct/valid_0_1.sol xForce for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/xForce/valid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/1.sol',)
+The test cases execution result for 1.sol is [PassedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/xForce/invalid_0', additionalInfo=None, detected=False), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/xForce/valid_0', additionalInfo=None)]
+[2022-05-30 00:27:09.216753] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 00:27:09.217091] INFO: CR.py: Calling fitnessFn_ProblemDection function
+2022-05-30T00:27:09.427Z info:     Generated 1 patches for current task
+2022-05-30T00:27:09.444Z info:     Patched source file #2 written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/2.sol
+2022-05-30T00:27:09.444Z info:     Mutation sequence file #2 for /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/2.sol written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/2.sol.mutation.json
+2022-05-30T00:27:09.473Z info:     Termination requested
+2022-05-30T00:27:09.490Z info:     Termination requested
+[2022-05-30 00:27:09.491886] INFO: CR.py: Evaluating the population in CR
+[2022-05-30 00:27:09.492268] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+Path source is ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/2.sol',)
+[2022-05-30 00:27:09.493196] INFO: SolVer.py: Start executing 2 test cases using SolVer with symbex
+[2022-05-30 00:27:09.494171] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpax3gr_av/invalid_0_2.sol xForce for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/xForce/invalid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/2.sol',)
+[2022-05-30 00:27:09.499243] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpax3gr_av/valid_0_2.sol xForce for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/xForce/valid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/2.sol',)
+The test cases execution result for 0.sol is [PassedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/xForce/invalid_0', additionalInfo=None, detected=False), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/xForce/valid_0', additionalInfo=None)]
+[2022-05-30 00:27:09.637486] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 00:27:09.637880] INFO: CR.py: Calling fitnessFn_ProblemDection function
+2022-05-30T00:27:09.896Z info:     Generated 1 patches for current task
+2022-05-30T00:27:09.914Z info:     Patched source file #3 written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/3.sol
+2022-05-30T00:27:09.915Z info:     Mutation sequence file #3 for /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/3.sol written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/3.sol.mutation.json
+2022-05-30T00:27:09.937Z info:     Termination requested
+2022-05-30T00:27:09.939Z info:     Termination requested
+[2022-05-30 00:27:09.943093] INFO: CR.py: Evaluating the population in CR
+[2022-05-30 00:27:09.943540] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+Path source is ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/3.sol',)
+[2022-05-30 00:27:09.944808] INFO: SolVer.py: Start executing 2 test cases using SolVer with symbex
+[2022-05-30 00:27:09.945838] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmppc0dwmnb/invalid_0_3.sol xForce for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/xForce/invalid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/3.sol',)
+[2022-05-30 00:27:09.954760] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmppc0dwmnb/valid_0_3.sol xForce for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/xForce/valid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/3.sol',)
+The test cases execution result for 2.sol is [FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/xForce/invalid_0', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/xForce/valid_0', additionalInfo=None)]
+[2022-05-30 00:27:10.379871] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 00:27:10.380230] INFO: CR.py: Calling fitnessFn_ProblemDection function
+2022-05-30T00:27:10.578Z info:     Generated 1 patches for current task
+2022-05-30T00:27:10.600Z info:     Patched source file #4 written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/4.sol
+2022-05-30T00:27:10.600Z info:     Mutation sequence file #4 for /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/4.sol written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/4.sol.mutation.json
+2022-05-30T00:27:10.637Z info:     Termination requested
+2022-05-30T00:27:10.694Z info:     Termination requested
+[2022-05-30 00:27:10.695512] INFO: CR.py: Evaluating the population in CR
+[2022-05-30 00:27:10.695795] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+Path source is ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/4.sol',)
+[2022-05-30 00:27:10.696683] INFO: SolVer.py: Start executing 2 test cases using SolVer with symbex
+[2022-05-30 00:27:10.697716] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpcq5jyt80/invalid_0_4.sol xForce for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/xForce/invalid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/4.sol',)
+[2022-05-30 00:27:10.703398] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpcq5jyt80/valid_0_4.sol xForce for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/xForce/valid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/4.sol',)
+The test cases execution result for 3.sol is [FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/xForce/invalid_0', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/xForce/valid_0', additionalInfo=None)]
+[2022-05-30 00:27:10.892414] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 00:27:10.892813] INFO: CR.py: Calling fitnessFn_ProblemDection function
+The test cases execution result for 4.sol is [PassedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/xForce/invalid_0', additionalInfo=None, detected=False), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/xForce/valid_0', additionalInfo=None)]
+[2022-05-30 00:27:11.124422] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 00:27:11.124641] INFO: CR.py: Calling fitnessFn_ProblemDection function
+2022-05-30T00:27:11.290Z info:     Generated 1 patches for current task
+2022-05-30T00:27:11.309Z info:     Patched source file #5 written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/5.sol
+2022-05-30T00:27:11.309Z info:     Mutation sequence file #5 for /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/5.sol written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/5.sol.mutation.json
+2022-05-30T00:27:11.328Z info:     Termination requested
+2022-05-30T00:27:11.346Z info:     Termination requested
+[2022-05-30 00:27:11.347720] INFO: CR.py: Evaluating the population in CR
+[2022-05-30 00:27:11.347989] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+Path source is ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/5.sol',)
+[2022-05-30 00:27:11.348835] INFO: SolVer.py: Start executing 2 test cases using SolVer with symbex
+[2022-05-30 00:27:11.349640] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpegugf7a8/invalid_0_5.sol xForce for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/xForce/invalid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/5.sol',)
+[2022-05-30 00:27:11.354507] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpegugf7a8/valid_0_5.sol xForce for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/xForce/valid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/5.sol',)
+2022-05-30T00:27:11.956Z info:     Generated 1 patches for current task
+2022-05-30T00:27:11.976Z info:     Patched source file #6 written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/6.sol
+2022-05-30T00:27:11.977Z info:     Mutation sequence file #6 for /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/6.sol written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/6.sol.mutation.json
+2022-05-30T00:27:12.001Z info:     Termination requested
+2022-05-30T00:27:12.041Z info:     Termination requested
+[2022-05-30 00:27:12.042419] INFO: CR.py: Evaluating the population in CR
+[2022-05-30 00:27:12.042788] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+Path source is ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/6.sol',)
+[2022-05-30 00:27:12.043712] INFO: SolVer.py: Start executing 2 test cases using SolVer with symbex
+[2022-05-30 00:27:12.044625] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpxuz2uokz/invalid_0_6.sol xForce for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/xForce/invalid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/6.sol',)
+[2022-05-30 00:27:12.051312] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpxuz2uokz/valid_0_6.sol xForce for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/xForce/valid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/6.sol',)
+The test cases execution result for 5.sol is [FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/xForce/invalid_0', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/xForce/valid_0', additionalInfo=None)]
+[2022-05-30 00:27:12.092334] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 00:27:12.092641] INFO: CR.py: Calling fitnessFn_ProblemDection function
+The test cases execution result for 6.sol is [PassedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/xForce/invalid_0', additionalInfo=None, detected=False), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/xForce/valid_0', additionalInfo=None)]
+[2022-05-30 00:27:12.450760] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 00:27:12.451008] INFO: CR.py: Calling fitnessFn_ProblemDection function
+2022-05-30T00:27:12.786Z info:     Generated 1 patches for current task
+2022-05-30T00:27:12.805Z info:     Patched source file #7 written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/7.sol
+2022-05-30T00:27:12.806Z info:     Mutation sequence file #7 for /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/7.sol written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/7.sol.mutation.json
+2022-05-30T00:27:12.806Z info:     Generated 1 patches for current task
+2022-05-30T00:27:12.820Z info:     Patched source file #1 written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpznsl2xji/1.sol
+2022-05-30T00:27:12.820Z info:     Mutation sequence file #1 for /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpznsl2xji/1.sol written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpznsl2xji/1.sol.mutation.json
+2022-05-30T00:27:12.858Z info:     Termination requested
+[2022-05-30 00:27:12.859551] INFO: CR.py: Evaluating the population in CR
+[2022-05-30 00:27:12.859818] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+[2022-05-30 00:27:12.859993] INFO: CR.py: Evaluating the population in CR
+Path source is ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpznsl2xji/1.sol',)
+[2022-05-30 00:27:12.860615] INFO: SolVer.py: Start executing 2 test cases using SolVer with symbex
+Path source is ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/7.sol',)
+[2022-05-30 00:27:12.860907] INFO: SolVer.py: Start executing 2 test cases using SolVer with symbex
+[2022-05-30 00:27:12.861510] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp5yjzp773/invalid_0_1.sol xForce for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/xForce/invalid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpznsl2xji/1.sol',)
+[2022-05-30 00:27:12.866228] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp5yjzp773/valid_0_1.sol xForce for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/xForce/valid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpznsl2xji/1.sol',)
+[2022-05-30 00:27:12.871418] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp3x_5j8bz/invalid_0_7.sol xForce for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/xForce/invalid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/7.sol',)
+[2022-05-30 00:27:12.876758] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp3x_5j8bz/valid_0_7.sol xForce for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/xForce/valid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/7.sol',)
+The test cases execution result for 7.sol is [PassedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/xForce/invalid_0', additionalInfo=None, detected=False), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/xForce/valid_0', additionalInfo=None)]
+[2022-05-30 00:27:13.198340] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 00:27:13.198643] INFO: CR.py: Calling fitnessFn_ProblemDection function
+The test cases execution result for 1.sol is [FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/xForce/invalid_0', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/xForce/valid_0', additionalInfo=None)]
+[2022-05-30 00:27:13.400271] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 00:27:13.400438] INFO: CR.py: Calling fitnessFn_ProblemDection function
+[2022-05-30 00:27:13.401116] INFO: CR.py: Currently done evaluating generation 0
+[2022-05-30 00:27:13.401376] INFO: CR.py:    	     	                                                                            	    	                                   vulnerabilities                                    
+   	     	                                                                            	    	--------------------------------------------------------------------------------------
+   	     	                               fitness values                               	    	                                 	                                              
+   	     	----------------------------------------------------------------------------	    	                                 	                                              
+gen	evals	min                                  	max                                 	op  	#targetedVuls                    	#targetedVuls(detailed)vuls-best-patch(max: 3)
+0  	11   	{'hard': '(-1.0,)', 'soft': '(1.0,)'}	{'hard': '(0.0,)', 'soft': '(1.0,)'}	init	(0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1)	                                              
+[2022-05-30 00:27:13.402781] INFO: CR.py: ParetoFront: 
+{'fitness values': {'min': FitnessMultiMin_improved(Hard: (0.0,) Soft: (1.0,)), 'max': FitnessMultiMin_improved(Hard: (0.0,) Soft: (1.0,))}, 'vulnerabilities': {'vuls-best-patch(max: 3)': {}, '#targetedVuls': (0, 0, 0, 0)}}
+[2022-05-30 00:27:13.402911] INFO: CR.py: Evaluated 10 patches
+[2022-05-30 00:27:13.403164] INFO: CR.py:                   	     	                                                                            	    	                                   vulnerabilities                                    
+                  	     	                                                                            	    	--------------------------------------------------------------------------------------
+                  	     	                               fitness values                               	    	                                 	                                              
+                  	     	----------------------------------------------------------------------------	    	                                 	                                              
+gen               	evals	min                                  	max                                 	op  	#targetedVuls                    	#targetedVuls(detailed)vuls-best-patch(max: 3)
+0                 	11   	{'hard': '(-1.0,)', 'soft': '(1.0,)'}	{'hard': '(0.0,)', 'soft': '(1.0,)'}	init	(0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1)	                                              
+plausible-last-gen	6    	{'hard': '(0.0,)', 'soft': '(2.0,)'} 	{'hard': '(0.0,)', 'soft': '(1.0,)'}	init	(0, 0, 0, 0, 0, 0)               	                                              
+[2022-05-30 00:27:13.403529] INFO: CR.py: Plausible patches details:
+[Individual(MutationSequence=[{'mutationType': 'ReplacementM', 'targetNodePath': ['children', '1', 'subNodes', '12', 'body', 'statements', '0', 'expression', 'arguments', '0'], 'newNode': {'type': 'BinaryOperation', 'left': {'type': 'Identifier', 'name': 'totalSupply'}, 'right': {'type': 'Identifier', 'name': 'amount'}, 'operator': '<='}}], PatchedFilePath='/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/0.sol', ModifiedLocations=[{'start': {'line': 148, 'column': 16}, 'end': {'line': 148, 'column': 36}}]), Individual(MutationSequence=[{'targetNodePath': ['children', '1', 'subNodes', '11', 'body'], 'targetPropertyPath': ['children', '1', 'subNodes', '11', 'body', 'statements'], 'insertIndex': 6, 'newNode': {'type': 'ExpressionStatement', 'expression': {'type': 'FunctionCall', 'expression': {'type': 'Identifier', 'name': 'require'}, 'arguments': [{'type': 'Identifier', 'name': 'res'}], 'names': []}}, 'mutationType': 'InsertionM'}], PatchedFilePath='/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpznsl2xji/0.sol', ModifiedLocations=[{'start': {'line': 127, 'column': 46}, 'end': {'line': 145, 'column': 4}}]), Individual(MutationSequence=[{'mutationType': 'ReplacementM', 'targetNodePath': ['children', '1', 'subNodes', '12', 'body', 'statements', '0', 'expression', 'arguments', '0'], 'newNode': {'type': 'BinaryOperation', 'left': {'type': 'Identifier', 'name': 'totalSupply'}, 'right': {'type': 'Identifier', 'name': 'amount'}, 'operator': '=='}}], PatchedFilePath='/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/6.sol', ModifiedLocations=[{'start': {'line': 148, 'column': 16}, 'end': {'line': 148, 'column': 36}}]), Individual(MutationSequence=[{'mutationType': 'ReplacementM', 'targetNodePath': ['children', '1', 'subNodes', '12', 'body', 'statements', '0', 'expression', 'arguments', '0'], 'newNode': {'type': 'BinaryOperation', 'left': {'type': 'Identifier', 'name': 'totalSupply'}, 'right': {'type': 'NumberLiteral', 'number': '0', 'subdenomination': {}}, 'operator': '<='}}], PatchedFilePath='/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/7.sol', ModifiedLocations=[{'start': {'line': 148, 'column': 16}, 'end': {'line': 148, 'column': 36}}]), Individual(MutationSequence=[{'mutationType': 'ReplacementM', 'targetNodePath': ['children', '1', 'subNodes', '12', 'body', 'statements', '0', 'expression', 'arguments', '0'], 'newNode': {'type': 'BinaryOperation', 'left': {'type': 'Identifier', 'name': 'totalSupply'}, 'right': {'type': 'Identifier', 'name': 'amount'}, 'operator': '<='}}, {'mutationType': 'ReplacementM', 'targetNodePath': ['children', '1', 'subNodes', '12', 'body', 'statements', '0', 'expression', 'arguments', '0'], 'newNode': {'type': 'BinaryOperation', 'left': {'type': 'Identifier', 'name': 'totalSupply'}, 'right': {'type': 'Identifier', 'name': 'totalSupply'}, 'operator': '<'}}], PatchedFilePath='/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/1.sol', ModifiedLocations=[{'start': {'line': 148, 'column': 16}, 'end': {'line': 148, 'column': 36}}]), Individual(MutationSequence=[{'mutationType': 'ReplacementM', 'targetNodePath': ['children', '1', 'subNodes', '12', 'body', 'statements', '0', 'expression', 'arguments', '0'], 'newNode': {'type': 'BinaryOperation', 'left': {'type': 'Identifier', 'name': 'totalSupply'}, 'right': {'type': 'Identifier', 'name': 'amount'}, 'operator': '='}}, {'mutationType': 'ReplacementM', 'targetNodePath': ['children', '1', 'subNodes', '12', 'body', 'statements', '0', 'expression', 'arguments', '0'], 'newNode': {'type': 'BinaryOperation', 'left': {'type': 'Identifier', 'name': 'totalSupply'}, 'right': {'type': 'Identifier', 'name': 'amount'}, 'operator': '<'}}], PatchedFilePath='/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/4.sol', ModifiedLocations=[{'start': {'line': 148, 'column': 16}, 'end': {'line': 148, 'column': 36}}])]
+[2022-05-30 00:27:13.403682] INFO: CR.py: Evaluated 10 patches
+Testing equivalence... 0
+Testing equivalence... 1
+The valid implementation is EQUIVALENT: ../DeFi/SolVer/experiment/xForce/patched/patched_1.sol
+Testing equivalence... 2
+Testing equivalence... 3
+Testing equivalence... 4
+Testing equivalence... 5
+[2022-05-30 00:27:16.436553] INFO: CR.py: Terminating...
+Source files after applying plausible patches are in:
+/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/0.sol
+/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpznsl2xji/0.sol
+/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/6.sol
+/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/7.sol
+/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/1.sol
+/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp4f5b9wv_/4.sol
+python3 CLI.py --targetContractName xForce repair   52.83s user 2.55s system 377% cpu 14.665 total

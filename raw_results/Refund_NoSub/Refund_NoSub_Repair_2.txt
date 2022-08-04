@@ -1,0 +1,335 @@
+-> % time python3 CLI.py --targetContractName Refund_NoSub repair ../DeFi/SolVer/experiment/Refund_NoSub/Refund_NoSub.sol
+
+[2022-05-30 01:02:12.264695] INFO: CLI: Start repairing problems
+[2022-05-30 01:02:12.265389] INFO: CLI: ['0']
+[2022-05-30 01:02:12.265477] INFO: CLI: False
+[2022-05-30 01:02:12.265543] INFO: CR.py: in CR is reentrant is False
+[2022-05-30 01:02:12.267433] INFO: CR.py: Executing REPAIR
+[2022-05-30 01:02:12.267841] INFO: CR.py: Evaluating the population in CR
+Path source is (PosixPath('/Users/hidden/DeFi/SolVer/experiment/Refund_NoSub/Refund_NoSub.sol'),)
+tcPath ../DeFi/SolVer/experiment/Refund_NoSub
+[2022-05-30 01:02:12.269192] INFO: SolVer.py: Start executing 4 test cases using SolVer with symbex
+[2022-05-30 01:02:12.270023] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpqw00g3z4/invalid_1_Refund_NoSub.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_1 and (PosixPath('/Users/hidden/DeFi/SolVer/experiment/Refund_NoSub/Refund_NoSub.sol'),)
+[2022-05-30 01:02:12.275872] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpqw00g3z4/invalid_0_Refund_NoSub.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_0 and (PosixPath('/Users/hidden/DeFi/SolVer/experiment/Refund_NoSub/Refund_NoSub.sol'),)
+[2022-05-30 01:02:12.281300] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpqw00g3z4/valid_1_Refund_NoSub.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_1 and (PosixPath('/Users/hidden/DeFi/SolVer/experiment/Refund_NoSub/Refund_NoSub.sol'),)
+[2022-05-30 01:02:12.286945] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpqw00g3z4/valid_0_Refund_NoSub.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_0 and (PosixPath('/Users/hidden/DeFi/SolVer/experiment/Refund_NoSub/Refund_NoSub.sol'),)
+[2022-05-30 01:02:12.569187] INFO: SolVer.py: Results for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_0 are []
+[2022-05-30 01:02:12.571030] INFO: SolVer.py: Results for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_1 are []
+[2022-05-30 01:02:12.583068] INFO: SolVer.py: Results for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_0 are []
+[2022-05-30 01:02:12.584321] INFO: SolVer.py: Results for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_1 are []
+The test cases execution result for Refund_NoSub.sol is [FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_1', additionalInfo=None), FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_0', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_1', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_0', additionalInfo=None)]
+[2022-05-30 01:02:12.585153] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 01:02:12.585319] INFO: CR.py: Calling fitnessFn_ProblemDection function
+[2022-05-30 01:02:12.585572] INFO: CR.py: Initial subject contract has the following targeted vulnerabilities:
+{'SolVer': [FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_1', additionalInfo=None), FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_0', additionalInfo=None)]}
+[2022-05-30 01:02:12.585787] INFO: CR.py: Generated init fault space specifier: TYPE:Refund_NoSub.refund-Block;TYPE:Refund_NoSub.deposit-Block;
+[2022-05-30 01:02:12.585963] INFO: SolidityM.py: Constructed base args for sm: ['/Users/hidden/DeFinery/sm/build/main/utils/bin.js', 'iter-gen-mutations', '--only-compilable=true', '/Users/hidden/DeFi/SolVer/experiment/Refund_NoSub/Refund_NoSub.sol', '--mutation-space=TYPE:Refund_NoSub.refund-Block;TYPE:Refund_NoSub.deposit-Block;']
+[2022-05-30 01:02:12.586078] INFO: SolidityM.py: Start sm for space ('InsertionM',) with args: ['/Users/hidden/DeFinery/sm/build/main/utils/bin.js', 'iter-gen-mutations', '--only-compilable=true', '/Users/hidden/DeFi/SolVer/experiment/Refund_NoSub/Refund_NoSub.sol', '--mutation-space=TYPE:Refund_NoSub.refund-Block;TYPE:Refund_NoSub.deposit-Block;', '--patched-src-dir=/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt', '--mutation_types', 'InsertionM', '--must-include-mutation-types', 'InsertionM']
+[2022-05-30 01:02:12.591832] INFO: SolidityM.py: Start sm for space ('ReplacementM',) with args: ['/Users/hidden/DeFinery/sm/build/main/utils/bin.js', 'iter-gen-mutations', '--only-compilable=true', '/Users/hidden/DeFi/SolVer/experiment/Refund_NoSub/Refund_NoSub.sol', '--mutation-space=TYPE:Refund_NoSub.refund-Block;TYPE:Refund_NoSub.deposit-Block;', '--patched-src-dir=/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y', '--mutation_types', 'ReplacementM', '--must-include-mutation-types', 'ReplacementM']
+[2022-05-30 01:02:12.596653] INFO: SolidityM.py: Start sm for space ('InsertionM', 'ReplacementM') with args: ['/Users/hidden/DeFinery/sm/build/main/utils/bin.js', 'iter-gen-mutations', '--only-compilable=true', '/Users/hidden/DeFi/SolVer/experiment/Refund_NoSub/Refund_NoSub.sol', '--mutation-space=TYPE:Refund_NoSub.refund-Block;TYPE:Refund_NoSub.deposit-Block;', '--patched-src-dir=/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpx4ra9a5e', '--mutation_types', 'InsertionM', 'ReplacementM', '--must-include-mutation-types', 'InsertionM', 'ReplacementM']
+[2022-05-30 01:02:12.601997] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:02:13.812Z info:     Using seed "lucky-seed" as type string
+2022-05-30T01:02:13.820Z info:     Using seed "lucky-seed" as type string
+2022-05-30T01:02:13.829Z info:     Using seed "lucky-seed" as type string
+(node:75479) Warning: Accessing non-existent property 'INVALID_ALT_NUMBER' of module exports inside circular dependency
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:75479) Warning: Accessing non-existent property 'INVALID_ALT_NUMBER' of module exports inside circular dependency
+(node:75480) Warning: Accessing non-existent property 'INVALID_ALT_NUMBER' of module exports inside circular dependency
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:75480) Warning: Accessing non-existent property 'INVALID_ALT_NUMBER' of module exports inside circular dependency
+(node:75481) Warning: Accessing non-existent property 'INVALID_ALT_NUMBER' of module exports inside circular dependency
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:75481) Warning: Accessing non-existent property 'INVALID_ALT_NUMBER' of module exports inside circular dependency
+2022-05-30T01:02:15.587Z info:     Generated 1 patches for current task
+2022-05-30T01:02:15.606Z info:     Patched source file #0 written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/0.sol
+2022-05-30T01:02:15.609Z info:     Mutation sequence file #0 for /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/0.sol written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/0.sol.mutation.json
+2022-05-30T01:02:15.653Z info:     Termination requested
+2022-05-30T01:02:15.683Z info:     Termination requested
+[2022-05-30 01:02:15.684455] INFO: CR.py: Evaluating the population in CR
+Path source is ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/0.sol',)
+[2022-05-30 01:02:15.686392] INFO: SolVer.py: Start executing 4 test cases using SolVer with symbex
+[2022-05-30 01:02:15.687117] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpo5xujavt/invalid_1_0.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/0.sol',)
+[2022-05-30 01:02:15.692781] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpo5xujavt/invalid_0_0.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/0.sol',)
+[2022-05-30 01:02:15.698653] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpo5xujavt/valid_1_0.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/0.sol',)
+[2022-05-30 01:02:15.706575] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpo5xujavt/valid_0_0.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/0.sol',)
+The test cases execution result for 0.sol is [FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_1', additionalInfo=None), FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_0', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_1', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_0', additionalInfo=None)]
+[2022-05-30 01:02:15.994169] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 01:02:15.994415] INFO: CR.py: Calling fitnessFn_ProblemDection function
+[2022-05-30 01:02:15.994949] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:02:16.420Z info:     Generated 1 patches for current task
+2022-05-30T01:02:16.431Z info:     Patched source file #1 written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/1.sol
+2022-05-30T01:02:16.432Z info:     Mutation sequence file #1 for /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/1.sol written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/1.sol.mutation.json
+2022-05-30T01:02:16.479Z info:     Termination requested
+2022-05-30T01:02:16.485Z info:     Termination requested
+[2022-05-30 01:02:16.486602] INFO: CR.py: Evaluating the population in CR
+[2022-05-30 01:02:16.486994] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+Path source is ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/1.sol',)
+[2022-05-30 01:02:16.488064] INFO: SolVer.py: Start executing 4 test cases using SolVer with symbex
+[2022-05-30 01:02:16.489100] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpvarmuf3y/invalid_1_1.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/1.sol',)
+[2022-05-30 01:02:16.495931] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpvarmuf3y/invalid_0_1.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/1.sol',)
+[2022-05-30 01:02:16.506077] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpvarmuf3y/valid_1_1.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/1.sol',)
+[2022-05-30 01:02:16.514621] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpvarmuf3y/valid_0_1.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/1.sol',)
+The test cases execution result for 1.sol is [FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_1', additionalInfo=None), FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_0', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_1', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_0', additionalInfo=None)]
+[2022-05-30 01:02:17.138635] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 01:02:17.138954] INFO: CR.py: Calling fitnessFn_ProblemDection function
+2022-05-30T01:02:17.251Z info:     Generated 1 patches for current task
+2022-05-30T01:02:17.259Z info:     Patched source file #2 written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/2.sol
+2022-05-30T01:02:17.259Z info:     Mutation sequence file #2 for /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/2.sol written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/2.sol.mutation.json
+2022-05-30T01:02:17.279Z info:     Termination requested
+2022-05-30T01:02:17.283Z info:     Termination requested
+[2022-05-30 01:02:17.284720] INFO: CR.py: Evaluating the population in CR
+[2022-05-30 01:02:17.284973] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+Path source is ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/2.sol',)
+[2022-05-30 01:02:17.285995] INFO: SolVer.py: Start executing 4 test cases using SolVer with symbex
+[2022-05-30 01:02:17.287354] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpnt_ppaar/invalid_1_2.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/2.sol',)
+[2022-05-30 01:02:17.296136] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpnt_ppaar/invalid_0_2.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/2.sol',)
+[2022-05-30 01:02:17.309331] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpnt_ppaar/valid_1_2.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/2.sol',)
+[2022-05-30 01:02:17.320357] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpnt_ppaar/valid_0_2.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/2.sol',)
+2022-05-30T01:02:17.445Z info:     Generated 1 patches for current task
+2022-05-30T01:02:17.471Z info:     Patched source file #3 written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/3.sol
+2022-05-30T01:02:17.471Z info:     Mutation sequence file #3 for /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/3.sol written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/3.sol.mutation.json
+2022-05-30T01:02:17.506Z info:     Termination requested
+2022-05-30T01:02:17.734Z info:     Generated 1 patches for current task
+2022-05-30T01:02:17.747Z info:     Patched source file #0 written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/0.sol
+2022-05-30T01:02:17.747Z info:     Mutation sequence file #0 for /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/0.sol written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/0.sol.mutation.json
+[2022-05-30 01:02:17.751387] INFO: CR.py: Evaluating the population in CR
+[2022-05-30 01:02:17.751846] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+[2022-05-30 01:02:17.752095] INFO: CR.py: Evaluating the population in CR
+[2022-05-30 01:02:17.752354] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+Path source is ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/0.sol',)
+[2022-05-30 01:02:17.753665] INFO: SolVer.py: Start executing 4 test cases using SolVer with symbex
+Path source is ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/3.sol',)
+[2022-05-30 01:02:17.754218] INFO: SolVer.py: Start executing 4 test cases using SolVer with symbex
+[2022-05-30 01:02:17.755381] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpu8s04orc/invalid_1_0.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/0.sol',)
+[2022-05-30 01:02:17.762255] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpu8s04orc/invalid_0_0.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/0.sol',)
+[2022-05-30 01:02:17.772711] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpu8s04orc/valid_1_0.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/0.sol',)
+[2022-05-30 01:02:17.787920] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpu8s04orc/valid_0_0.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/0.sol',)
+[2022-05-30 01:02:17.800639] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpxd0x9yy7/invalid_1_3.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/3.sol',)
+[2022-05-30 01:02:17.809202] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpxd0x9yy7/invalid_0_3.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/3.sol',)
+[2022-05-30 01:02:17.817294] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpxd0x9yy7/valid_1_3.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/3.sol',)
+[2022-05-30 01:02:17.826959] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpxd0x9yy7/valid_0_3.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/3.sol',)
+The test cases execution result for 2.sol is [FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_1', additionalInfo=None), FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_0', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_1', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_0', additionalInfo=None)]
+[2022-05-30 01:02:17.846519] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 01:02:17.847028] INFO: CR.py: Calling fitnessFn_ProblemDection function
+2022-05-30T01:02:18.147Z info:     Generated 1 patches for current task
+2022-05-30T01:02:18.166Z info:     Patched source file #4 written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/4.sol
+2022-05-30T01:02:18.167Z info:     Mutation sequence file #4 for /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/4.sol written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/4.sol.mutation.json
+2022-05-30T01:02:18.227Z info:     Termination requested
+2022-05-30T01:02:18.400Z info:     Generated 1 patches for current task
+2022-05-30T01:02:18.413Z info:     Patched source file #1 written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/1.sol
+2022-05-30T01:02:18.413Z info:     Mutation sequence file #1 for /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/1.sol written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/1.sol.mutation.json
+[2022-05-30 01:02:18.417968] INFO: CR.py: Evaluating the population in CR
+[2022-05-30 01:02:18.418408] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+[2022-05-30 01:02:18.418653] INFO: CR.py: Evaluating the population in CR
+[2022-05-30 01:02:18.418858] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+Path source is ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/1.sol',)
+[2022-05-30 01:02:18.420129] INFO: SolVer.py: Start executing 4 test cases using SolVer with symbex
+Path source is ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/4.sol',)
+[2022-05-30 01:02:18.420654] INFO: SolVer.py: Start executing 4 test cases using SolVer with symbex
+[2022-05-30 01:02:18.421842] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp39dix889/invalid_1_1.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/1.sol',)
+[2022-05-30 01:02:18.430055] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp39dix889/invalid_0_1.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/1.sol',)
+[2022-05-30 01:02:18.441225] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp39dix889/valid_1_1.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/1.sol',)
+[2022-05-30 01:02:18.452301] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp39dix889/valid_0_1.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/1.sol',)
+[2022-05-30 01:02:18.460810] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpuai50whx/invalid_1_4.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/4.sol',)
+[2022-05-30 01:02:18.468709] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpuai50whx/invalid_0_4.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/4.sol',)
+[2022-05-30 01:02:18.477233] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpuai50whx/valid_1_4.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/4.sol',)
+[2022-05-30 01:02:18.486191] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpuai50whx/valid_0_4.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/4.sol',)
+The test cases execution result for 3.sol is [FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_1', additionalInfo=None), FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_0', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_1', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_0', additionalInfo=None)]
+[2022-05-30 01:02:18.716470] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 01:02:18.716940] INFO: CR.py: Calling fitnessFn_ProblemDection function
+The test cases execution result for 0.sol is [FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_1', additionalInfo=None), FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_0', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_1', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_0', additionalInfo=None)]
+[2022-05-30 01:02:18.757485] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 01:02:18.758403] INFO: CR.py: Calling fitnessFn_ProblemDection function
+2022-05-30T01:02:19.002Z info:     Generated 1 patches for current task
+2022-05-30T01:02:19.039Z info:     Patched source file #5 written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/5.sol
+2022-05-30T01:02:19.040Z info:     Mutation sequence file #5 for /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/5.sol written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/5.sol.mutation.json
+2022-05-30T01:02:19.060Z info:     Termination requested
+2022-05-30T01:02:19.210Z info:     Generated 1 patches for current task
+2022-05-30T01:02:19.224Z info:     Patched source file #2 written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/2.sol
+2022-05-30T01:02:19.226Z info:     Mutation sequence file #2 for /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/2.sol written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/2.sol.mutation.json
+[2022-05-30 01:02:19.230201] INFO: CR.py: Evaluating the population in CR
+[2022-05-30 01:02:19.230568] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+[2022-05-30 01:02:19.230788] INFO: CR.py: Evaluating the population in CR
+[2022-05-30 01:02:19.231015] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+Path source is ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/2.sol',)
+[2022-05-30 01:02:19.232613] INFO: SolVer.py: Start executing 4 test cases using SolVer with symbex
+Path source is ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/5.sol',)
+[2022-05-30 01:02:19.233147] INFO: SolVer.py: Start executing 4 test cases using SolVer with symbex
+[2022-05-30 01:02:19.234858] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp9q122ko2/invalid_1_2.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/2.sol',)
+[2022-05-30 01:02:19.242744] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp9q122ko2/invalid_0_2.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/2.sol',)
+[2022-05-30 01:02:19.252256] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp9q122ko2/valid_1_2.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/2.sol',)
+[2022-05-30 01:02:19.262014] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp9q122ko2/valid_0_2.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/2.sol',)
+[2022-05-30 01:02:19.271954] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8zluseu4/invalid_1_5.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/5.sol',)
+[2022-05-30 01:02:19.281116] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8zluseu4/invalid_0_5.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/5.sol',)
+[2022-05-30 01:02:19.290417] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8zluseu4/valid_1_5.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/5.sol',)
+[2022-05-30 01:02:19.310279] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8zluseu4/valid_0_5.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/5.sol',)
+The test cases execution result for 4.sol is [FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_1', additionalInfo=None), FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_0', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_1', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_0', additionalInfo=None)]
+[2022-05-30 01:02:19.447632] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 01:02:19.448000] INFO: CR.py: Calling fitnessFn_ProblemDection function
+The test cases execution result for 1.sol is [FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_1', additionalInfo=None), FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_0', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_1', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_0', additionalInfo=None)]
+[2022-05-30 01:02:19.569502] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 01:02:19.569921] INFO: CR.py: Calling fitnessFn_ProblemDection function
+2022-05-30T01:02:19.579Z info:     Generated 1 patches for current task
+2022-05-30T01:02:19.600Z info:     Patched source file #6 written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/6.sol
+2022-05-30T01:02:19.601Z info:     Mutation sequence file #6 for /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/6.sol written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/6.sol.mutation.json
+2022-05-30T01:02:19.626Z info:     Termination requested
+2022-05-30T01:02:19.633Z info:     Termination requested
+[2022-05-30 01:02:19.635107] INFO: CR.py: Evaluating the population in CR
+Path source is ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/6.sol',)
+[2022-05-30 01:02:19.636046] INFO: SolVer.py: Start executing 4 test cases using SolVer with symbex
+[2022-05-30 01:02:19.637005] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpz0xn8740/invalid_1_6.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/6.sol',)
+[2022-05-30 01:02:19.644640] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpz0xn8740/invalid_0_6.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/6.sol',)
+[2022-05-30 01:02:19.652641] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpz0xn8740/valid_1_6.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/6.sol',)
+[2022-05-30 01:02:19.660830] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpz0xn8740/valid_0_6.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/6.sol',)
+The test cases execution result for 5.sol is [FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_1', additionalInfo=None), FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_0', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_1', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_0', additionalInfo=None)]
+[2022-05-30 01:02:20.119482] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 01:02:20.120011] INFO: CR.py: Calling fitnessFn_ProblemDection function
+The test cases execution result for 2.sol is [FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_1', additionalInfo=None), FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_0', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_1', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_0', additionalInfo=None)]
+[2022-05-30 01:02:20.201400] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 01:02:20.201622] INFO: CR.py: Calling fitnessFn_ProblemDection function
+The test cases execution result for 6.sol is [FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_1', additionalInfo=None), FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_0', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_1', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_0', additionalInfo=None)]
+[2022-05-30 01:02:20.256096] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 01:02:20.256289] INFO: CR.py: Calling fitnessFn_ProblemDection function
+[2022-05-30 01:02:20.256855] INFO: CR.py: Currently done evaluating generation 0
+[2022-05-30 01:02:20.257189] INFO: CR.py:    	     	                                                                             	    	                                   vulnerabilities                                    
+   	     	                                                                             	    	--------------------------------------------------------------------------------------
+   	     	                                fitness values                               	    	                                 	                                              
+   	     	-----------------------------------------------------------------------------	    	                                 	                                              
+gen	evals	min                                  	max                                  	op  	#targetedVuls                    	#targetedVuls(detailed)vuls-best-patch(max: 3)
+0  	11   	{'hard': '(-2.0,)', 'soft': '(2.0,)'}	{'hard': '(-2.0,)', 'soft': '(0.0,)'}	init	(2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2)	                                              
+[2022-05-30 01:02:20.260715] INFO: CR.py: ParetoFront: 
+{'fitness values': {'min': FitnessMultiMin_improved(Hard: (-2.0,) Soft: (0.0,)), 'max': FitnessMultiMin_improved(Hard: (-2.0,) Soft: (0.0,))}, 'vulnerabilities': {'vuls-best-patch(max: 3)': {'SolVer': (FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_1', additionalInfo=None), FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_0', additionalInfo=None))}, '#targetedVuls': (2,)}}
+[2022-05-30 01:02:20.260890] INFO: CR.py: Evaluated 10 patches
+[2022-05-30 01:02:20.261438] INFO: CR.py: Performing Mutate
+[2022-05-30 01:02:20.261628] INFO: CR.py: Chosen patch as parent: Individual(MutationSequence=(), PatchedFilePath=PosixPath('/Users/hidden/DeFi/SolVer/experiment/Refund_NoSub/Refund_NoSub.sol'), ModifiedLocations=())
+[2022-05-30 01:02:20.261776] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:02:20.583Z info:     Generated 1 patches for current task
+2022-05-30T01:02:20.593Z info:     Patched source file #7 written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/7.sol
+2022-05-30T01:02:20.593Z info:     Mutation sequence file #7 for /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/7.sol written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/7.sol.mutation.json
+2022-05-30T01:02:20.621Z info:     Termination requested
+2022-05-30T01:02:20.639Z info:     Generated 1 patches for current task
+2022-05-30T01:02:20.646Z info:     Patched source file #3 written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/3.sol
+2022-05-30T01:02:20.646Z info:     Mutation sequence file #3 for /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/3.sol written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/3.sol.mutation.json
+[2022-05-30 01:02:20.648421] INFO: CR.py: Evaluating the population in CR
+Path source is ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/3.sol',)
+[2022-05-30 01:02:20.649980] INFO: SolVer.py: Start executing 4 test cases using SolVer with symbex
+[2022-05-30 01:02:20.650844] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp9j7712_m/invalid_1_3.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/3.sol',)
+[2022-05-30 01:02:20.655692] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp9j7712_m/invalid_0_3.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/3.sol',)
+[2022-05-30 01:02:20.660543] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp9j7712_m/valid_1_3.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/3.sol',)
+[2022-05-30 01:02:20.665892] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp9j7712_m/valid_0_3.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/3.sol',)
+The test cases execution result for 3.sol is [PassedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_1', additionalInfo=None, detected=False), PassedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_0', additionalInfo=None, detected=False), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_1', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_0', additionalInfo=None)]
+[2022-05-30 01:02:21.011660] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 01:02:21.011864] INFO: CR.py: Calling fitnessFn_ProblemDection function
+[2022-05-30 01:02:21.012402] INFO: CR.py: Chosen patch as parent: Individual(MutationSequence=[{'mutationType': 'ReplacementM', 'targetNodePath': ['children', '0', 'subNodes', '3', 'body', 'statements', '0', 'expression', 'arguments', '0', 'left'], 'newNode': {'type': 'BinaryOperation', 'left': {'type': 'BinaryOperation', 'operator': '+', 'left': {'type': 'IndexAccess', 'base': {'type': 'Identifier', 'name': 'balances'}, 'index': {'type': 'MemberAccess', 'expression': {'type': 'Identifier', 'name': 'msg'}, 'memberName': 'sender'}}, 'right': {'type': 'MemberAccess', 'expression': {'type': 'Identifier', 'name': 'msg'}, 'memberName': 'value'}}, 'right': {'type': 'IndexAccess', 'base': {'type': 'Identifier', 'name': 'balances'}, 'index': {'type': 'MemberAccess', 'expression': {'type': 'Identifier', 'name': 'msg'}, 'memberName': 'sender'}}, 'operator': '&'}}], PatchedFilePath='/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/0.sol', ModifiedLocations=[{'start': {'line': 24, 'column': 17}, 'end': {'line': 24, 'column': 44}}])
+[2022-05-30 01:02:21.012820] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+[2022-05-30 01:02:21.012989] INFO: CR.py: Evaluating the population in CR
+Path source is ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/7.sol',)
+[2022-05-30 01:02:21.015002] INFO: SolVer.py: Start executing 4 test cases using SolVer with symbex
+[2022-05-30 01:02:21.015982] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpk3liqfu3/invalid_1_7.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/7.sol',)
+[2022-05-30 01:02:21.021008] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpk3liqfu3/invalid_0_7.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/7.sol',)
+[2022-05-30 01:02:21.025353] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpk3liqfu3/valid_1_7.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/7.sol',)
+[2022-05-30 01:02:21.029751] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpk3liqfu3/valid_0_7.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/7.sol',)
+The test cases execution result for 7.sol is [FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_1', additionalInfo=None), FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_0', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_1', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_0', additionalInfo=None)]
+[2022-05-30 01:02:21.319268] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 01:02:21.319478] INFO: CR.py: Calling fitnessFn_ProblemDection function
+[2022-05-30 01:02:21.319851] INFO: CR.py: Chosen patch as parent: Individual(MutationSequence=[{'mutationType': 'ReplacementM', 'targetNodePath': ['children', '0', 'subNodes', '3', 'body', 'statements', '0', 'expression', 'arguments', '0'], 'newNode': {'type': 'BinaryOperation', 'left': {'type': 'IndexAccess', 'base': {'type': 'Identifier', 'name': 'balances'}, 'index': {'type': 'MemberAccess', 'expression': {'type': 'Identifier', 'name': 'msg'}, 'memberName': 'sender'}}, 'right': {'type': 'IndexAccess', 'base': {'type': 'Identifier', 'name': 'balances'}, 'index': {'type': 'MemberAccess', 'expression': {'type': 'Identifier', 'name': 'msg'}, 'memberName': 'sender'}}, 'operator': '<='}}], PatchedFilePath='/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/1.sol', ModifiedLocations=[{'start': {'line': 24, 'column': 17}, 'end': {'line': 24, 'column': 71}}])
+[2022-05-30 01:02:21.320036] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:02:21.436Z info:     Generated 1 patches for current task
+2022-05-30T01:02:21.444Z info:     Patched source file #8 written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/8.sol
+2022-05-30T01:02:21.445Z info:     Mutation sequence file #8 for /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/8.sol written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/8.sol.mutation.json
+2022-05-30T01:02:21.468Z info:     Termination requested
+2022-05-30T01:02:21.486Z info:     Termination requested
+[2022-05-30 01:02:21.489194] INFO: CR.py: Evaluating the population in CR
+Path source is ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/8.sol',)
+[2022-05-30 01:02:21.491196] INFO: SolVer.py: Start executing 4 test cases using SolVer with symbex
+[2022-05-30 01:02:21.492278] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpx_1j2whu/invalid_1_8.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/8.sol',)
+[2022-05-30 01:02:21.497002] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpx_1j2whu/invalid_0_8.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/8.sol',)
+[2022-05-30 01:02:21.502133] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpx_1j2whu/valid_1_8.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/8.sol',)
+[2022-05-30 01:02:21.507383] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpx_1j2whu/valid_0_8.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/8.sol',)
+The test cases execution result for 8.sol is [FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_1', additionalInfo=None), FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_0', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_1', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_0', additionalInfo=None)]
+[2022-05-30 01:02:21.819949] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 01:02:21.820175] INFO: CR.py: Calling fitnessFn_ProblemDection function
+[2022-05-30 01:02:21.820581] INFO: CR.py: Chosen patch as parent: Individual(MutationSequence=[{'mutationType': 'ReplacementM', 'targetNodePath': ['children', '0', 'subNodes', '3', 'body', 'statements', '0', 'expression', 'arguments', '0'], 'newNode': {'type': 'BinaryOperation', 'left': {'type': 'IndexAccess', 'base': {'type': 'Identifier', 'name': 'balances'}, 'index': {'type': 'MemberAccess', 'expression': {'type': 'Identifier', 'name': 'msg'}, 'memberName': 'sender'}}, 'right': {'type': 'IndexAccess', 'base': {'type': 'Identifier', 'name': 'balances'}, 'index': {'type': 'MemberAccess', 'expression': {'type': 'Identifier', 'name': 'msg'}, 'memberName': 'sender'}}, 'operator': '!='}}], PatchedFilePath='/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/2.sol', ModifiedLocations=[{'start': {'line': 24, 'column': 17}, 'end': {'line': 24, 'column': 71}}])
+[2022-05-30 01:02:21.820778] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:02:21.965Z info:     Generated 1 patches for current task
+2022-05-30T01:02:21.974Z info:     Patched source file #4 written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/4.sol
+2022-05-30T01:02:21.975Z info:     Mutation sequence file #4 for /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/4.sol written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/4.sol.mutation.json
+2022-05-30T01:02:21.984Z info:     Generated 1 patches for current task
+2022-05-30T01:02:21.987Z info:     Termination requested
+2022-05-30T01:02:21.991Z info:     Patched source file #9 written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/9.sol
+2022-05-30T01:02:21.992Z info:     Mutation sequence file #9 for /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/9.sol written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/9.sol.mutation.json
+[2022-05-30 01:02:21.994091] INFO: CR.py: Evaluating the population in CR
+Path source is ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/4.sol',)
+[2022-05-30 01:02:21.994777] INFO: SolVer.py: Start executing 4 test cases using SolVer with symbex
+[2022-05-30 01:02:21.995289] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpv5or9g2m/invalid_1_4.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/4.sol',)
+[2022-05-30 01:02:21.999715] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpv5or9g2m/invalid_0_4.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/4.sol',)
+[2022-05-30 01:02:22.004575] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpv5or9g2m/valid_1_4.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/4.sol',)
+[2022-05-30 01:02:22.008950] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpv5or9g2m/valid_0_4.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/4.sol',)
+The test cases execution result for 4.sol is [FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_1', additionalInfo=None), FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_0', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_1', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_0', additionalInfo=None)]
+[2022-05-30 01:02:22.328852] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 01:02:22.329251] INFO: CR.py: Calling fitnessFn_ProblemDection function
+[2022-05-30 01:02:22.329753] INFO: CR.py: Evaluating the population in CR
+Path source is ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/3.sol',)
+[2022-05-30 01:02:22.332173] INFO: SolVer.py: Start executing 4 test cases using SolVer with symbex
+Path source is ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/7.sol',)
+[2022-05-30 01:02:22.333814] INFO: SolVer.py: Start executing 4 test cases using SolVer with symbex
+Path source is ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/8.sol',)
+[2022-05-30 01:02:22.334755] INFO: SolVer.py: Start executing 4 test cases using SolVer with symbex
+Path source is ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/4.sol',)
+[2022-05-30 01:02:22.335492] INFO: SolVer.py: Start executing 4 test cases using SolVer with symbex
+[2022-05-30 01:02:22.336303] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_ha18y9i/invalid_1_3.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/3.sol',)
+[2022-05-30 01:02:22.341425] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_ha18y9i/invalid_0_3.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/3.sol',)
+[2022-05-30 01:02:22.346837] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_ha18y9i/valid_1_3.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/3.sol',)
+[2022-05-30 01:02:22.353631] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_ha18y9i/valid_0_3.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/3.sol',)
+[2022-05-30 01:02:22.359144] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpubrayw98/invalid_1_7.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/7.sol',)
+[2022-05-30 01:02:22.367739] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpubrayw98/invalid_0_7.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/7.sol',)
+[2022-05-30 01:02:22.376397] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpubrayw98/valid_1_7.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/7.sol',)
+[2022-05-30 01:02:22.383774] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpubrayw98/valid_0_7.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/7.sol',)
+[2022-05-30 01:02:22.392336] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpzv9q6wx4/invalid_1_8.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/8.sol',)
+[2022-05-30 01:02:22.404436] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpzv9q6wx4/invalid_0_8.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/8.sol',)
+[2022-05-30 01:02:22.437596] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpzv9q6wx4/valid_1_8.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/8.sol',)
+[2022-05-30 01:02:22.445858] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpzv9q6wx4/valid_0_8.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp8q6x2w3y/8.sol',)
+[2022-05-30 01:02:22.453965] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmptrr_e_33/invalid_1_4.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/4.sol',)
+[2022-05-30 01:02:22.461512] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmptrr_e_33/invalid_0_4.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/4.sol',)
+[2022-05-30 01:02:22.469426] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmptrr_e_33/valid_1_4.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/4.sol',)
+[2022-05-30 01:02:22.477457] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmptrr_e_33/valid_0_4.sol Refund_NoSub for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/4.sol',)
+The test cases execution result for 3.sol is [PassedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_1', additionalInfo=None, detected=False), PassedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_0', additionalInfo=None, detected=False), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_1', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_0', additionalInfo=None)]
+The test cases execution result for 7.sol is [FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_1', additionalInfo=None), FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_0', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_1', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_0', additionalInfo=None)]
+The test cases execution result for 8.sol is [FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_1', additionalInfo=None), FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_0', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_1', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_0', additionalInfo=None)]
+The test cases execution result for 4.sol is [FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_1', additionalInfo=None), FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/invalid_0', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_1', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Refund_NoSub/valid_0', additionalInfo=None)]
+[2022-05-30 01:02:23.392257] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 01:02:23.392671] INFO: CR.py: Calling fitnessFn_ProblemDection function
+[2022-05-30 01:02:23.392919] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 01:02:23.393058] INFO: CR.py: Calling fitnessFn_ProblemDection function
+[2022-05-30 01:02:23.393343] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 01:02:23.393521] INFO: CR.py: Calling fitnessFn_ProblemDection function
+[2022-05-30 01:02:23.393820] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 01:02:23.394025] INFO: CR.py: Calling fitnessFn_ProblemDection function
+[2022-05-30 01:02:23.394434] INFO: CR.py: Currently done evaluating generation 1
+[2022-05-30 01:02:23.394703] INFO: CR.py:    	     	                                                                             	      	                                   vulnerabilities                                    
+   	     	                                                                             	      	--------------------------------------------------------------------------------------
+   	     	                                fitness values                               	      	                                 	                                              
+   	     	-----------------------------------------------------------------------------	      	                                 	                                              
+gen	evals	min                                  	max                                  	op    	#targetedVuls                    	#targetedVuls(detailed)vuls-best-patch(max: 3)
+0  	11   	{'hard': '(-2.0,)', 'soft': '(2.0,)'}	{'hard': '(-2.0,)', 'soft': '(0.0,)'}	init  	(2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2)	                                              
+1  	4    	{'hard': '(-2.0,)', 'soft': '(1.0,)'}	{'hard': '(0.0,)', 'soft': '(1.0,)'} 	mutate	(0, 2, 2, 2)                     	                                              
+[2022-05-30 01:02:23.395819] INFO: CR.py: ParetoFront: 
+{'fitness values': {'min': FitnessMultiMin_improved(Hard: (0.0,) Soft: (1.0,)), 'max': FitnessMultiMin_improved(Hard: (0.0,) Soft: (1.0,))}, 'vulnerabilities': {'vuls-best-patch(max: 3)': {}, '#targetedVuls': (0,)}}
+[2022-05-30 01:02:23.395995] INFO: CR.py: Evaluated 14 patches
+[2022-05-30 01:02:23.396253] INFO: CR.py:                   	     	                                                                             	      	                                   vulnerabilities                                    
+                  	     	                                                                             	      	--------------------------------------------------------------------------------------
+                  	     	                                fitness values                               	      	                                 	                                              
+                  	     	-----------------------------------------------------------------------------	      	                                 	                                              
+gen               	evals	min                                  	max                                  	op    	#targetedVuls                    	#targetedVuls(detailed)vuls-best-patch(max: 3)
+0                 	11   	{'hard': '(-2.0,)', 'soft': '(2.0,)'}	{'hard': '(-2.0,)', 'soft': '(0.0,)'}	init  	(2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2)	                                              
+1                 	4    	{'hard': '(-2.0,)', 'soft': '(1.0,)'}	{'hard': '(0.0,)', 'soft': '(1.0,)'} 	mutate	(0, 2, 2, 2)                     	                                              
+plausible-last-gen	1    	{'hard': '(0.0,)', 'soft': '(1.0,)'} 	{'hard': '(0.0,)', 'soft': '(1.0,)'} 	mutate	(0,)                             	                                              
+[2022-05-30 01:02:23.397142] INFO: CR.py: Plausible patches details:
+[Individual(MutationSequence=[{'targetNodePath': ['children', '0', 'subNodes', '5', 'body'], 'targetPropertyPath': ['children', '0', 'subNodes', '5', 'body', 'statements'], 'insertIndex': 1, 'newNode': {'type': 'ExpressionStatement', 'expression': {'type': 'BinaryOperation', 'left': {'type': 'IndexAccess', 'base': {'type': 'Identifier', 'name': 'balances'}, 'index': {'type': 'MemberAccess', 'expression': {'type': 'Identifier', 'name': 'msg'}, 'memberName': 'sender'}}, 'right': {'type': 'NumberLiteral', 'number': '0', 'subdenomination': None}, 'operator': '='}}, 'mutationType': 'InsertionM'}], PatchedFilePath='/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/3.sol', ModifiedLocations=[{'start': {'line': 34, 'column': 30}, 'end': {'line': 37, 'column': 5}}])]
+[2022-05-30 01:02:23.397275] INFO: CR.py: Evaluated 14 patches
+Testing equivalence... 2
+The valid implementation is EQUIVALENT: ../DeFi/SolVer/experiment/Refund_NoSub/patched/patched_2.sol
+[2022-05-30 01:02:24.024607] INFO: CR.py: Terminating...
+Source files after applying plausible patches are in:
+/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_evpn3qt/3.sol
+python3 CLI.py --targetContractName Refund_NoSub repair   54.93s user 4.04s system 483% cpu 12.187 total

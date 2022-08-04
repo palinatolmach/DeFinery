@@ -1,0 +1,845 @@
+-> % time  ./solver/solver -symexe-main ../contracts/Value.sol Value
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+dumping contract information: 
+Contract: User
+	State Variables:
+		value
+	Modifiers:
+	Functions:
+		User::governanceRecoverUnsupported:function (address)
+		User::initialize:function (address,address,address)
+		User::setValue:function (address)
+	Local Variables:
+		_token@743
+		_busd@725
+		_wbnb@723
+		_stake@721
+		_value@709
+
+Contract: _MAIN_
+	Constructor: _MAIN_()
+	State Variables:
+		new_busd
+		$calling_init
+		new_wbnb
+		hacker
+		user
+		wbnb
+		stake
+		res
+		busd
+		pool
+		init
+	Modifiers:
+	Functions:
+		_MAIN_::declare_property:function (bool)
+		_MAIN_:::function ()
+		_MAIN_::declare_path:function (uint256,string)
+	Local Variables:
+		newToken@983
+		token_init@921
+		method@762
+		oldToken@912
+		property@768
+		path@760
+
+Contract: Token
+	State Variables:
+		allowance
+		totalSupply
+		balanceOf
+	Modifiers:
+	Functions:
+		Token::setBalances:function (address,uint256)
+		Token::getTotalSupply:function () returns (uint256)
+		Token::transferFrom:function (address,address,uint256) returns (bool)
+		Token::approve:function (address,uint256) returns (bool)
+		Token::doTransfer:function (address,uint256) returns (bool)
+		Token::getBalanceOf:function (address) returns (uint256)
+	Local Variables:
+		amount@198
+		success@134
+		wad@131
+		_user@196
+		success@111
+		dst@129
+		wad@108
+		guy@85
+		dst@106
+		wad@87
+		appr@90
+		balance@68
+		src@127
+		tS@78
+		usr@65
+
+Contract: Value
+	State Variables:
+		rewardPoolInfo
+		stakeToken
+		wbnb
+		publicAllowed
+		startRewardBlock
+		_locked
+		userInfo
+		initialized
+		endRewardBlock
+		reserveFund
+		busd
+		operator
+		BLOCKS_PER_DAY
+	Modifiers:
+		checkPublicAllow
+		notInitialized
+		lock
+		onlyReserveFund
+		onlyOperator
+	Functions:
+		Value::governanceRecoverUnsupported:function (address,uint256,address)
+		Value::withdraw:function (uint256)
+		Value::_safeTokenTransfer:function (address,address,uint256)
+		Value::_deposit:function (address,uint256)
+		Value::getStakeToken:function () returns (address)
+		Value::depositFor:function (address,uint256)
+		Value::setReserveFund:function (address)
+		Value::deposit:function (uint256)
+		Value::_withdraw:function (address,uint256)
+		Value::setOperator:function (address)
+		Value::emergencyWithdraw:function (uint256)
+		Value::initialize:function (address,address,address,address,uint256)
+	Local Variables:
+		amount@681
+		_token@679
+		_amount@637
+		_to@635
+		user@572
+		_token@633
+		_amount@566
+		_busd@357
+		_amount@510
+		_amount@485
+		_account@483
+		_startRewardBlock@361
+		_amount@459
+		_amount@554
+		_amount@436
+		_reserveFund@422
+		_amount@579
+		user@516
+		_operator@402
+		to@683
+		staked@534
+		user@442
+		_tokenBal@641
+		_reserveFund@359
+		_account@434
+		_wbnb@355
+		_stakeToken@353
+		_account@508
+		_token@415
+
+Contract: IERC20
+	State Variables:
+	Modifiers:
+	Functions:
+		IERC20::transferFrom:function (address,address,uint256) returns (bool)
+		IERC20::approve:function (address,uint256) returns (bool)
+		IERC20::allowance:function (address,address) returns (uint256)
+		IERC20::doTransfer:function (address,uint256) returns (bool)
+		IERC20::getBalanceOf:function (address) returns (uint256)
+		IERC20::totalSupply:function () returns (uint256)
+	Local Variables:
+		recipient@43
+		approved@37
+		sender@41
+		amount@34
+		amount@45
+		owner@23
+		success@19
+		recipient@14
+		bal@10
+		allowed@28
+		amount@16
+		spender@32
+		spender@25
+		account@7
+		success@48
+		ts@3
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+initName: balance%1%_0_
+After state allocation: 
+Added path@760%1% to unsigned 
+After allocation: 
++++++++++++++ printing context +++++++++++++++
+idNum: 2, addr: 0x7f8a970041f0
+sourceContext: nullptr
+	state variables: 
+		varName: busd%1%, value: 0, sort: Int
+		varName: user%1%, value: 0, sort: Int
+		varName: hacker%1%, value: 0, sort: Int
+		varName: $calling_init%1%, value: $calling_init%1%, sort: (_ BitVec 64)
+		varName: pool%1%, value: 0, sort: Int
+		varName: new_wbnb%1%, value: 0, sort: Int
+		varName: msg.value, value: msg.value_0_, sort: (_ BitVec 64)
+		varName: res%1%, value: ((as const (Array Int (_ BitVec 64))) #x0000000000000000), sort: (Array Int (_ BitVec 64))
+		varName: new_busd%1%, value: 0, sort: Int
+		varName: init%1%, value: ((as const (Array Int (_ BitVec 64))) #x0000000000000000), sort: (Array Int (_ BitVec 64))
+		varName: balance%1%, value: balance%1%_0_, sort: (_ BitVec 64)
+		varName: stake%1%, value: 0, sort: Int
+		varName: block.timestamp, value: block.timestamp_0_, sort: Int
+		varName: wbnb%1%, value: 0, sort: Int
+		varName: msg.sender, value: msg.sender_0_, sort: Int
+	local variables: 
+		varName: path@760%1%, value: #x0000000000000000, sort: (_ BitVec 64)
+		varName: oldToken@912%1%, value: 0, sort: Int
+		varName: method@762%1%, value: "", sort: String
+		varName: token_init@921%1%, value: 0, sort: Int
+		varName: property@768%1%, value: false, sort: Bool
+		varName: newToken@983%1%, value: 0, sort: Int
+	path conditions: 
+	goHead: 1
+	current Address: 1
+	msg.sender: 0
+	current Function Scope: 
+	abnormal Termination: None
+Call Stack: 
+++++++++++++ end of printing context +++++++++++++++
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:283:9: 
+    |
+283 |         user = new User();
+    |         ^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Allocation is done: 
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:284:9: 
+    |
+284 |         wbnb = new Token();
+    |         ^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Allocation is done: 
+Added amount@198%3% to unsigned 
+Added wad@131%3% to unsigned 
+Added wad@108%3% to unsigned 
+Added wad@87%3% to unsigned 
+Added balance@68%3% to unsigned 
+Added tS@78%3% to unsigned 
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:285:9: 
+    |
+285 |         busd = new Token();
+    |         ^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Allocation is done: 
+Added amount@198%4% to unsigned 
+Added wad@131%4% to unsigned 
+Added wad@108%4% to unsigned 
+Added wad@87%4% to unsigned 
+Added balance@68%4% to unsigned 
+Added tS@78%4% to unsigned 
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:286:9: 
+    |
+286 |         stake = new Token();
+    |         ^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Allocation is done: 
+Added amount@198%5% to unsigned 
+Added wad@131%5% to unsigned 
+Added wad@108%5% to unsigned 
+Added wad@87%5% to unsigned 
+Added balance@68%5% to unsigned 
+Added tS@78%5% to unsigned 
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:287:9: 
+    |
+287 |         hacker = new Token();
+    |         ^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Allocation is done: 
+Added amount@198%6% to unsigned 
+Added wad@131%6% to unsigned 
+Added wad@108%6% to unsigned 
+Added wad@87%6% to unsigned 
+Added balance@68%6% to unsigned 
+Added tS@78%6% to unsigned 
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:288:9: 
+    |
+288 |         pool = new Value();
+    |         ^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Struct Type: RewardPoolInfo
+Struct Type: UserInfo
+Allocation is done: 
+Address of the repaired contract is 7
+Value is name 
+Added amount@681%7% to unsigned 
+Added _amount@637%7% to unsigned 
+Struct Type: UserInfo
+Added _amount@566%7% to unsigned 
+Added _amount@510%7% to unsigned 
+Added _amount@485%7% to unsigned 
+Added _startRewardBlock@361%7% to unsigned 
+Added _amount@459%7% to unsigned 
+Added _amount@554%7% to unsigned 
+Added _amount@436%7% to unsigned 
+Added _amount@579%7% to unsigned 
+Struct Type: UserInfo
+Struct Type: UserInfo
+Added _tokenBal@641%7% to unsigned 
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:290:9: 
+    |
+290 |         new_wbnb = new Token();
+    |         ^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Allocation is done: 
+Added amount@198%8% to unsigned 
+Added wad@131%8% to unsigned 
+Added wad@108%8% to unsigned 
+Added wad@87%8% to unsigned 
+Added balance@68%8% to unsigned 
+Added tS@78%8% to unsigned 
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:291:9: 
+    |
+291 |         new_busd = new Token();
+    |         ^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Allocation is done: 
+Added amount@198%9% to unsigned 
+Added wad@131%9% to unsigned 
+Added wad@108%9% to unsigned 
+Added wad@87%9% to unsigned 
+Added balance@68%9% to unsigned 
+Added tS@78%9% to unsigned 
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:293:9: 
+    |
+293 |         hacker.setBalances(address(user), 100);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Value.sol:56:9: 
+   |
+56 |         balanceOf[_user] = amount;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:294:9: 
+    |
+294 |         hacker.setBalances(address(pool), 100);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Value.sol:56:9: 
+   |
+56 |         balanceOf[_user] = amount;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:296:9: 
+    |
+296 |         stake.setBalances(address(pool), 100);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Value.sol:56:9: 
+   |
+56 |         balanceOf[_user] = amount;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:297:9: 
+    |
+297 |         stake.setBalances(address(user), 100);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Value.sol:56:9: 
+   |
+56 |         balanceOf[_user] = amount;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:299:9: 
+    |
+299 |         pool.initialize(address(stake), address(wbnb), address(busd), address(this), 0);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+executeModifier() is executed!
+modifierIndex: 0
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:130:9: 
+    |
+130 |         require(!initialized, "ProfitSharingRewardPool: initialized");
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+translating 
+printing propertyExpr: (not false)
+======= ======= ======= ======= ======= ======= =======
+positive branch is possible! Go head with it!
+*** require() statement is satisfied!! ****
+======= ======= ======= ======= ======= ======= =======
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:131:9: 
+    |
+131 |         _;
+    |         ^
+-------------------------------------------------
+executeModifier() is executed!
+modifierIndex: 1
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:150:9: 
+    |
+150 |         stakeToken = _stakeToken;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:151:9: 
+    |
+151 |         wbnb = _wbnb;
+    |         ^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:152:9: 
+    |
+152 |         busd = _busd;
+    |         ^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:153:9: 
+    |
+153 |         reserveFund = _reserveFund;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:154:9: 
+    |
+154 |         startRewardBlock = _startRewardBlock;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:155:9: 
+    |
+155 |         endRewardBlock = _startRewardBlock;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:157:9: 
+    |
+157 |         operator = msg.sender;
+    |         ^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:158:9: 
+    |
+158 |         _locked = 0;
+    |         ^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:300:9: 
+    |
+300 |         user.setValue(address(pool));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:250:9: 
+    |
+250 |         value = Value(_value);
+    |         ^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:302:9: 
+    |
+302 |         address oldToken;
+    |         ^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:303:9: 
+    |
+303 |         oldToken = pool.getStakeToken();
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:166:9: 
+    |
+166 |         return stakeToken;
+    |         ^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:305:9: 
+    |
+305 |         address token_init;
+    |         ^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:306:9: 
+    |
+306 |         token_init = address(hacker);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:308:9: 
+    |
+308 |         __assume__($calling_init == 0 || $calling_init == 1 || $calling_init == 2);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:311:9: 
+    |
+311 |         if ($calling_init == 0) {
+    |         ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+TRUE branch is feasible! Follow it.
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:311:33: 
+    |
+311 |         if ($calling_init == 0) {
+    |                                 ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:312:13: 
+    |
+312 |             user.initialize(token_init, address(new_wbnb), address(new_busd));
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:254:9: 
+    |
+254 |         value.initialize(_stake, _wbnb, _busd, address(this), 10);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+executeModifier() is executed!
+modifierIndex: 0
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:130:9: 
+    |
+130 |         require(!initialized, "ProfitSharingRewardPool: initialized");
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+translating 
+printing propertyExpr: (not false)
+======= ======= ======= ======= ======= ======= =======
+positive branch is possible! Go head with it!
+*** require() statement is satisfied!! ****
+======= ======= ======= ======= ======= ======= =======
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:131:9: 
+    |
+131 |         _;
+    |         ^
+-------------------------------------------------
+executeModifier() is executed!
+modifierIndex: 1
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:150:9: 
+    |
+150 |         stakeToken = _stakeToken;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:151:9: 
+    |
+151 |         wbnb = _wbnb;
+    |         ^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:152:9: 
+    |
+152 |         busd = _busd;
+    |         ^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:153:9: 
+    |
+153 |         reserveFund = _reserveFund;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:154:9: 
+    |
+154 |         startRewardBlock = _startRewardBlock;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:155:9: 
+    |
+155 |         endRewardBlock = _startRewardBlock;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:157:9: 
+    |
+157 |         operator = msg.sender;
+    |         ^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:158:9: 
+    |
+158 |         _locked = 0;
+    |         ^^^^^^^^^^^
+-------------------------------------------------
+FALSE branch is feasible! Follow it.
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:313:16: 
+    |
+313 |         } else if ($calling_init == 1) {
+    |                ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+TRUE branch is feasible! Follow it.
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:313:40: 
+    |
+313 |         } else if ($calling_init == 1) {
+    |                                        ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:314:13: 
+    |
+314 |             pool.initialize(token_init, address(new_wbnb), address(new_busd), address(this), 0);
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+executeModifier() is executed!
+modifierIndex: 0
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:130:9: 
+    |
+130 |         require(!initialized, "ProfitSharingRewardPool: initialized");
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+translating 
+printing propertyExpr: (not false)
+======= ======= ======= ======= ======= ======= =======
+positive branch is possible! Go head with it!
+*** require() statement is satisfied!! ****
+======= ======= ======= ======= ======= ======= =======
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:131:9: 
+    |
+131 |         _;
+    |         ^
+-------------------------------------------------
+executeModifier() is executed!
+modifierIndex: 1
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:150:9: 
+    |
+150 |         stakeToken = _stakeToken;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:151:9: 
+    |
+151 |         wbnb = _wbnb;
+    |         ^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:152:9: 
+    |
+152 |         busd = _busd;
+    |         ^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:153:9: 
+    |
+153 |         reserveFund = _reserveFund;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:154:9: 
+    |
+154 |         startRewardBlock = _startRewardBlock;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:155:9: 
+    |
+155 |         endRewardBlock = _startRewardBlock;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:157:9: 
+    |
+157 |         operator = msg.sender;
+    |         ^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:158:9: 
+    |
+158 |         _locked = 0;
+    |         ^^^^^^^^^^^
+-------------------------------------------------
+FALSE branch is feasible! Follow it.
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:315:16: 
+    |
+315 |         } else {
+    |                ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:319:9: 
+    |
+319 |         address newToken;
+    |         ^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:319:9: 
+    |
+319 |         address newToken;
+    |         ^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:319:9: 
+    |
+319 |         address newToken;
+    |         ^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:320:9: 
+    |
+320 |         newToken = pool.getStakeToken();
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:166:9: 
+    |
+166 |         return stakeToken;
+    |         ^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:320:9: 
+    |
+320 |         newToken = pool.getStakeToken();
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:166:9: 
+    |
+166 |         return stakeToken;
+    |         ^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:320:9: 
+    |
+320 |         newToken = pool.getStakeToken();
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:166:9: 
+    |
+166 |         return stakeToken;
+    |         ^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:322:9: 
+    |
+322 |         declare_property(oldToken == newToken && oldToken == address(stake));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:322:9: 
+    |
+322 |         declare_property(oldToken == newToken && oldToken == address(stake));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Value.sol:322:9: 
+    |
+322 |         declare_property(oldToken == newToken && oldToken == address(stake));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+result context [1]: 
+Is possibly reentrant: 0
+RESULT: 0
+The trace is INVALID
+$calling_init = 0
+result context [2]: 
+Is possibly reentrant: 0
+RESULT: 0
+The trace is INVALID
+$calling_init = 1
+result context [3]: 
+Is possibly reentrant: 0
+RESULT: 1
+The trace is VALID
+$calling_init = 2
+Recording summary, validCount: 1
+./solver/solver -symexe-main ../contracts/Value.sol Value  0.44s user 0.04s system 96% cpu 0.500 total

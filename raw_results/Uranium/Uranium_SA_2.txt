@@ -1,0 +1,1033 @@
+-> % time ./solver/solver -symexe-main ../contracts/Uranium.sol Uranium
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+dumping contract information: 
+Contract: _MAIN_
+	Constructor: _MAIN_()
+	State Variables:
+		$init1
+		testVal_1
+		$init0
+		res
+		testVal_0
+		init
+	Modifiers:
+	Functions:
+		_MAIN_::declare_uint_variable:function (uint256)
+		_MAIN_::declare_property:function (bool)
+		_MAIN_:::function ()
+		_MAIN_::declare_path:function (int256,string)
+	Local Variables:
+		res_usr@794
+		variable@588
+		res_urn@786
+		urn_usdc@766
+		urn_usdc_init@679
+		urn@647
+		usdc@615
+		dai@618
+		uranium@612
+		property@582
+		func@576
+		path@574
+
+Contract: Uranium
+	Constructor: Uranium()
+	State Variables:
+		dai
+		usdc
+		borrowIndex
+		reserve1
+		totalReserves
+		totalBorrows
+		reserve0
+	Modifiers:
+	Functions:
+		Uranium::_update:function (uint256,uint256,uint256,uint256)
+		Uranium::swap:function (uint256,uint256,address)
+		Uranium:::function (uint256,uint256,address,address)
+	Local Variables:
+		_reserve1@559
+		_balance0@553
+		_balance1@555
+		balance1Adjusted@519
+		_reserve0@557
+		balance0Adjusted@509
+		amount1In@453
+		amount0In@450
+		balance0@422
+		balance1@425
+		_usdc@328
+		_reserve0@360
+		to@356
+		amount1Out@354
+		_dai@330
+		_reserve1@326
+		_reserve1@364
+		_reserve0@324
+		amount0Out@352
+
+Contract: DAI
+	State Variables:
+		allowance
+		totalSupply
+		balanceOf
+	Modifiers:
+	Functions:
+		DAI::setBalances_DAI:function (address,uint256)
+		DAI::transfer:function (address,uint256) returns (bool)
+		DAI::getTotalSupply:function () returns (uint256)
+		DAI::transferFrom:function (address,address,uint256) returns (bool)
+		DAI::approve:function (address,uint256) returns (bool)
+		DAI::getBalanceOf:function (address) returns (uint256)
+	Local Variables:
+		success@233
+		wad@230
+		_user@295
+		dst@228
+		success@214
+		wad@211
+		appr@193
+		tS@181
+		dst@209
+		wad@190
+		guy@188
+		balance@171
+		amount@297
+		src@226
+		usr@168
+
+Contract: USDC
+	State Variables:
+		allowance
+		totalSupply
+		balanceOf
+	Modifiers:
+	Functions:
+		USDC::setBalances_USDC:function (address,uint256)
+		USDC::transfer:function (address,uint256) returns (bool)
+		USDC::getTotalSupply:function () returns (uint256)
+		USDC::transferFrom:function (address,address,uint256) returns (bool)
+		USDC::approve:function (address,uint256) returns (bool)
+		USDC::getBalanceOf:function (address) returns (uint256)
+	Local Variables:
+		amount@143
+		_user@141
+		wad@76
+		wad@36
+		balance@17
+		dst@74
+		wad@57
+		src@72
+		success@60
+		dst@55
+		guy@34
+		success@79
+		tS@27
+		appr@39
+		usr@14
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+initName: balance%1%_0_
+After state allocation: 
+Added res_usr@794%1% to unsigned 
+Added variable@588%1% to unsigned 
+Added res_urn@786%1% to unsigned 
+Added urn_usdc@766%1% to unsigned 
+Added urn_usdc_init@679%1% to unsigned 
+After allocation: 
++++++++++++++ printing context +++++++++++++++
+idNum: 2, addr: 0x7f83850041f0
+sourceContext: nullptr
+	state variables: 
+		varName: testVal_0%1%, value: #x0000000000000000, sort: (_ BitVec 64)
+		varName: res%1%, value: ((as const (Array Int (_ BitVec 64))) #x0000000000000000), sort: (Array Int (_ BitVec 64))
+		varName: $init0%1%, value: $init0%1%, sort: (_ BitVec 64)
+		varName: testVal_1%1%, value: #x0000000000000000, sort: (_ BitVec 64)
+		varName: $init1%1%, value: $init1%1%, sort: (_ BitVec 64)
+		varName: balance%1%, value: balance%1%_0_, sort: (_ BitVec 64)
+		varName: init%1%, value: ((as const (Array Int (_ BitVec 64))) #x0000000000000000), sort: (Array Int (_ BitVec 64))
+		varName: msg.value, value: msg.value_0_, sort: (_ BitVec 64)
+		varName: block.timestamp, value: block.timestamp_0_, sort: Int
+		varName: msg.sender, value: msg.sender_0_, sort: Int
+	local variables: 
+		varName: dai@618%1%, value: 0, sort: Int
+		varName: urn@647%1%, value: 0, sort: Int
+		varName: func@576%1%, value: "", sort: String
+		varName: property@582%1%, value: false, sort: Bool
+		varName: usdc@615%1%, value: 0, sort: Int
+		varName: urn_usdc_init@679%1%, value: #x0000000000000000, sort: (_ BitVec 64)
+		varName: urn_usdc@766%1%, value: #x0000000000000000, sort: (_ BitVec 64)
+		varName: variable@588%1%, value: #x0000000000000000, sort: (_ BitVec 64)
+		varName: res_urn@786%1%, value: #x0000000000000000, sort: (_ BitVec 64)
+		varName: path@574%1%, value: #x0000000000000000, sort: (_ BitVec 64)
+		varName: uranium@612%1%, value: 0, sort: Int
+		varName: res_usr@794%1%, value: #x0000000000000000, sort: (_ BitVec 64)
+	path conditions: 
+	goHead: 1
+	current Address: 1
+	msg.sender: 0
+	current Function Scope: 
+	abnormal Termination: None
+Call Stack: 
+++++++++++++ end of printing context +++++++++++++++
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:175:9: 
+    |
+175 |         Uranium uranium;
+    |         ^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:176:9: 
+    |
+176 |         USDC usdc;
+    |         ^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:177:9: 
+    |
+177 |         DAI dai;
+    |         ^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:180:9: 
+    |
+180 |         usdc = new USDC();
+    |         ^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Allocation is done: 
+Added amount@143%2% to unsigned 
+Added wad@76%2% to unsigned 
+Added wad@36%2% to unsigned 
+Added balance@17%2% to unsigned 
+Added wad@57%2% to unsigned 
+Added tS@27%2% to unsigned 
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:181:9: 
+    |
+181 |         dai = new DAI();
+    |         ^^^^^^^^^^^^^^^
+-------------------------------------------------
+Allocation is done: 
+Added wad@230%3% to unsigned 
+Added wad@211%3% to unsigned 
+Added tS@181%3% to unsigned 
+Added wad@190%3% to unsigned 
+Added balance@171%3% to unsigned 
+Added amount@297%3% to unsigned 
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:183:9: 
+    |
+183 |         uranium = new Uranium(1000, 1000, address(usdc), address(dai));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Allocation is done: 
+Address of the repaired contract is 4
+Uranium is name 
+Added _reserve1@559%4% to unsigned 
+Added _balance0@553%4% to unsigned 
+Added _balance1@555%4% to unsigned 
+Added balance1Adjusted@519%4% to unsigned 
+Added _reserve0@557%4% to unsigned 
+Added balance0Adjusted@509%4% to unsigned 
+Added amount1In@453%4% to unsigned 
+Added amount0In@450%4% to unsigned 
+Added balance0@422%4% to unsigned 
+Added balance1@425%4% to unsigned 
+Added _reserve0@360%4% to unsigned 
+Added amount1Out@354%4% to unsigned 
+Added _reserve1@326%4% to unsigned 
+Added _reserve1@364%4% to unsigned 
+Added _reserve0@324%4% to unsigned 
+Added amount0Out@352%4% to unsigned 
+_executeConstructors() is called for: Uranium
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:102:9: 
+    |
+102 |         reserve0 = _reserve0;
+    |         ^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:103:9: 
+    |
+103 |         reserve1 = _reserve1;
+    |         ^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:104:9: 
+    |
+104 |         usdc = _usdc;
+    |         ^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:105:9: 
+    |
+105 |         dai = _dai;
+    |         ^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:184:9: 
+    |
+184 |         address urn;
+    |         ^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:185:9: 
+    |
+185 |         urn = address(uranium);
+    |         ^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:187:9: 
+    |
+187 |         dai.setBalances_DAI(urn, 1000);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Uranium.sol:86:9: 
+   |
+86 |         balanceOf[_user] = amount;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:188:9: 
+    |
+188 |         usdc.setBalances_USDC(urn, 1000);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Uranium.sol:42:9: 
+   |
+42 |         balanceOf[_user] = amount;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:194:9: 
+    |
+194 |         init[urn] = dai.getBalanceOf(urn);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Uranium.sol:52:9: 
+   |
+52 |         return balanceOf[usr];
+   |         ^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:195:9: 
+    |
+195 |         uint urn_usdc_init; urn_usdc_init = usdc.getBalanceOf(urn);
+    |         ^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:195:29: 
+    |
+195 |         uint urn_usdc_init; urn_usdc_init = usdc.getBalanceOf(urn);
+    |                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+ --> ../contracts/Uranium.sol:7:9: 
+  |
+7 |         return balanceOf[usr];
+  |         ^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:196:9: 
+    |
+196 |         init[urn] = urn_usdc_init * init[urn];
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:199:9: 
+    |
+199 |         dai.setBalances_DAI(address(this), 100);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Uranium.sol:86:9: 
+   |
+86 |         balanceOf[_user] = amount;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:200:9: 
+    |
+200 |         usdc.setBalances_USDC(address(this), 0);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Uranium.sol:42:9: 
+   |
+42 |         balanceOf[_user] = amount;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:202:9: 
+    |
+202 |         __assume__($init0 > 0 && $init0 <= 100);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:203:9: 
+    |
+203 |         dai.transferFrom(address(this), urn, $init0);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Uranium.sol:72:9: 
+   |
+72 |         require(balanceOf[src] >= wad);
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+translating 
+printing propertyExpr: (let ((a!1 (select (store (store ((as const (Array Int (_ BitVec 64)))
+                                   #x0000000000000000)
+                                 4
+                                 #x00000000000003e8)
+                          1
+                          #x0000000000000064)
+                   1)))
+  (bvuge a!1 $init0%1%))
+======= ======= ======= ======= ======= ======= =======
+positive branch is possible! Go head with it!
+*** require() statement is satisfied!! ****
+======= ======= ======= ======= ======= ======= =======
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Uranium.sol:74:9: 
+   |
+74 |         if (src != msg.sender && allowance[src][msg.sender] != 99999999) {
+   |         ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+TRUE branch is not feasible! Skipped.
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Uranium.sol:79:9: 
+   |
+79 |         balanceOf[src] -= wad;
+   |         ^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Uranium.sol:80:9: 
+   |
+80 |         balanceOf[dst] += wad;
+   |         ^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Uranium.sol:82:9: 
+   |
+82 |         return true;
+   |         ^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:205:9: 
+    |
+205 |         __assume__($init1 > 0 && $init1 < 1000);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:207:9: 
+    |
+207 |         uranium.swap($init1, 0, address(this));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:109:9: 
+    |
+109 |         uint _reserve0 = reserve0;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:110:9: 
+    |
+110 |         uint _reserve1 = reserve1;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:112:9: 
+    |
+112 |         require(amount0Out > 0 || amount1Out > 0, 'UniswapV2: INSUFFICIENT_OUTPUT_AMOUNT');
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+translating 
+printing propertyExpr: (or (bvugt $init1%1% #x0000000000000000)
+    (bvugt #x0000000000000000 #x0000000000000000))
+======= ======= ======= ======= ======= ======= =======
+positive branch is possible! Go head with it!
+*** require() statement is satisfied!! ****
+======= ======= ======= ======= ======= ======= =======
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:113:9: 
+    |
+113 |         require(amount0Out < _reserve0 && amount1Out < _reserve1, 'UniswapV2: INSUFFICIENT_LIQUIDITY');
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+translating 
+printing propertyExpr: (and (bvult $init1%1% #x00000000000003e8)
+     (bvult #x0000000000000000 #x00000000000003e8))
+======= ======= ======= ======= ======= ======= =======
+positive branch is possible! Go head with it!
+*** require() statement is satisfied!! ****
+======= ======= ======= ======= ======= ======= =======
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:116:9: 
+    |
+116 |         if (amount0Out > 0) {
+    |         ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+TRUE branch is feasible! Follow it.
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:116:29: 
+    |
+116 |         if (amount0Out > 0) {
+    |                             ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:117:13: 
+    |
+117 |             USDC(usdc).transferFrom(address(this), to, amount0Out);
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Uranium.sol:27:9: 
+   |
+27 |         require(balanceOf[src] >= wad);
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+translating 
+printing propertyExpr: (let ((a!1 (select (store (store ((as const (Array Int (_ BitVec 64)))
+                                   #x0000000000000000)
+                                 4
+                                 #x00000000000003e8)
+                          1
+                          #x0000000000000000)
+                   4)))
+  (bvuge a!1 $init1%1%))
+======= ======= ======= ======= ======= ======= =======
+positive branch is possible! Go head with it!
+*** require() statement is satisfied!! ****
+======= ======= ======= ======= ======= ======= =======
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Uranium.sol:29:9: 
+   |
+29 |         if (src != msg.sender && allowance[src][msg.sender] != 99999999) {
+   |         ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+TRUE branch is not feasible! Skipped.
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Uranium.sol:34:9: 
+   |
+34 |         balanceOf[src] -= wad;
+   |         ^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Uranium.sol:35:9: 
+   |
+35 |         balanceOf[dst] += wad;
+   |         ^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Uranium.sol:38:9: 
+   |
+38 |         return true;
+   |         ^^^^^^^^^^^
+-------------------------------------------------
+FALSE branch is not feasible! Skipped.
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:122:9: 
+    |
+122 |         uint balance0;
+    |         ^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:123:9: 
+    |
+123 |         uint balance1;
+    |         ^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:125:9: 
+    |
+125 |         balance0 = USDC(usdc).getBalanceOf(address(this));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+ --> ../contracts/Uranium.sol:7:9: 
+  |
+7 |         return balanceOf[usr];
+  |         ^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:126:9: 
+    |
+126 |         balance1 = DAI(dai).getBalanceOf(address(this));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Uranium.sol:52:9: 
+   |
+52 |         return balanceOf[usr];
+   |         ^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:128:9: 
+    |
+128 |         uint amount0In;
+    |         ^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:129:9: 
+    |
+129 |         uint amount1In;
+    |         ^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:130:9: 
+    |
+130 |         if (balance0 > _reserve0 - amount0Out) {
+    |         ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+TRUE branch is not feasible! Skipped.
+FALSE branch is feasible! Follow it.
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:132:16: 
+    |
+132 |         } else {
+    |                ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:133:13: 
+    |
+133 |             amount0In = 0;
+    |             ^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:136:9: 
+    |
+136 |         if (balance1 > _reserve1 - amount1Out) {
+    |         ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+TRUE branch is feasible! Follow it.
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:136:48: 
+    |
+136 |         if (balance1 > _reserve1 - amount1Out) {
+    |                                                ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:137:13: 
+    |
+137 |             amount1In = balance1 - (_reserve1 - amount1Out);
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+FALSE branch is not feasible! Skipped.
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:143:9: 
+    |
+143 |         require(amount0In > 0 || amount1In > 0, 'UniswapV2: INSUFFICIENT_INPUT_AMOUNT');
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+translating 
+printing propertyExpr: (let ((a!1 (select (store (store ((as const (Array Int (_ BitVec 64)))
+                                   #x0000000000000000)
+                                 4
+                                 #x00000000000003e8)
+                          1
+                          #x0000000000000064)
+                   1)))
+(let ((a!2 (store (store (store ((as const (Array Int (_ BitVec 64)))
+                                  #x0000000000000000)
+                                4
+                                #x00000000000003e8)
+                         1
+                         #x0000000000000064)
+                  1
+                  (bvsub a!1 $init0%1%))))
+(let ((a!3 (select (store a!2 4 (bvadd (select a!2 4) $init0%1%)) 4)))
+  (or (bvugt #x0000000000000000 #x0000000000000000)
+      (bvugt (bvsub a!3 (bvsub #x00000000000003e8 #x0000000000000000))
+             #x0000000000000000)))))
+======= ======= ======= ======= ======= ======= =======
+positive branch is possible! Go head with it!
+*** require() statement is satisfied!! ****
+======= ======= ======= ======= ======= ======= =======
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:144:9: 
+    |
+144 |         uint balance0Adjusted;
+    |         ^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:145:9: 
+    |
+145 |         balance0Adjusted = (balance0 * 100);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:146:9: 
+    |
+146 |         uint balance1Adjusted;
+    |         ^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:147:9: 
+    |
+147 |         balance1Adjusted = (balance1 * 100);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:150:9: 
+    |
+150 |         require(balance0Adjusted * balance1Adjusted >= _reserve0 * _reserve1 * 10**2, 'UniswapV2: K');
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+translating 
+printing propertyExpr: (let ((a!1 (select (store (store ((as const (Array Int (_ BitVec 64)))
+                                   #x0000000000000000)
+                                 4
+                                 #x00000000000003e8)
+                          1
+                          #x0000000000000000)
+                   4))
+      (a!4 (select (store (store ((as const (Array Int (_ BitVec 64)))
+                                   #x0000000000000000)
+                                 4
+                                 #x00000000000003e8)
+                          1
+                          #x0000000000000064)
+                   1)))
+(let ((a!2 (store (store (store ((as const (Array Int (_ BitVec 64)))
+                                  #x0000000000000000)
+                                4
+                                #x00000000000003e8)
+                         1
+                         #x0000000000000000)
+                  4
+                  (bvsub a!1 $init1%1%)))
+      (a!5 (store (store (store ((as const (Array Int (_ BitVec 64)))
+                                  #x0000000000000000)
+                                4
+                                #x00000000000003e8)
+                         1
+                         #x0000000000000064)
+                  1
+                  (bvsub a!4 $init0%1%))))
+(let ((a!3 (select (store a!2 1 (bvadd (select a!2 1) $init1%1%)) 4))
+      (a!6 (select (store a!5 4 (bvadd (select a!5 4) $init0%1%)) 4)))
+  (bvuge (bvmul a!3 #x0000000000000064 a!6 #x0000000000000064)
+         (bvmul #x00000000000003e8
+                #x00000000000003e8
+                #x0000000000000001
+                #x000000000000000a
+                #x000000000000000a)))))
+======= ======= ======= ======= ======= ======= =======
+positive branch is possible! Go head with it!
+*** require() statement is satisfied!! ****
+======= ======= ======= ======= ======= ======= =======
+======= ======= ======= ======= ======= ======= =======
+negation branch is possible! Go head with it!
+*** require() statement failed!! ****
+   --> ../contracts/Uranium.sol:150:9: 
+    |
+150 |         require(balance0Adjusted * balance1Adjusted >= _reserve0 * _reserve1 * 10**2, 'UniswapV2: K');
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(let ((a!1 (select (store (store ((as const (Array Int (_ BitVec 64)))
+                                   #x0000000000000000)
+                                 4
+                                 #x00000000000003e8)
+                          1
+                          #x0000000000000000)
+                   4))
+      (a!4 (select (store (store ((as const (Array Int (_ BitVec 64)))
+                                   #x0000000000000000)
+                                 4
+                                 #x00000000000003e8)
+                          1
+                          #x0000000000000064)
+                   1)))
+(let ((a!2 (store (store (store ((as const (Array Int (_ BitVec 64)))
+                                  #x0000000000000000)
+                                4
+                                #x00000000000003e8)
+                         1
+                         #x0000000000000000)
+                  4
+                  (bvsub a!1 $init1%1%)))
+      (a!5 (store (store (store ((as const (Array Int (_ BitVec 64)))
+                                  #x0000000000000000)
+                                4
+                                #x00000000000003e8)
+                         1
+                         #x0000000000000064)
+                  1
+                  (bvsub a!4 $init0%1%))))
+(let ((a!3 (select (store a!2 1 (bvadd (select a!2 1) $init1%1%)) 4))
+      (a!6 (select (store a!5 4 (bvadd (select a!5 4) $init0%1%)) 4)))
+  (bvuge (bvmul a!3 #x0000000000000064 a!6 #x0000000000000064)
+         (bvmul #x00000000000003e8
+                #x00000000000003e8
+                #x0000000000000001
+                #x000000000000000a
+                #x000000000000000a)))))
+Stop executing this path in this context!
+======= ======= ======= ======= ======= ======= =======
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:152:9: 
+    |
+152 |         _update(balance0, balance1, _reserve0, _reserve1);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:156:9: 
+    |
+156 |         reserve0 = _balance0;
+    |         ^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:157:9: 
+    |
+157 |         reserve1 = _balance1;
+    |         ^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Returning to the prev context
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:210:9: 
+    |
+210 |         res[urn] = dai.getBalanceOf(urn);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Uranium.sol:52:9: 
+   |
+52 |         return balanceOf[usr];
+   |         ^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:210:9: 
+    |
+210 |         res[urn] = dai.getBalanceOf(urn);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Uranium.sol:52:9: 
+   |
+52 |         return balanceOf[usr];
+   |         ^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:211:9: 
+    |
+211 |         uint urn_usdc; urn_usdc = usdc.getBalanceOf(urn);
+    |         ^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:211:9: 
+    |
+211 |         uint urn_usdc; urn_usdc = usdc.getBalanceOf(urn);
+    |         ^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:211:24: 
+    |
+211 |         uint urn_usdc; urn_usdc = usdc.getBalanceOf(urn);
+    |                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+ --> ../contracts/Uranium.sol:7:9: 
+  |
+7 |         return balanceOf[usr];
+  |         ^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:211:24: 
+    |
+211 |         uint urn_usdc; urn_usdc = usdc.getBalanceOf(urn);
+    |                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+ --> ../contracts/Uranium.sol:7:9: 
+  |
+7 |         return balanceOf[usr];
+  |         ^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:212:9: 
+    |
+212 |         res[urn] =  res[urn] * urn_usdc;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:212:9: 
+    |
+212 |         res[urn] =  res[urn] * urn_usdc;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:214:9: 
+    |
+214 |         uint res_urn = res[address(urn)];
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:214:9: 
+    |
+214 |         uint res_urn = res[address(urn)];
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:215:9: 
+    |
+215 |         uint res_usr = res[address(this)];
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:215:9: 
+    |
+215 |         uint res_usr = res[address(this)];
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:217:9: 
+    |
+217 |         testVal_0 = res_urn;
+    |         ^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:217:9: 
+    |
+217 |         testVal_0 = res_urn;
+    |         ^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:218:9: 
+    |
+218 |         testVal_1 = res_usr;
+    |         ^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:218:9: 
+    |
+218 |         testVal_1 = res_usr;
+    |         ^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:220:9: 
+    |
+220 |         declare_property(res[urn] >= init[urn]);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Uranium.sol:220:9: 
+    |
+220 |         declare_property(res[urn] >= init[urn]);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+result context [1]: 
+Is possibly reentrant: 0
+RESULT: 1
+RESULT: 0
+The trace is VALID
+$init0 = 80
+$init1 = 8
+Recording summary, validCount: 1
+The trace is INVALID
+$init0 = 80
+$init1 = 86
+result context [2]: 
+Is possibly reentrant: 0
+RESULT: 1
+The trace is VALID
+$init0 = 66
+$init1 = 996
+Recording summary, validCount: 2
+./solver/solver -symexe-main ../contracts/Uranium.sol Uranium  3.62s user 0.14s system 97% cpu 3.873 total

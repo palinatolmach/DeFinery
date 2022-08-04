@@ -1,0 +1,701 @@
+-> % time python3 CLI.py --targetContractName EtherBank repair ../DeFi/SolVer/experiment/EtherBank/EtherBank.sol
+
+[2022-05-30 01:19:51.067066] INFO: CLI: Start repairing problems
+[2022-05-30 01:19:51.067938] INFO: CLI: ['1']
+[2022-05-30 01:19:51.068062] INFO: CLI: True
+[2022-05-30 01:19:51.068242] INFO: CR.py: in CR is reentrant is True
+[2022-05-30 01:19:51.071038] INFO: CR.py: Executing REPAIR
+[2022-05-30 01:19:51.071345] INFO: CR.py: Evaluating the population in CR
+Path source is (PosixPath('/Users/hidden/DeFi/SolVer/experiment/EtherBank/EtherBank.sol'),)
+tcPath ../DeFi/SolVer/experiment/EtherBank
+[2022-05-30 01:19:51.072348] INFO: SolVer.py: Start executing 2 test cases using SolVer with symbex
+[2022-05-30 01:19:51.072988] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpy524qvr_/invalid_0_EtherBank.sol EtherBank for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/EtherBank/invalid_0 and (PosixPath('/Users/hidden/DeFi/SolVer/experiment/EtherBank/EtherBank.sol'),)
+[2022-05-30 01:19:51.077912] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpy524qvr_/valid_0_EtherBank.sol EtherBank for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/EtherBank/valid_0 and (PosixPath('/Users/hidden/DeFi/SolVer/experiment/EtherBank/EtherBank.sol'),)
+[2022-05-30 01:19:51.240991] INFO: SolVer.py: Results for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/EtherBank/valid_0 are []
+[2022-05-30 01:19:51.262040] INFO: SolVer.py: Results for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/EtherBank/invalid_0 are []
+The test cases execution result for EtherBank.sol is [FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/EtherBank/invalid_0', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/EtherBank/valid_0', additionalInfo=None)]
+[2022-05-30 01:19:51.262918] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 01:19:51.263137] INFO: CR.py: Calling fitnessFn_ProblemDection function
+[2022-05-30 01:19:51.263432] INFO: CR.py: Initial subject contract has the following targeted vulnerabilities:
+{'SolVer': [FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/EtherBank/invalid_0', additionalInfo=None)]}
+[2022-05-30 01:19:51.263673] INFO: CR.py: Generated init fault space specifier: TYPE:EtherBank.withdrawBalance-Block;TYPE:EtherBank.withdrawBalance-Block;TYPE:EtherBank.addToBalance-Block;
+[2022-05-30 01:19:51.263837] INFO: SolidityM.py: Constructed base args for sm: ['/Users/hidden/DeFinery/sm/build/main/utils/bin.js', 'iter-gen-mutations', '--only-compilable=true', '/Users/hidden/DeFi/SolVer/experiment/EtherBank/EtherBank.sol', '--mutation-space=TYPE:EtherBank.withdrawBalance-Block;TYPE:EtherBank.withdrawBalance-Block;TYPE:EtherBank.addToBalance-Block;']
+[2022-05-30 01:19:51.263975] INFO: SolidityM.py: Start sm for space ('MovementM',) with args: ['/Users/hidden/DeFinery/sm/build/main/utils/bin.js', 'iter-gen-mutations', '--only-compilable=true', '/Users/hidden/DeFi/SolVer/experiment/EtherBank/EtherBank.sol', '--mutation-space=TYPE:EtherBank.withdrawBalance-Block;TYPE:EtherBank.withdrawBalance-Block;TYPE:EtherBank.addToBalance-Block;', '--patched-src-dir=/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpgsnlr83p', '--mutation_types', 'MovementM', '--must-include-mutation-types', 'MovementM']
+[2022-05-30 01:19:51.271051] INFO: SolidityM.py: Start sm for space ('InsertionM',) with args: ['/Users/hidden/DeFinery/sm/build/main/utils/bin.js', 'iter-gen-mutations', '--only-compilable=true', '/Users/hidden/DeFi/SolVer/experiment/EtherBank/EtherBank.sol', '--mutation-space=TYPE:EtherBank.withdrawBalance-Block;TYPE:EtherBank.withdrawBalance-Block;TYPE:EtherBank.addToBalance-Block;', '--patched-src-dir=/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp2_dgeemr', '--mutation_types', 'InsertionM', '--must-include-mutation-types', 'InsertionM']
+[2022-05-30 01:19:51.276222] INFO: SolidityM.py: Start sm for space ('ReplacementM',) with args: ['/Users/hidden/DeFinery/sm/build/main/utils/bin.js', 'iter-gen-mutations', '--only-compilable=true', '/Users/hidden/DeFi/SolVer/experiment/EtherBank/EtherBank.sol', '--mutation-space=TYPE:EtherBank.withdrawBalance-Block;TYPE:EtherBank.withdrawBalance-Block;TYPE:EtherBank.addToBalance-Block;', '--patched-src-dir=/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpjudywwvi', '--mutation_types', 'ReplacementM', '--must-include-mutation-types', 'ReplacementM']
+[2022-05-30 01:19:51.284744] INFO: SolidityM.py: Start sm for space ('MovementM', 'InsertionM') with args: ['/Users/hidden/DeFinery/sm/build/main/utils/bin.js', 'iter-gen-mutations', '--only-compilable=true', '/Users/hidden/DeFi/SolVer/experiment/EtherBank/EtherBank.sol', '--mutation-space=TYPE:EtherBank.withdrawBalance-Block;TYPE:EtherBank.withdrawBalance-Block;TYPE:EtherBank.addToBalance-Block;', '--patched-src-dir=/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmprkl_bevm', '--mutation_types', 'MovementM', 'InsertionM', '--must-include-mutation-types', 'MovementM', 'InsertionM']
+[2022-05-30 01:19:51.290283] INFO: SolidityM.py: Start sm for space ('MovementM', 'ReplacementM') with args: ['/Users/hidden/DeFinery/sm/build/main/utils/bin.js', 'iter-gen-mutations', '--only-compilable=true', '/Users/hidden/DeFi/SolVer/experiment/EtherBank/EtherBank.sol', '--mutation-space=TYPE:EtherBank.withdrawBalance-Block;TYPE:EtherBank.withdrawBalance-Block;TYPE:EtherBank.addToBalance-Block;', '--patched-src-dir=/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpsehbn9jh', '--mutation_types', 'MovementM', 'ReplacementM', '--must-include-mutation-types', 'MovementM', 'ReplacementM']
+[2022-05-30 01:19:51.297541] INFO: SolidityM.py: Start sm for space ('InsertionM', 'ReplacementM') with args: ['/Users/hidden/DeFinery/sm/build/main/utils/bin.js', 'iter-gen-mutations', '--only-compilable=true', '/Users/hidden/DeFi/SolVer/experiment/EtherBank/EtherBank.sol', '--mutation-space=TYPE:EtherBank.withdrawBalance-Block;TYPE:EtherBank.withdrawBalance-Block;TYPE:EtherBank.addToBalance-Block;', '--patched-src-dir=/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpgr_1ux62', '--mutation_types', 'InsertionM', 'ReplacementM', '--must-include-mutation-types', 'InsertionM', 'ReplacementM']
+[2022-05-30 01:19:51.304386] INFO: SolidityM.py: Start sm for space ('MovementM', 'InsertionM', 'ReplacementM') with args: ['/Users/hidden/DeFinery/sm/build/main/utils/bin.js', 'iter-gen-mutations', '--only-compilable=true', '/Users/hidden/DeFi/SolVer/experiment/EtherBank/EtherBank.sol', '--mutation-space=TYPE:EtherBank.withdrawBalance-Block;TYPE:EtherBank.withdrawBalance-Block;TYPE:EtherBank.addToBalance-Block;', '--patched-src-dir=/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpd9ahqx6a', '--mutation_types', 'MovementM', 'InsertionM', 'ReplacementM', '--must-include-mutation-types', 'MovementM', 'InsertionM', 'ReplacementM']
+[2022-05-30 01:19:51.311088] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:53.297Z info:     Using seed "lucky-seed" as type string
+2022-05-30T01:19:53.304Z info:     Using seed "lucky-seed" as type string
+2022-05-30T01:19:53.306Z info:     Using seed "lucky-seed" as type string
+2022-05-30T01:19:53.307Z info:     Using seed "lucky-seed" as type string
+2022-05-30T01:19:53.313Z info:     Using seed "lucky-seed" as type string
+2022-05-30T01:19:53.359Z info:     Using seed "lucky-seed" as type string
+2022-05-30T01:19:53.378Z info:     Using seed "lucky-seed" as type string
+(node:79021) Warning: Accessing non-existent property 'INVALID_ALT_NUMBER' of module exports inside circular dependency
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:79021) Warning: Accessing non-existent property 'INVALID_ALT_NUMBER' of module exports inside circular dependency
+2022-05-30T01:19:54.813Z info:     Patch search space exhausted.
+(node:79019) Warning: Accessing non-existent property 'INVALID_ALT_NUMBER' of module exports inside circular dependency
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:79019) Warning: Accessing non-existent property 'INVALID_ALT_NUMBER' of module exports inside circular dependency
+(node:79020) Warning: Accessing non-existent property 'INVALID_ALT_NUMBER' of module exports inside circular dependency
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:79022) Warning: Accessing non-existent property 'INVALID_ALT_NUMBER' of module exports inside circular dependency
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:79020) Warning: Accessing non-existent property 'INVALID_ALT_NUMBER' of module exports inside circular dependency
+(node:79022) Warning: Accessing non-existent property 'INVALID_ALT_NUMBER' of module exports inside circular dependency
+2022-05-30T01:19:54.840Z info:     Termination requested
+2022-05-30T01:19:54.840Z info:     Termination requested
+2022-05-30T01:19:54.841Z info:     Termination requested
+(node:79023) Warning: Accessing non-existent property 'INVALID_ALT_NUMBER' of module exports inside circular dependency
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:79023) Warning: Accessing non-existent property 'INVALID_ALT_NUMBER' of module exports inside circular dependency
+2022-05-30T01:19:54.859Z info:     Termination requested
+(node:79024) Warning: Accessing non-existent property 'INVALID_ALT_NUMBER' of module exports inside circular dependency
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:79024) Warning: Accessing non-existent property 'INVALID_ALT_NUMBER' of module exports inside circular dependency
+2022-05-30T01:19:54.888Z info:     Termination requested
+(node:79025) Warning: Accessing non-existent property 'INVALID_ALT_NUMBER' of module exports inside circular dependency
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:79025) Warning: Accessing non-existent property 'INVALID_ALT_NUMBER' of module exports inside circular dependency
+2022-05-30T01:19:54.906Z info:     Termination requested
+[2022-05-30 01:19:54.907432] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:54.908Z info:     Patch search space exhausted.
+2022-05-30T01:19:54.989Z info:     Termination requested
+2022-05-30T01:19:54.992Z info:     Termination requested
+2022-05-30T01:19:54.996Z info:     Termination requested
+2022-05-30T01:19:54.999Z info:     Termination requested
+2022-05-30T01:19:55.130Z info:     Termination requested
+2022-05-30T01:19:55.135Z info:     Generated 1 patches for current task
+2022-05-30T01:19:55.153Z info:     Patched source file #0 written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpgsnlr83p/0.sol
+2022-05-30T01:19:55.154Z info:     Mutation sequence file #0 for /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpgsnlr83p/0.sol written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpgsnlr83p/0.sol.mutation.json
+[2022-05-30 01:19:55.169689] INFO: CR.py: Evaluating the population in CR
+Path source is ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpgsnlr83p/0.sol',)
+[2022-05-30 01:19:55.170379] INFO: SolVer.py: Start executing 2 test cases using SolVer with symbex
+[2022-05-30 01:19:55.170985] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmprhd3q8a4/invalid_0_0.sol EtherBank for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/EtherBank/invalid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpgsnlr83p/0.sol',)
+[2022-05-30 01:19:55.175647] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmprhd3q8a4/valid_0_0.sol EtherBank for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/EtherBank/valid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpgsnlr83p/0.sol',)
+The test cases execution result for 0.sol is [PassedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/EtherBank/invalid_0', additionalInfo=None, detected=False), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/EtherBank/valid_0', additionalInfo=None)]
+[2022-05-30 01:19:55.362950] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 01:19:55.363173] INFO: CR.py: Calling fitnessFn_ProblemDection function
+[2022-05-30 01:19:55.363780] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:55.364Z info:     Patch search space exhausted.
+2022-05-30T01:19:55.365Z info:     Patch search space exhausted.
+2022-05-30T01:19:55.365Z info:     Patch search space exhausted.
+2022-05-30T01:19:55.402Z info:     Termination requested
+2022-05-30T01:19:55.404Z info:     Termination requested
+2022-05-30T01:19:55.405Z info:     Termination requested
+2022-05-30T01:19:55.407Z info:     Termination requested
+[2022-05-30 01:19:55.408075] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:55.409Z info:     Patch search space exhausted.
+2022-05-30T01:19:55.409Z info:     Patch search space exhausted.
+2022-05-30T01:19:55.409Z info:     Patch search space exhausted.
+2022-05-30T01:19:55.451Z info:     Termination requested
+2022-05-30T01:19:55.454Z info:     Termination requested
+2022-05-30T01:19:55.461Z info:     Termination requested
+2022-05-30T01:19:55.462Z info:     Termination requested
+[2022-05-30 01:19:55.463074] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:55.464Z info:     Patch search space exhausted.
+2022-05-30T01:19:55.464Z info:     Patch search space exhausted.
+2022-05-30T01:19:55.464Z info:     Patch search space exhausted.
+2022-05-30T01:19:55.508Z info:     Termination requested
+2022-05-30T01:19:55.513Z info:     Termination requested
+2022-05-30T01:19:55.514Z info:     Termination requested
+2022-05-30T01:19:55.523Z info:     Termination requested
+[2022-05-30 01:19:55.527412] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:55.529Z info:     Patch search space exhausted.
+2022-05-30T01:19:55.529Z info:     Patch search space exhausted.
+2022-05-30T01:19:55.531Z info:     Patch search space exhausted.
+2022-05-30T01:19:55.581Z info:     Termination requested
+2022-05-30T01:19:55.589Z info:     Termination requested
+2022-05-30T01:19:55.590Z info:     Termination requested
+2022-05-30T01:19:55.600Z info:     Termination requested
+[2022-05-30 01:19:55.615409] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:55.616Z info:     Patch search space exhausted.
+2022-05-30T01:19:55.617Z info:     Patch search space exhausted.
+2022-05-30T01:19:55.619Z info:     Patch search space exhausted.
+2022-05-30T01:19:55.656Z info:     Termination requested
+2022-05-30T01:19:55.662Z info:     Termination requested
+2022-05-30T01:19:55.663Z info:     Termination requested
+2022-05-30T01:19:55.669Z info:     Termination requested
+[2022-05-30 01:19:55.670789] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:55.671Z info:     Patch search space exhausted.
+2022-05-30T01:19:55.671Z info:     Patch search space exhausted.
+2022-05-30T01:19:55.671Z info:     Patch search space exhausted.
+2022-05-30T01:19:55.730Z info:     Termination requested
+2022-05-30T01:19:55.737Z info:     Termination requested
+2022-05-30T01:19:55.856Z info:     Termination requested
+2022-05-30T01:19:55.857Z info:     Termination requested
+[2022-05-30 01:19:55.858176] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:55.858Z info:     Patch search space exhausted.
+2022-05-30T01:19:55.858Z info:     Patch search space exhausted.
+2022-05-30T01:19:55.858Z info:     Patch search space exhausted.
+2022-05-30T01:19:55.882Z info:     Termination requested
+2022-05-30T01:19:55.885Z info:     Termination requested
+2022-05-30T01:19:55.888Z info:     Termination requested
+2022-05-30T01:19:55.895Z info:     Termination requested
+[2022-05-30 01:19:55.896712] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:55.897Z info:     Patch search space exhausted.
+2022-05-30T01:19:55.898Z info:     Patch search space exhausted.
+2022-05-30T01:19:55.898Z info:     Patch search space exhausted.
+2022-05-30T01:19:55.941Z info:     Termination requested
+2022-05-30T01:19:55.941Z info:     Termination requested
+2022-05-30T01:19:55.942Z info:     Termination requested
+2022-05-30T01:19:55.944Z info:     Termination requested
+[2022-05-30 01:19:55.945903] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:55.946Z info:     Patch search space exhausted.
+2022-05-30T01:19:55.946Z info:     Patch search space exhausted.
+2022-05-30T01:19:55.946Z info:     Patch search space exhausted.
+2022-05-30T01:19:55.972Z info:     Termination requested
+2022-05-30T01:19:55.977Z info:     Termination requested
+2022-05-30T01:19:55.982Z info:     Termination requested
+2022-05-30T01:19:55.985Z info:     Termination requested
+[2022-05-30 01:19:55.986795] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:55.988Z info:     Patch search space exhausted.
+2022-05-30T01:19:55.988Z info:     Patch search space exhausted.
+2022-05-30T01:19:55.988Z info:     Patch search space exhausted.
+2022-05-30T01:19:56.016Z info:     Termination requested
+2022-05-30T01:19:56.018Z info:     Termination requested
+2022-05-30T01:19:56.019Z info:     Termination requested
+2022-05-30T01:19:56.021Z info:     Termination requested
+[2022-05-30 01:19:56.022751] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:56.023Z info:     Patch search space exhausted.
+2022-05-30T01:19:56.023Z info:     Patch search space exhausted.
+2022-05-30T01:19:56.024Z info:     Patch search space exhausted.
+2022-05-30T01:19:56.054Z info:     Termination requested
+2022-05-30T01:19:56.059Z info:     Termination requested
+2022-05-30T01:19:56.062Z info:     Termination requested
+2022-05-30T01:19:56.063Z info:     Termination requested
+[2022-05-30 01:19:56.064563] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:56.066Z info:     Patch search space exhausted.
+2022-05-30T01:19:56.066Z info:     Patch search space exhausted.
+2022-05-30T01:19:56.066Z info:     Patch search space exhausted.
+2022-05-30T01:19:56.091Z info:     Termination requested
+2022-05-30T01:19:56.092Z info:     Termination requested
+2022-05-30T01:19:56.100Z info:     Termination requested
+2022-05-30T01:19:56.101Z info:     Termination requested
+[2022-05-30 01:19:56.102588] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:56.104Z info:     Patch search space exhausted.
+2022-05-30T01:19:56.104Z info:     Patch search space exhausted.
+2022-05-30T01:19:56.104Z info:     Patch search space exhausted.
+2022-05-30T01:19:56.132Z info:     Termination requested
+2022-05-30T01:19:56.133Z info:     Termination requested
+2022-05-30T01:19:56.139Z info:     Termination requested
+2022-05-30T01:19:56.141Z info:     Termination requested
+[2022-05-30 01:19:56.142277] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:56.143Z info:     Patch search space exhausted.
+2022-05-30T01:19:56.143Z info:     Patch search space exhausted.
+2022-05-30T01:19:56.143Z info:     Patch search space exhausted.
+2022-05-30T01:19:56.167Z info:     Termination requested
+2022-05-30T01:19:56.171Z info:     Termination requested
+2022-05-30T01:19:56.172Z info:     Termination requested
+2022-05-30T01:19:56.274Z info:     Termination requested
+[2022-05-30 01:19:56.275436] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:56.276Z info:     Patch search space exhausted.
+2022-05-30T01:19:56.276Z info:     Patch search space exhausted.
+2022-05-30T01:19:56.276Z info:     Patch search space exhausted.
+2022-05-30T01:19:56.281Z info:     Termination requested
+2022-05-30T01:19:56.298Z info:     Termination requested
+2022-05-30T01:19:56.299Z info:     Termination requested
+2022-05-30T01:19:56.301Z info:     Termination requested
+[2022-05-30 01:19:56.302173] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:56.303Z info:     Patch search space exhausted.
+2022-05-30T01:19:56.303Z info:     Patch search space exhausted.
+2022-05-30T01:19:56.303Z info:     Patch search space exhausted.
+2022-05-30T01:19:56.312Z info:     Termination requested
+2022-05-30T01:19:56.331Z info:     Termination requested
+2022-05-30T01:19:56.331Z info:     Termination requested
+2022-05-30T01:19:56.334Z info:     Termination requested
+[2022-05-30 01:19:56.335973] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:56.337Z info:     Patch search space exhausted.
+2022-05-30T01:19:56.337Z info:     Patch search space exhausted.
+2022-05-30T01:19:56.337Z info:     Patch search space exhausted.
+2022-05-30T01:19:56.343Z info:     Termination requested
+2022-05-30T01:19:56.343Z info:     Termination requested
+2022-05-30T01:19:56.364Z info:     Termination requested
+2022-05-30T01:19:56.372Z info:     Termination requested
+[2022-05-30 01:19:56.373383] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:56.374Z info:     Patch search space exhausted.
+2022-05-30T01:19:56.374Z info:     Patch search space exhausted.
+2022-05-30T01:19:56.374Z info:     Patch search space exhausted.
+2022-05-30T01:19:56.394Z info:     Termination requested
+2022-05-30T01:19:56.398Z info:     Termination requested
+2022-05-30T01:19:56.404Z info:     Termination requested
+2022-05-30T01:19:56.405Z info:     Termination requested
+[2022-05-30 01:19:56.406356] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:56.407Z info:     Patch search space exhausted.
+2022-05-30T01:19:56.407Z info:     Patch search space exhausted.
+2022-05-30T01:19:56.407Z info:     Patch search space exhausted.
+2022-05-30T01:19:56.429Z info:     Termination requested
+2022-05-30T01:19:56.432Z info:     Termination requested
+2022-05-30T01:19:56.434Z info:     Termination requested
+2022-05-30T01:19:56.438Z info:     Termination requested
+[2022-05-30 01:19:56.439376] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:56.440Z info:     Patch search space exhausted.
+2022-05-30T01:19:56.440Z info:     Patch search space exhausted.
+2022-05-30T01:19:56.440Z info:     Patch search space exhausted.
+2022-05-30T01:19:56.470Z info:     Termination requested
+2022-05-30T01:19:56.472Z info:     Termination requested
+2022-05-30T01:19:56.569Z info:     Termination requested
+2022-05-30T01:19:56.569Z info:     Termination requested
+[2022-05-30 01:19:56.570822] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:56.572Z info:     Patch search space exhausted.
+2022-05-30T01:19:56.574Z info:     Patch search space exhausted.
+2022-05-30T01:19:56.574Z info:     Patch search space exhausted.
+2022-05-30T01:19:56.595Z info:     Termination requested
+2022-05-30T01:19:56.602Z info:     Termination requested
+2022-05-30T01:19:56.602Z info:     Termination requested
+2022-05-30T01:19:56.702Z info:     Generated 1 patches for current task
+2022-05-30T01:19:56.709Z info:     Patched source file #0 written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp2_dgeemr/0.sol
+2022-05-30T01:19:56.709Z info:     Mutation sequence file #0 for /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp2_dgeemr/0.sol written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp2_dgeemr/0.sol.mutation.json
+[2022-05-30 01:19:56.711790] INFO: CR.py: Evaluating the population in CR
+[2022-05-30 01:19:56.711991] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:56.712Z info:     Patch search space exhausted.
+2022-05-30T01:19:56.712Z info:     Patch search space exhausted.
+2022-05-30T01:19:56.712Z info:     Patch search space exhausted.
+Path source is ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp2_dgeemr/0.sol',)
+[2022-05-30 01:19:56.713119] INFO: SolVer.py: Start executing 2 test cases using SolVer with symbex
+[2022-05-30 01:19:56.713913] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp39dhijd0/invalid_0_0.sol EtherBank for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/EtherBank/invalid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp2_dgeemr/0.sol',)
+[2022-05-30 01:19:56.719186] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp39dhijd0/valid_0_0.sol EtherBank for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/EtherBank/valid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp2_dgeemr/0.sol',)
+2022-05-30T01:19:56.736Z info:     Termination requested
+2022-05-30T01:19:56.737Z info:     Termination requested
+2022-05-30T01:19:56.739Z info:     Termination requested
+2022-05-30T01:19:56.740Z info:     Termination requested
+[2022-05-30 01:19:56.742007] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:56.742Z info:     Patch search space exhausted.
+2022-05-30T01:19:56.743Z info:     Patch search space exhausted.
+2022-05-30T01:19:56.743Z info:     Patch search space exhausted.
+2022-05-30T01:19:56.766Z info:     Termination requested
+2022-05-30T01:19:56.771Z info:     Termination requested
+2022-05-30T01:19:56.772Z info:     Termination requested
+2022-05-30T01:19:56.775Z info:     Termination requested
+[2022-05-30 01:19:56.776419] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:56.777Z info:     Patch search space exhausted.
+2022-05-30T01:19:56.777Z info:     Patch search space exhausted.
+2022-05-30T01:19:56.777Z info:     Patch search space exhausted.
+2022-05-30T01:19:56.800Z info:     Termination requested
+2022-05-30T01:19:56.801Z info:     Termination requested
+2022-05-30T01:19:56.804Z info:     Termination requested
+2022-05-30T01:19:56.808Z info:     Termination requested
+[2022-05-30 01:19:56.809343] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:56.810Z info:     Patch search space exhausted.
+2022-05-30T01:19:56.810Z info:     Patch search space exhausted.
+2022-05-30T01:19:56.810Z info:     Patch search space exhausted.
+2022-05-30T01:19:56.833Z info:     Termination requested
+2022-05-30T01:19:56.941Z info:     Termination requested
+2022-05-30T01:19:56.942Z info:     Termination requested
+2022-05-30T01:19:56.999Z info:     Termination requested
+[2022-05-30 01:19:57.000454] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:57.001Z info:     Patch search space exhausted.
+2022-05-30T01:19:57.001Z info:     Patch search space exhausted.
+2022-05-30T01:19:57.001Z info:     Patch search space exhausted.
+2022-05-30T01:19:57.006Z info:     Termination requested
+2022-05-30T01:19:57.006Z info:     Termination requested
+2022-05-30T01:19:57.006Z info:     Termination requested
+2022-05-30T01:19:57.017Z info:     Termination requested
+[2022-05-30 01:19:57.020327] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:57.022Z info:     Patch search space exhausted.
+2022-05-30T01:19:57.022Z info:     Patch search space exhausted.
+2022-05-30T01:19:57.022Z info:     Patch search space exhausted.
+2022-05-30T01:19:57.042Z info:     Termination requested
+The test cases execution result for 0.sol is [FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/EtherBank/invalid_0', additionalInfo=None), FailedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/EtherBank/valid_0', additionalInfo=None, detected=True)]
+2022-05-30T01:19:57.050Z info:     Termination requested
+[2022-05-30 01:19:57.055132] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 01:19:57.055995] INFO: CR.py: Calling fitnessFn_ProblemDection function
+2022-05-30T01:19:57.163Z info:     Termination requested
+2022-05-30T01:19:57.173Z info:     Generated 1 patches for current task
+2022-05-30T01:19:57.185Z info:     Patched source file #1 written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp2_dgeemr/1.sol
+2022-05-30T01:19:57.186Z info:     Mutation sequence file #1 for /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp2_dgeemr/1.sol written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp2_dgeemr/1.sol.mutation.json
+[2022-05-30 01:19:57.188468] INFO: CR.py: Evaluating the population in CR
+[2022-05-30 01:19:57.188680] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:57.189Z info:     Patch search space exhausted.
+2022-05-30T01:19:57.189Z info:     Patch search space exhausted.
+2022-05-30T01:19:57.189Z info:     Patch search space exhausted.
+Path source is ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp2_dgeemr/1.sol',)
+[2022-05-30 01:19:57.189908] INFO: SolVer.py: Start executing 2 test cases using SolVer with symbex
+[2022-05-30 01:19:57.190816] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpb8zf40jd/invalid_0_1.sol EtherBank for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/EtherBank/invalid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp2_dgeemr/1.sol',)
+[2022-05-30 01:19:57.196029] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpb8zf40jd/valid_0_1.sol EtherBank for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/EtherBank/valid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp2_dgeemr/1.sol',)
+2022-05-30T01:19:57.211Z info:     Termination requested
+2022-05-30T01:19:57.217Z info:     Termination requested
+2022-05-30T01:19:57.218Z info:     Termination requested
+2022-05-30T01:19:57.269Z info:     Termination requested
+[2022-05-30 01:19:57.270014] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:57.271Z info:     Patch search space exhausted.
+2022-05-30T01:19:57.271Z info:     Patch search space exhausted.
+2022-05-30T01:19:57.271Z info:     Patch search space exhausted.
+2022-05-30T01:19:57.291Z info:     Termination requested
+2022-05-30T01:19:57.292Z info:     Termination requested
+2022-05-30T01:19:57.293Z info:     Termination requested
+2022-05-30T01:19:57.293Z info:     Termination requested
+[2022-05-30 01:19:57.295042] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:57.296Z info:     Patch search space exhausted.
+2022-05-30T01:19:57.296Z info:     Patch search space exhausted.
+2022-05-30T01:19:57.297Z info:     Patch search space exhausted.
+2022-05-30T01:19:57.325Z info:     Termination requested
+2022-05-30T01:19:57.325Z info:     Termination requested
+2022-05-30T01:19:57.337Z info:     Termination requested
+2022-05-30T01:19:57.399Z info:     Generated 1 patches for current task
+2022-05-30T01:19:57.405Z info:     Patched source file #2 written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp2_dgeemr/2.sol
+2022-05-30T01:19:57.405Z info:     Mutation sequence file #2 for /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp2_dgeemr/2.sol written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp2_dgeemr/2.sol.mutation.json
+[2022-05-30 01:19:57.408370] INFO: CR.py: Evaluating the population in CR
+[2022-05-30 01:19:57.408663] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:57.409Z info:     Patch search space exhausted.
+2022-05-30T01:19:57.409Z info:     Patch search space exhausted.
+2022-05-30T01:19:57.409Z info:     Patch search space exhausted.
+Path source is ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp2_dgeemr/2.sol',)
+[2022-05-30 01:19:57.410068] INFO: SolVer.py: Start executing 2 test cases using SolVer with symbex
+[2022-05-30 01:19:57.411032] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmprz3g3hrr/invalid_0_2.sol EtherBank for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/EtherBank/invalid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp2_dgeemr/2.sol',)
+[2022-05-30 01:19:57.440685] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmprz3g3hrr/valid_0_2.sol EtherBank for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/EtherBank/valid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp2_dgeemr/2.sol',)
+2022-05-30T01:19:57.476Z info:     Termination requested
+2022-05-30T01:19:57.476Z info:     Termination requested
+2022-05-30T01:19:57.479Z info:     Termination requested
+2022-05-30T01:19:57.482Z info:     Termination requested
+[2022-05-30 01:19:57.486023] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:57.487Z info:     Patch search space exhausted.
+2022-05-30T01:19:57.487Z info:     Patch search space exhausted.
+2022-05-30T01:19:57.488Z info:     Patch search space exhausted.
+The test cases execution result for 1.sol is [FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/EtherBank/invalid_0', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/EtherBank/valid_0', additionalInfo=None)]
+[2022-05-30 01:19:57.507396] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 01:19:57.507805] INFO: CR.py: Calling fitnessFn_ProblemDection function
+2022-05-30T01:19:57.515Z info:     Termination requested
+2022-05-30T01:19:57.516Z info:     Termination requested
+2022-05-30T01:19:57.523Z info:     Termination requested
+2022-05-30T01:19:57.523Z info:     Termination requested
+[2022-05-30 01:19:57.524912] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:57.525Z info:     Patch search space exhausted.
+2022-05-30T01:19:57.525Z info:     Patch search space exhausted.
+2022-05-30T01:19:57.525Z info:     Patch search space exhausted.
+2022-05-30T01:19:57.551Z info:     Termination requested
+2022-05-30T01:19:57.551Z info:     Termination requested
+2022-05-30T01:19:57.553Z info:     Termination requested
+2022-05-30T01:19:57.554Z info:     Termination requested
+[2022-05-30 01:19:57.554945] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:57.555Z info:     Patch search space exhausted.
+2022-05-30T01:19:57.555Z info:     Patch search space exhausted.
+2022-05-30T01:19:57.555Z info:     Patch search space exhausted.
+2022-05-30T01:19:57.575Z info:     Termination requested
+2022-05-30T01:19:57.577Z info:     Termination requested
+2022-05-30T01:19:57.582Z info:     Termination requested
+2022-05-30T01:19:57.586Z info:     Termination requested
+[2022-05-30 01:19:57.587317] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:57.588Z info:     Patch search space exhausted.
+2022-05-30T01:19:57.588Z info:     Patch search space exhausted.
+2022-05-30T01:19:57.588Z info:     Patch search space exhausted.
+2022-05-30T01:19:57.591Z info:     Termination requested
+2022-05-30T01:19:57.591Z info:     Termination requested
+2022-05-30T01:19:57.615Z info:     Termination requested
+2022-05-30T01:19:57.615Z info:     Termination requested
+[2022-05-30 01:19:57.616769] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:57.617Z info:     Patch search space exhausted.
+2022-05-30T01:19:57.617Z info:     Patch search space exhausted.
+2022-05-30T01:19:57.617Z info:     Patch search space exhausted.
+2022-05-30T01:19:57.621Z info:     Termination requested
+2022-05-30T01:19:57.633Z info:     Termination requested
+2022-05-30T01:19:57.635Z info:     Termination requested
+2022-05-30T01:19:57.639Z info:     Termination requested
+[2022-05-30 01:19:57.640320] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:57.641Z info:     Patch search space exhausted.
+2022-05-30T01:19:57.641Z info:     Patch search space exhausted.
+2022-05-30T01:19:57.642Z info:     Patch search space exhausted.
+2022-05-30T01:19:57.665Z info:     Termination requested
+2022-05-30T01:19:57.672Z info:     Termination requested
+2022-05-30T01:19:57.675Z info:     Termination requested
+The test cases execution result for 2.sol is [FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/EtherBank/invalid_0', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/EtherBank/valid_0', additionalInfo=None)]
+2022-05-30T01:19:57.736Z info:     Generated 1 patches for current task
+[2022-05-30 01:19:57.736916] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 01:19:57.737185] INFO: CR.py: Calling fitnessFn_ProblemDection function
+2022-05-30T01:19:57.743Z info:     Patched source file #3 written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp2_dgeemr/3.sol
+2022-05-30T01:19:57.743Z info:     Mutation sequence file #3 for /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp2_dgeemr/3.sol written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp2_dgeemr/3.sol.mutation.json
+[2022-05-30 01:19:57.745726] INFO: CR.py: Evaluating the population in CR
+[2022-05-30 01:19:57.746002] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:57.746Z info:     Patch search space exhausted.
+2022-05-30T01:19:57.746Z info:     Patch search space exhausted.
+2022-05-30T01:19:57.746Z info:     Patch search space exhausted.
+Path source is ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp2_dgeemr/3.sol',)
+[2022-05-30 01:19:57.747318] INFO: SolVer.py: Start executing 2 test cases using SolVer with symbex
+[2022-05-30 01:19:57.748299] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp5_mkxxgn/invalid_0_3.sol EtherBank for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/EtherBank/invalid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp2_dgeemr/3.sol',)
+[2022-05-30 01:19:57.757976] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp5_mkxxgn/valid_0_3.sol EtherBank for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/EtherBank/valid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp2_dgeemr/3.sol',)
+2022-05-30T01:19:57.770Z info:     Termination requested
+2022-05-30T01:19:57.774Z info:     Termination requested
+2022-05-30T01:19:57.779Z info:     Termination requested
+2022-05-30T01:19:57.858Z info:     Termination requested
+[2022-05-30 01:19:57.862169] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:57.862Z info:     Patch search space exhausted.
+2022-05-30T01:19:57.862Z info:     Patch search space exhausted.
+2022-05-30T01:19:57.863Z info:     Patch search space exhausted.
+2022-05-30T01:19:57.866Z info:     Termination requested
+2022-05-30T01:19:57.881Z info:     Termination requested
+2022-05-30T01:19:57.882Z info:     Termination requested
+2022-05-30T01:19:57.883Z info:     Termination requested
+[2022-05-30 01:19:57.884458] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:57.885Z info:     Patch search space exhausted.
+2022-05-30T01:19:57.885Z info:     Patch search space exhausted.
+2022-05-30T01:19:57.885Z info:     Patch search space exhausted.
+2022-05-30T01:19:57.905Z info:     Termination requested
+2022-05-30T01:19:57.909Z info:     Termination requested
+2022-05-30T01:19:57.910Z info:     Termination requested
+2022-05-30T01:19:57.911Z info:     Termination requested
+[2022-05-30 01:19:57.912820] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:57.914Z info:     Patch search space exhausted.
+2022-05-30T01:19:57.914Z info:     Patch search space exhausted.
+2022-05-30T01:19:57.914Z info:     Patch search space exhausted.
+2022-05-30T01:19:57.928Z info:     Termination requested
+2022-05-30T01:19:57.936Z info:     Termination requested
+2022-05-30T01:19:57.936Z info:     Termination requested
+2022-05-30T01:19:57.937Z info:     Termination requested
+[2022-05-30 01:19:57.937838] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:57.939Z info:     Patch search space exhausted.
+2022-05-30T01:19:57.939Z info:     Patch search space exhausted.
+2022-05-30T01:19:57.939Z info:     Patch search space exhausted.
+2022-05-30T01:19:57.961Z info:     Termination requested
+2022-05-30T01:19:57.962Z info:     Termination requested
+2022-05-30T01:19:57.962Z info:     Termination requested
+2022-05-30T01:19:57.964Z info:     Termination requested
+[2022-05-30 01:19:57.965188] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:57.966Z info:     Patch search space exhausted.
+2022-05-30T01:19:57.966Z info:     Patch search space exhausted.
+2022-05-30T01:19:57.966Z info:     Patch search space exhausted.
+2022-05-30T01:19:57.968Z info:     Termination requested
+2022-05-30T01:19:57.994Z info:     Termination requested
+2022-05-30T01:19:58.023Z info:     Termination requested
+2022-05-30T01:19:58.024Z info:     Generated 1 patches for current task
+2022-05-30T01:19:58.031Z info:     Patched source file #4 written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp2_dgeemr/4.sol
+2022-05-30T01:19:58.031Z info:     Mutation sequence file #4 for /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp2_dgeemr/4.sol written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp2_dgeemr/4.sol.mutation.json
+The test cases execution result for 3.sol is [FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/EtherBank/invalid_0', additionalInfo=None), FailedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/EtherBank/valid_0', additionalInfo=None, detected=True)]
+[2022-05-30 01:19:58.033062] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 01:19:58.033236] INFO: CR.py: Calling fitnessFn_ProblemDection function
+[2022-05-30 01:19:58.033878] INFO: CR.py: Evaluating the population in CR
+[2022-05-30 01:19:58.034068] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:58.034Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.034Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.034Z info:     Patch search space exhausted.
+Path source is ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp2_dgeemr/4.sol',)
+[2022-05-30 01:19:58.035140] INFO: SolVer.py: Start executing 2 test cases using SolVer with symbex
+[2022-05-30 01:19:58.036042] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmppl404m12/invalid_0_4.sol EtherBank for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/EtherBank/invalid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp2_dgeemr/4.sol',)
+[2022-05-30 01:19:58.043381] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmppl404m12/valid_0_4.sol EtherBank for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/EtherBank/valid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp2_dgeemr/4.sol',)
+2022-05-30T01:19:58.069Z info:     Termination requested
+2022-05-30T01:19:58.076Z info:     Termination requested
+2022-05-30T01:19:58.077Z info:     Termination requested
+2022-05-30T01:19:58.108Z info:     Termination requested
+[2022-05-30 01:19:58.111462] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:58.116Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.116Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.116Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.135Z info:     Termination requested
+2022-05-30T01:19:58.139Z info:     Termination requested
+2022-05-30T01:19:58.139Z info:     Termination requested
+2022-05-30T01:19:58.141Z info:     Termination requested
+[2022-05-30 01:19:58.142179] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:58.143Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.143Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.143Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.144Z info:     Termination requested
+2022-05-30T01:19:58.145Z info:     Termination requested
+2022-05-30T01:19:58.163Z info:     Termination requested
+2022-05-30T01:19:58.192Z info:     Termination requested
+[2022-05-30 01:19:58.193603] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:58.194Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.194Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.194Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.196Z info:     Termination requested
+2022-05-30T01:19:58.196Z info:     Termination requested
+2022-05-30T01:19:58.213Z info:     Termination requested
+2022-05-30T01:19:58.216Z info:     Termination requested
+[2022-05-30 01:19:58.217463] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:58.218Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.218Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.218Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.236Z info:     Termination requested
+2022-05-30T01:19:58.237Z info:     Termination requested
+2022-05-30T01:19:58.239Z info:     Termination requested
+2022-05-30T01:19:58.239Z info:     Termination requested
+[2022-05-30 01:19:58.240572] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:58.241Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.241Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.241Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.256Z info:     Termination requested
+2022-05-30T01:19:58.260Z info:     Termination requested
+2022-05-30T01:19:58.261Z info:     Termination requested
+2022-05-30T01:19:58.289Z info:     Termination requested
+[2022-05-30 01:19:58.307790] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:58.309Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.309Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.309Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.359Z info:     Termination requested
+2022-05-30T01:19:58.371Z info:     Termination requested
+2022-05-30T01:19:58.378Z info:     Generated 1 patches for current task
+The test cases execution result for 4.sol is [FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/EtherBank/invalid_0', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/EtherBank/valid_0', additionalInfo=None)]
+[2022-05-30 01:19:58.389063] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 01:19:58.389326] INFO: CR.py: Calling fitnessFn_ProblemDection function
+2022-05-30T01:19:58.391Z info:     Patched source file #0 written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmprkl_bevm/0.sol
+2022-05-30T01:19:58.392Z info:     Mutation sequence file #0 for /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmprkl_bevm/0.sol written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmprkl_bevm/0.sol.mutation.json
+2022-05-30T01:19:58.434Z info:     Termination requested
+[2022-05-30 01:19:58.435911] INFO: CR.py: Evaluating the population in CR
+[2022-05-30 01:19:58.436522] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:58.437Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.437Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.437Z info:     Patch search space exhausted.
+Path source is ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmprkl_bevm/0.sol',)
+[2022-05-30 01:19:58.438257] INFO: SolVer.py: Start executing 2 test cases using SolVer with symbex
+[2022-05-30 01:19:58.439408] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpiwh055qi/invalid_0_0.sol EtherBank for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/EtherBank/invalid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmprkl_bevm/0.sol',)
+[2022-05-30 01:19:58.444631] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpiwh055qi/valid_0_0.sol EtherBank for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/EtherBank/valid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmprkl_bevm/0.sol',)
+2022-05-30T01:19:58.459Z info:     Termination requested
+2022-05-30T01:19:58.460Z info:     Termination requested
+2022-05-30T01:19:58.462Z info:     Termination requested
+2022-05-30T01:19:58.485Z info:     Termination requested
+[2022-05-30 01:19:58.486778] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:58.488Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.488Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.488Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.506Z info:     Termination requested
+2022-05-30T01:19:58.508Z info:     Termination requested
+2022-05-30T01:19:58.512Z info:     Termination requested
+2022-05-30T01:19:58.546Z info:     Termination requested
+[2022-05-30 01:19:58.547570] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:58.548Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.548Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.548Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.550Z info:     Termination requested
+2022-05-30T01:19:58.551Z info:     Termination requested
+2022-05-30T01:19:58.551Z info:     Termination requested
+2022-05-30T01:19:58.561Z info:     Termination requested
+[2022-05-30 01:19:58.562627] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:58.563Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.563Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.563Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.567Z info:     Termination requested
+2022-05-30T01:19:58.578Z info:     Termination requested
+2022-05-30T01:19:58.587Z info:     Termination requested
+2022-05-30T01:19:58.608Z info:     Termination requested
+[2022-05-30 01:19:58.608726] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:58.609Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.609Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.609Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.611Z info:     Termination requested
+2022-05-30T01:19:58.621Z info:     Termination requested
+2022-05-30T01:19:58.622Z info:     Termination requested
+2022-05-30T01:19:58.625Z info:     Termination requested
+[2022-05-30 01:19:58.626310] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:58.627Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.627Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.627Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.649Z info:     Termination requested
+2022-05-30T01:19:58.652Z info:     Termination requested
+2022-05-30T01:19:58.688Z info:     Generated 1 patches for current task
+2022-05-30T01:19:58.690Z info:     Termination requested
+2022-05-30T01:19:58.695Z info:     Patched source file #5 written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp2_dgeemr/5.sol
+2022-05-30T01:19:58.695Z info:     Mutation sequence file #5 for /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp2_dgeemr/5.sol written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp2_dgeemr/5.sol.mutation.json
+[2022-05-30 01:19:58.697489] INFO: CR.py: Evaluating the population in CR
+[2022-05-30 01:19:58.697739] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:58.698Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.698Z info:     Patch search space exhausted.
+Path source is ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp2_dgeemr/5.sol',)
+2022-05-30T01:19:58.698Z info:     Patch search space exhausted.
+[2022-05-30 01:19:58.698963] INFO: SolVer.py: Start executing 2 test cases using SolVer with symbex
+[2022-05-30 01:19:58.699911] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpnxh01m18/invalid_0_5.sol EtherBank for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/EtherBank/invalid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp2_dgeemr/5.sol',)
+[2022-05-30 01:19:58.705357] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpnxh01m18/valid_0_5.sol EtherBank for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/EtherBank/valid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp2_dgeemr/5.sol',)
+2022-05-30T01:19:58.733Z info:     Termination requested
+2022-05-30T01:19:58.735Z info:     Termination requested
+The test cases execution result for 0.sol is [PassedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/EtherBank/invalid_0', additionalInfo=None, detected=False), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/EtherBank/valid_0', additionalInfo=None)]
+[2022-05-30 01:19:58.737499] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 01:19:58.738078] INFO: CR.py: Calling fitnessFn_ProblemDection function
+2022-05-30T01:19:58.749Z info:     Termination requested
+2022-05-30T01:19:58.771Z info:     Termination requested
+[2022-05-30 01:19:58.772510] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:58.773Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.773Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.773Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.778Z info:     Termination requested
+2022-05-30T01:19:58.790Z info:     Termination requested
+2022-05-30T01:19:58.793Z info:     Termination requested
+2022-05-30T01:19:58.793Z info:     Termination requested
+[2022-05-30 01:19:58.794167] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:58.794Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.794Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.794Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.808Z info:     Termination requested
+2022-05-30T01:19:58.811Z info:     Termination requested
+2022-05-30T01:19:58.817Z info:     Termination requested
+2022-05-30T01:19:58.842Z info:     Generated 1 patches for current task
+2022-05-30T01:19:58.851Z info:     Patched source file #1 written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmprkl_bevm/1.sol
+2022-05-30T01:19:58.852Z info:     Mutation sequence file #1 for /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmprkl_bevm/1.sol written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmprkl_bevm/1.sol.mutation.json
+[2022-05-30 01:19:58.860180] INFO: CR.py: Evaluating the population in CR
+[2022-05-30 01:19:58.860446] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:58.861Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.861Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.861Z info:     Patch search space exhausted.
+Path source is ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmprkl_bevm/1.sol',)
+[2022-05-30 01:19:58.861667] INFO: SolVer.py: Start executing 2 test cases using SolVer with symbex
+[2022-05-30 01:19:58.862622] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_wfw44uw/invalid_0_1.sol EtherBank for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/EtherBank/invalid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmprkl_bevm/1.sol',)
+[2022-05-30 01:19:58.870780] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_wfw44uw/valid_0_1.sol EtherBank for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/EtherBank/valid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmprkl_bevm/1.sol',)
+2022-05-30T01:19:58.887Z info:     Termination requested
+2022-05-30T01:19:58.887Z info:     Termination requested
+2022-05-30T01:19:58.896Z info:     Termination requested
+2022-05-30T01:19:58.900Z info:     Termination requested
+[2022-05-30 01:19:58.900838] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:58.901Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.901Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.901Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.904Z info:     Termination requested
+2022-05-30T01:19:58.905Z info:     Termination requested
+2022-05-30T01:19:58.926Z info:     Termination requested
+2022-05-30T01:19:58.932Z info:     Termination requested
+[2022-05-30 01:19:58.934204] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T01:19:58.935Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.935Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.935Z info:     Patch search space exhausted.
+2022-05-30T01:19:58.957Z info:     Termination requested
+2022-05-30T01:19:58.962Z info:     Termination requested
+2022-05-30T01:19:58.969Z info:     Termination requested
+2022-05-30T01:19:59.003Z info:     Generated 1 patches for current task
+2022-05-30T01:19:59.021Z info:     Patched source file #2 written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmprkl_bevm/2.sol
+2022-05-30T01:19:59.021Z info:     Mutation sequence file #2 for /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmprkl_bevm/2.sol written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmprkl_bevm/2.sol.mutation.json
+The test cases execution result for 5.sol is [PassedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/EtherBank/invalid_0', additionalInfo=None, detected=False), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/EtherBank/valid_0', additionalInfo=None)]
+[2022-05-30 01:19:59.032662] INFO: CR.py: Evaluating the population in CR
+[2022-05-30 01:19:59.032906] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 01:19:59.033182] INFO: CR.py: Calling fitnessFn_ProblemDection function
+Path source is ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmprkl_bevm/2.sol',)
+[2022-05-30 01:19:59.033626] INFO: SolVer.py: Start executing 2 test cases using SolVer with symbex
+[2022-05-30 01:19:59.034352] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpm0h9krce/invalid_0_2.sol EtherBank for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/EtherBank/invalid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmprkl_bevm/2.sol',)
+[2022-05-30 01:19:59.038640] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpm0h9krce/valid_0_2.sol EtherBank for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/EtherBank/valid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmprkl_bevm/2.sol',)
+The test cases execution result for 1.sol is [PassedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/EtherBank/invalid_0', additionalInfo=None, detected=False), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/EtherBank/valid_0', additionalInfo=None)]
+[2022-05-30 01:19:59.167604] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 01:19:59.167887] INFO: CR.py: Calling fitnessFn_ProblemDection function
+The test cases execution result for 2.sol is [FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/EtherBank/invalid_0', additionalInfo=None), FailedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/EtherBank/valid_0', additionalInfo=None, detected=True)]
+[2022-05-30 01:19:59.219656] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 01:19:59.219895] INFO: CR.py: Calling fitnessFn_ProblemDection function
+[2022-05-30 01:19:59.220708] INFO: CR.py: Currently done evaluating generation 0
+[2022-05-30 01:19:59.220971] INFO: CR.py:    	     	                                                                            	    	                                   vulnerabilities                                    
+   	     	                                                                            	    	--------------------------------------------------------------------------------------
+   	     	                               fitness values                               	    	                                 	                                              
+   	     	----------------------------------------------------------------------------	    	                                 	                                              
+gen	evals	min                                  	max                                 	op  	#targetedVuls                    	#targetedVuls(detailed)vuls-best-patch(max: 3)
+0  	11   	{'hard': '(-2.0,)', 'soft': '(2.0,)'}	{'hard': '(0.0,)', 'soft': '(1.0,)'}	init	(0, 2, 1, 1, 2, 1, 0, 0, 0, 2, 1)	                                              
+[2022-05-30 01:19:59.222452] INFO: CR.py: ParetoFront: 
+{'fitness values': {'min': FitnessMultiMin_improved(Hard: (0.0,) Soft: (1.0,)), 'max': FitnessMultiMin_improved(Hard: (0.0,) Soft: (1.0,))}, 'vulnerabilities': {'vuls-best-patch(max: 3)': {}, '#targetedVuls': (0, 0)}}
+[2022-05-30 01:19:59.222610] INFO: CR.py: Evaluated 10 patches
+[2022-05-30 01:19:59.222957] INFO: CR.py:                   	     	                                                                            	    	                                   vulnerabilities                                    
+                  	     	                                                                            	    	--------------------------------------------------------------------------------------
+                  	     	                               fitness values                               	    	                                 	                                              
+                  	     	----------------------------------------------------------------------------	    	                                 	                                              
+gen               	evals	min                                  	max                                 	op  	#targetedVuls                    	#targetedVuls(detailed)vuls-best-patch(max: 3)
+0                 	11   	{'hard': '(-2.0,)', 'soft': '(2.0,)'}	{'hard': '(0.0,)', 'soft': '(1.0,)'}	init	(0, 2, 1, 1, 2, 1, 0, 0, 0, 2, 1)	                                              
+plausible-last-gen	4    	{'hard': '(0.0,)', 'soft': '(2.0,)'} 	{'hard': '(0.0,)', 'soft': '(1.0,)'}	init	(0, 0, 0, 0)                     	                                              
+[2022-05-30 01:19:59.224001] INFO: CR.py: Plausible patches details:
+[Individual(MutationSequence=[{'ast': {'type': 'SourceUnit', 'children': [{'type': 'ContractDefinition', 'name': 'EtherBank', 'baseContracts': [], 'subNodes': [{'type': 'StateVariableDeclaration', 'variables': [{'type': 'VariableDeclaration', 'typeName': {'type': 'Mapping', 'keyType': {'type': 'ElementaryTypeName', 'name': 'address'}, 'valueType': {'type': 'ElementaryTypeName', 'name': 'uint256'}}, 'name': 'userBalances', 'expression': None, 'visibility': 'default', 'isStateVar': True, 'isDeclaredConst': False, 'isIndexed': False}], 'initialValue': None}, {'type': 'FunctionDefinition', 'name': 'addToBalance', 'parameters': [], 'returnParameters': None, 'body': {'type': 'Block', 'statements': [{'type': 'ExpressionStatement', 'expression': {'type': 'BinaryOperation', 'operator': '+=', 'left': {'type': 'IndexAccess', 'base': {'type': 'Identifier', 'name': 'userBalances'}, 'index': {'type': 'MemberAccess', 'expression': {'type': 'Identifier', 'name': 'msg'}, 'memberName': 'sender'}}, 'right': {'type': 'MemberAccess', 'expression': {'type': 'Identifier', 'name': 'msg'}, 'memberName': 'value'}}}]}, 'visibility': 'public', 'modifiers': [], 'isConstructor': False, 'stateMutability': 'payable'}, {'type': 'FunctionDefinition', 'name': 'withdrawBalance', 'parameters': [], 'returnParameters': None, 'body': {'type': 'Block', 'statements': [{'type': 'VariableDeclarationStatement', 'variables': [{'type': 'VariableDeclaration', 'typeName': {'type': 'ElementaryTypeName', 'name': 'uint256'}, 'name': 'amountToWithdraw', 'storageLocation': None, 'isStateVar': False, 'isIndexed': False}], 'initialValue': None}, {'type': 'ExpressionStatement', 'expression': {'type': 'BinaryOperation', 'operator': '=', 'left': {'type': 'Identifier', 'name': 'amountToWithdraw'}, 'right': {'type': 'IndexAccess', 'base': {'type': 'Identifier', 'name': 'userBalances'}, 'index': {'type': 'MemberAccess', 'expression': {'type': 'Identifier', 'name': 'msg'}, 'memberName': 'sender'}}}}, {'type': 'ExpressionStatement', 'expression': {'type': 'FunctionCall', 'expression': {'type': 'MemberAccess', 'expression': {'type': 'MemberAccess', 'expression': {'type': 'MemberAccess', 'expression': {'type': 'Identifier', 'name': 'msg'}, 'memberName': 'sender'}, 'memberName': 'call'}, 'memberName': 'value'}, 'arguments': [{'type': 'Identifier', 'name': 'amountToWithdraw'}], 'names': []}}, {'type': 'ExpressionStatement', 'expression': {'type': 'BinaryOperation', 'operator': '=', 'left': {'type': 'IndexAccess', 'base': {'type': 'Identifier', 'name': 'userBalances'}, 'index': {'type': 'MemberAccess', 'expression': {'type': 'Identifier', 'name': 'msg'}, 'memberName': 'sender'}}, 'right': {'type': 'NumberLiteral', 'number': '0', 'subdenomination': None}}}]}, 'visibility': 'public', 'modifiers': [], 'isConstructor': False, 'stateMutability': None}, {'type': 'FunctionDefinition', 'name': 'getBalance', 'parameters': [{'type': 'VariableDeclaration', 'typeName': {'type': 'ElementaryTypeName', 'name': 'address'}, 'name': 'user', 'storageLocation': None, 'isStateVar': False, 'isIndexed': False}], 'returnParameters': [{'type': 'VariableDeclaration', 'typeName': {'type': 'ElementaryTypeName', 'name': 'uint256'}, 'name': 'balance', 'storageLocation': None, 'isStateVar': False, 'isIndexed': False}], 'body': {'type': 'Block', 'statements': [{'type': 'ReturnStatement', 'expression': {'type': 'IndexAccess', 'base': {'type': 'Identifier', 'name': 'userBalances'}, 'index': {'type': 'Identifier', 'name': 'user'}}}]}, 'visibility': 'external', 'modifiers': [], 'isConstructor': False, 'stateMutability': 'view'}], 'kind': 'contract'}], 'comments': [{'type': 'BlockComment', 'value': '\n@source: https://github.com/seresistvanandras/EthBench/blob/master/Benchmark/Simple/reentrant.sol\n@author: -\n@vulnerable_at_lines: 21', 'codeStart': 178, 'raw': '\n * @source: https://github.com/seresistvanandras/EthBench/blob/master/Benchmark/Simple/reentrant.sol\n * @author: -\n * @vulnerable_at_lines: 21\n ', 'code': {'context': {}, 'value': ''}}, {'type': 'LineComment', 'value': 'pragma solidity ^0.4.0;', 'raw': ' pragma solidity ^0.4.0;'}]}, 'mutationType': 'MovementM', 'fromNodePath': ['children', '0', 'subNodes', '2', 'body', 'statements', '2'], 'toPropertyPath': ['children', '0', 'subNodes', '2', 'body', 'statements'], 'insertIndex': 4}], PatchedFilePath='/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpgsnlr83p/0.sol', ModifiedLocations=[{'start': {'line': 18, 'column': 5}, 'end': {'line': 18, 'column': 44}}, {'start': {'line': 15, 'column': 35}, 'end': {'line': 20, 'column': 1}}]), Individual(MutationSequence=[{'targetNodePath': ['children', '0', 'subNodes', '2', 'body'], 'targetPropertyPath': ['children', '0', 'subNodes', '2', 'body', 'statements'], 'insertIndex': 0, 'newNode': {'type': 'ExpressionStatement', 'expression': {'type': 'FunctionCall', 'expression': {'type': 'Identifier', 'name': 'require'}, 'arguments': [{'type': 'BinaryOperation', 'left': {'type': 'NumberLiteral', 'number': '0', 'subdenomination': None}, 'right': {'type': 'IndexAccess', 'base': {'type': 'Identifier', 'name': 'userBalances'}, 'index': {'type': 'MemberAccess', 'expression': {'type': 'Identifier', 'name': 'msg'}, 'memberName': 'sender'}}, 'operator': '=='}], 'names': []}}, 'mutationType': 'InsertionM'}], PatchedFilePath='/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp2_dgeemr/5.sol', ModifiedLocations=[{'start': {'line': 15, 'column': 35}, 'end': {'line': 20, 'column': 1}}]), Individual(MutationSequence=[{'targetNodePath': ['children', '0', 'subNodes', '1', 'body'], 'targetPropertyPath': ['children', '0', 'subNodes', '1', 'body', 'statements'], 'insertIndex': 0, 'newNode': {'type': 'ExpressionStatement', 'expression': {'type': 'BinaryOperation', 'left': {'type': 'IndexAccess', 'base': {'type': 'Identifier', 'name': 'userBalances'}, 'index': {'type': 'MemberAccess', 'expression': {'type': 'Identifier', 'name': 'msg'}, 'memberName': 'sender'}}, 'right': {'type': 'NumberLiteral', 'number': '0', 'subdenomination': None}, 'operator': '='}}, 'mutationType': 'InsertionM'}, {'ast': {'type': 'SourceUnit', 'children': [{'type': 'ContractDefinition', 'name': 'EtherBank', 'baseContracts': [], 'subNodes': [{'type': 'StateVariableDeclaration', 'variables': [{'type': 'VariableDeclaration', 'typeName': {'type': 'Mapping', 'keyType': {'type': 'ElementaryTypeName', 'name': 'address'}, 'valueType': {'type': 'ElementaryTypeName', 'name': 'uint256'}}, 'name': 'userBalances', 'expression': None, 'visibility': 'default', 'isStateVar': True, 'isDeclaredConst': False, 'isIndexed': False}], 'initialValue': None}, {'type': 'FunctionDefinition', 'name': 'addToBalance', 'parameters': [], 'returnParameters': None, 'body': {'type': 'Block', 'statements': [{'type': 'ExpressionStatement', 'expression': {'type': 'BinaryOperation', 'left': {'type': 'IndexAccess', 'base': {'type': 'Identifier', 'name': 'userBalances'}, 'index': {'type': 'MemberAccess', 'expression': {'type': 'Identifier', 'name': 'msg'}, 'memberName': 'sender'}}, 'right': {'type': 'NumberLiteral', 'number': '0', 'subdenomination': None}, 'operator': '='}}, {'type': 'ExpressionStatement', 'expression': {'type': 'BinaryOperation', 'operator': '+=', 'left': {'type': 'IndexAccess', 'base': {'type': 'Identifier', 'name': 'userBalances'}, 'index': {'type': 'MemberAccess', 'expression': {'type': 'Identifier', 'name': 'msg'}, 'memberName': 'sender'}}, 'right': {'type': 'MemberAccess', 'expression': {'type': 'Identifier', 'name': 'msg'}, 'memberName': 'value'}}}]}, 'visibility': 'public', 'modifiers': [], 'isConstructor': False, 'stateMutability': 'payable'}, {'type': 'FunctionDefinition', 'name': 'withdrawBalance', 'parameters': [], 'returnParameters': None, 'body': {'type': 'Block', 'statements': [{'type': 'VariableDeclarationStatement', 'variables': [{'type': 'VariableDeclaration', 'typeName': {'type': 'ElementaryTypeName', 'name': 'uint256'}, 'name': 'amountToWithdraw', 'storageLocation': None, 'isStateVar': False, 'isIndexed': False}], 'initialValue': None}, {'type': 'ExpressionStatement', 'expression': {'type': 'BinaryOperation', 'operator': '=', 'left': {'type': 'Identifier', 'name': 'amountToWithdraw'}, 'right': {'type': 'IndexAccess', 'base': {'type': 'Identifier', 'name': 'userBalances'}, 'index': {'type': 'MemberAccess', 'expression': {'type': 'Identifier', 'name': 'msg'}, 'memberName': 'sender'}}}}, {'type': 'ExpressionStatement', 'expression': {'type': 'FunctionCall', 'expression': {'type': 'MemberAccess', 'expression': {'type': 'MemberAccess', 'expression': {'type': 'MemberAccess', 'expression': {'type': 'Identifier', 'name': 'msg'}, 'memberName': 'sender'}, 'memberName': 'call'}, 'memberName': 'value'}, 'arguments': [{'type': 'Identifier', 'name': 'amountToWithdraw'}], 'names': []}}, {'type': 'ExpressionStatement', 'expression': {'type': 'BinaryOperation', 'operator': '=', 'left': {'type': 'IndexAccess', 'base': {'type': 'Identifier', 'name': 'userBalances'}, 'index': {'type': 'MemberAccess', 'expression': {'type': 'Identifier', 'name': 'msg'}, 'memberName': 'sender'}}, 'right': {'type': 'NumberLiteral', 'number': '0', 'subdenomination': None}}}]}, 'visibility': 'public', 'modifiers': [], 'isConstructor': False, 'stateMutability': None}, {'type': 'FunctionDefinition', 'name': 'getBalance', 'parameters': [{'type': 'VariableDeclaration', 'typeName': {'type': 'ElementaryTypeName', 'name': 'address'}, 'name': 'user', 'storageLocation': None, 'isStateVar': False, 'isIndexed': False}], 'returnParameters': [{'type': 'VariableDeclaration', 'typeName': {'type': 'ElementaryTypeName', 'name': 'uint256'}, 'name': 'balance', 'storageLocation': None, 'isStateVar': False, 'isIndexed': False}], 'body': {'type': 'Block', 'statements': [{'type': 'ReturnStatement', 'expression': {'type': 'IndexAccess', 'base': {'type': 'Identifier', 'name': 'userBalances'}, 'index': {'type': 'Identifier', 'name': 'user'}}}]}, 'visibility': 'external', 'modifiers': [], 'isConstructor': False, 'stateMutability': 'view'}], 'kind': 'contract'}], 'comments': [{'type': 'BlockComment', 'value': '\n@source: https://github.com/seresistvanandras/EthBench/blob/master/Benchmark/Simple/reentrant.sol\n@author: -\n@vulnerable_at_lines: 21', 'codeStart': 178, 'raw': '\n * @source: https://github.com/seresistvanandras/EthBench/blob/master/Benchmark/Simple/reentrant.sol\n * @author: -\n * @vulnerable_at_lines: 21\n ', 'code': {'context': {}, 'value': ''}}, {'type': 'LineComment', 'value': 'pragma solidity ^0.4.0;', 'raw': ' pragma solidity ^0.4.0;'}]}, 'mutationType': 'MovementM', 'fromNodePath': ['children', '0', 'subNodes', '2', 'body', 'statements', '2'], 'toPropertyPath': ['children', '0', 'subNodes', '2', 'body', 'statements'], 'insertIndex': 4}], PatchedFilePath='/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmprkl_bevm/0.sol', ModifiedLocations=[{'start': {'line': 11, 'column': 40}, 'end': {'line': 13, 'column': 1}}, {'start': {'line': 18, 'column': 5}, 'end': {'line': 18, 'column': 44}}, {'start': {'line': 15, 'column': 35}, 'end': {'line': 20, 'column': 1}}]), Individual(MutationSequence=[{'ast': {'type': 'SourceUnit', 'children': [{'type': 'ContractDefinition', 'name': 'EtherBank', 'baseContracts': [], 'subNodes': [{'type': 'StateVariableDeclaration', 'variables': [{'type': 'VariableDeclaration', 'typeName': {'type': 'Mapping', 'keyType': {'type': 'ElementaryTypeName', 'name': 'address'}, 'valueType': {'type': 'ElementaryTypeName', 'name': 'uint256'}}, 'name': 'userBalances', 'expression': None, 'visibility': 'default', 'isStateVar': True, 'isDeclaredConst': False, 'isIndexed': False}], 'initialValue': None}, {'type': 'FunctionDefinition', 'name': 'addToBalance', 'parameters': [], 'returnParameters': None, 'body': {'type': 'Block', 'statements': [{'type': 'ExpressionStatement', 'expression': {'type': 'BinaryOperation', 'operator': '+=', 'left': {'type': 'IndexAccess', 'base': {'type': 'Identifier', 'name': 'userBalances'}, 'index': {'type': 'MemberAccess', 'expression': {'type': 'Identifier', 'name': 'msg'}, 'memberName': 'sender'}}, 'right': {'type': 'MemberAccess', 'expression': {'type': 'Identifier', 'name': 'msg'}, 'memberName': 'value'}}}]}, 'visibility': 'public', 'modifiers': [], 'isConstructor': False, 'stateMutability': 'payable'}, {'type': 'FunctionDefinition', 'name': 'withdrawBalance', 'parameters': [], 'returnParameters': None, 'body': {'type': 'Block', 'statements': [{'type': 'VariableDeclarationStatement', 'variables': [{'type': 'VariableDeclaration', 'typeName': {'type': 'ElementaryTypeName', 'name': 'uint256'}, 'name': 'amountToWithdraw', 'storageLocation': None, 'isStateVar': False, 'isIndexed': False}], 'initialValue': None}, {'type': 'ExpressionStatement', 'expression': {'type': 'BinaryOperation', 'operator': '=', 'left': {'type': 'Identifier', 'name': 'amountToWithdraw'}, 'right': {'type': 'IndexAccess', 'base': {'type': 'Identifier', 'name': 'userBalances'}, 'index': {'type': 'MemberAccess', 'expression': {'type': 'Identifier', 'name': 'msg'}, 'memberName': 'sender'}}}}, {'type': 'ExpressionStatement', 'expression': {'type': 'FunctionCall', 'expression': {'type': 'MemberAccess', 'expression': {'type': 'MemberAccess', 'expression': {'type': 'MemberAccess', 'expression': {'type': 'Identifier', 'name': 'msg'}, 'memberName': 'sender'}, 'memberName': 'call'}, 'memberName': 'value'}, 'arguments': [{'type': 'Identifier', 'name': 'amountToWithdraw'}], 'names': []}}, {'type': 'ExpressionStatement', 'expression': {'type': 'BinaryOperation', 'operator': '=', 'left': {'type': 'IndexAccess', 'base': {'type': 'Identifier', 'name': 'userBalances'}, 'index': {'type': 'MemberAccess', 'expression': {'type': 'Identifier', 'name': 'msg'}, 'memberName': 'sender'}}, 'right': {'type': 'NumberLiteral', 'number': '0', 'subdenomination': None}}}]}, 'visibility': 'public', 'modifiers': [], 'isConstructor': False, 'stateMutability': None}, {'type': 'FunctionDefinition', 'name': 'getBalance', 'parameters': [{'type': 'VariableDeclaration', 'typeName': {'type': 'ElementaryTypeName', 'name': 'address'}, 'name': 'user', 'storageLocation': None, 'isStateVar': False, 'isIndexed': False}], 'returnParameters': [{'type': 'VariableDeclaration', 'typeName': {'type': 'ElementaryTypeName', 'name': 'uint256'}, 'name': 'balance', 'storageLocation': None, 'isStateVar': False, 'isIndexed': False}], 'body': {'type': 'Block', 'statements': [{'type': 'ReturnStatement', 'expression': {'type': 'IndexAccess', 'base': {'type': 'Identifier', 'name': 'userBalances'}, 'index': {'type': 'Identifier', 'name': 'user'}}}]}, 'visibility': 'external', 'modifiers': [], 'isConstructor': False, 'stateMutability': 'view'}], 'kind': 'contract'}], 'comments': [{'type': 'BlockComment', 'value': '\n@source: https://github.com/seresistvanandras/EthBench/blob/master/Benchmark/Simple/reentrant.sol\n@author: -\n@vulnerable_at_lines: 21', 'codeStart': 178, 'raw': '\n * @source: https://github.com/seresistvanandras/EthBench/blob/master/Benchmark/Simple/reentrant.sol\n * @author: -\n * @vulnerable_at_lines: 21\n ', 'code': {'context': {}, 'value': ''}}, {'type': 'LineComment', 'value': 'pragma solidity ^0.4.0;', 'raw': ' pragma solidity ^0.4.0;'}]}, 'mutationType': 'MovementM', 'fromNodePath': ['children', '0', 'subNodes', '2', 'body', 'statements', '2'], 'toPropertyPath': ['children', '0', 'subNodes', '2', 'body', 'statements'], 'insertIndex': 4}, {'targetNodePath': ['children', '0', 'subNodes', '2', 'body'], 'targetPropertyPath': ['children', '0', 'subNodes', '2', 'body', 'statements'], 'insertIndex': 4, 'newNode': {'type': 'ExpressionStatement', 'expression': {'type': 'FunctionCall', 'expression': {'type': 'Identifier', 'name': 'require'}, 'arguments': [{'type': 'BinaryOperation', 'left': {'type': 'NumberLiteral', 'number': '0', 'subdenomination': None}, 'right': {'type': 'IndexAccess', 'base': {'type': 'Identifier', 'name': 'userBalances'}, 'index': {'type': 'MemberAccess', 'expression': {'type': 'Identifier', 'name': 'msg'}, 'memberName': 'sender'}}, 'operator': '!='}], 'names': []}}, 'mutationType': 'InsertionM'}], PatchedFilePath='/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmprkl_bevm/1.sol', ModifiedLocations=[{'start': {'line': 18, 'column': 5}, 'end': {'line': 18, 'column': 44}}, {'start': {'line': 15, 'column': 35}, 'end': {'line': 20, 'column': 1}}])]
+[2022-05-30 01:19:59.224376] INFO: CR.py: Evaluated 10 patches
+Testing equivalence... 16
+The valid implementation is EQUIVALENT: ../DeFi/SolVer/experiment/EtherBank/patched/patched_16.sol
+Testing equivalence... 17
+Testing equivalence... 18
+Testing equivalence... 19
+[2022-05-30 01:20:00.239827] INFO: CR.py: Terminating...
+Source files after applying plausible patches are in:
+/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpgsnlr83p/0.sol
+/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp2_dgeemr/5.sol
+/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmprkl_bevm/0.sol
+/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmprkl_bevm/1.sol
+python3 CLI.py --targetContractName EtherBank repair   44.30s user 3.03s system 492% cpu 9.615 total

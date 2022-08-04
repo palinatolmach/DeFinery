@@ -1,0 +1,886 @@
+-> % time ./solver/solver -symexe-main ../contracts/Refund_NoSub.sol Refund_NoSub
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+dumping contract information: 
+Contract: _MAIN_
+	Constructor: _MAIN_()
+	State Variables:
+		$value
+		$from_refund
+		$from_deposit
+		user
+		wallet
+	Modifiers:
+	Functions:
+		_MAIN_:::function ()
+		_MAIN_::declare_property:function (bool)
+	Local Variables:
+		balance_returned@258
+		new_wallet_balance@243
+		post_balance@255
+		pre_balance@252
+		new_this_balance@240
+		old_user_balance@234
+		property@183
+		new_usr_balance@249
+		old_wallet_balance@231
+		old_this_balance@228
+		new_user_balance@246
+		old_usr_balance@237
+
+Contract: User
+	Constructor: User()
+	State Variables:
+		wallet
+	Modifiers:
+	Functions:
+		User::deposit:function (uint256)
+		User::refund:function ()
+		User::withdraw:function (uint256)
+		User:::function (address)
+	Local Variables:
+		_amount@157
+		_value@142
+		_wallet@130
+
+Contract: Refund_NoSub
+	Constructor: Refund_NoSub()
+	State Variables:
+		balances
+		creator
+	Modifiers:
+	Functions:
+		Refund_NoSub::getBalances:function (address) returns (uint256)
+		Refund_NoSub::refund:function ()
+		Refund_NoSub::migrateTo:function (address payable)
+		Refund_NoSub::deposit:function ()
+		Refund_NoSub::withdraw:function (uint256)
+		Refund_NoSub:::function ()
+	Local Variables:
+		balance@118
+		to@93
+		depositor@115
+		amount@44
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+initName: balance%1%_0_
+After state allocation: 
+Added balance_returned@258%1% to unsigned 
+Added new_wallet_balance@243%1% to unsigned 
+Added post_balance@255%1% to unsigned 
+Added pre_balance@252%1% to unsigned 
+Added new_this_balance@240%1% to unsigned 
+Added old_user_balance@234%1% to unsigned 
+Added new_usr_balance@249%1% to unsigned 
+Added old_wallet_balance@231%1% to unsigned 
+Added old_this_balance@228%1% to unsigned 
+Added new_user_balance@246%1% to unsigned 
+Added old_usr_balance@237%1% to unsigned 
+After allocation: 
++++++++++++++ printing context +++++++++++++++
+idNum: 2, addr: 0x7fcb650041f0
+sourceContext: nullptr
+	state variables: 
+		varName: user%1%, value: 0, sort: Int
+		varName: $from_deposit%1%, value: $from_deposit%1%, sort: (_ BitVec 64)
+		varName: $from_refund%1%, value: $from_refund%1%, sort: (_ BitVec 64)
+		varName: msg.value, value: msg.value_0_, sort: (_ BitVec 64)
+		varName: $value%1%, value: $value%1%, sort: (_ BitVec 64)
+		varName: balance%1%, value: balance%1%_0_, sort: (_ BitVec 64)
+		varName: wallet%1%, value: 0, sort: Int
+		varName: block.timestamp, value: block.timestamp_0_, sort: Int
+		varName: msg.sender, value: msg.sender_0_, sort: Int
+	local variables: 
+		varName: old_usr_balance@237%1%, value: #x0000000000000000, sort: (_ BitVec 64)
+		varName: old_this_balance@228%1%, value: #x0000000000000000, sort: (_ BitVec 64)
+		varName: new_user_balance@246%1%, value: #x0000000000000000, sort: (_ BitVec 64)
+		varName: new_usr_balance@249%1%, value: #x0000000000000000, sort: (_ BitVec 64)
+		varName: old_wallet_balance@231%1%, value: #x0000000000000000, sort: (_ BitVec 64)
+		varName: old_user_balance@234%1%, value: #x0000000000000000, sort: (_ BitVec 64)
+		varName: pre_balance@252%1%, value: #x0000000000000000, sort: (_ BitVec 64)
+		varName: post_balance@255%1%, value: #x0000000000000000, sort: (_ BitVec 64)
+		varName: new_this_balance@240%1%, value: #x0000000000000000, sort: (_ BitVec 64)
+		varName: property@183%1%, value: false, sort: Bool
+		varName: balance_returned@258%1%, value: #x0000000000000000, sort: (_ BitVec 64)
+		varName: new_wallet_balance@243%1%, value: #x0000000000000000, sort: (_ BitVec 64)
+	path conditions: 
+	goHead: 1
+	current Address: 1
+	msg.sender: 0
+	current Function Scope: 
+	abnormal Termination: None
+Call Stack: 
+++++++++++++ end of printing context +++++++++++++++
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Refund_NoSub.sol:81:9: 
+   |
+81 |         wallet = new Refund_NoSub();
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Allocation is done: 
+Address of the repaired contract is 2
+Refund_NoSub is name 
+Added balance@118%2% to unsigned 
+Added amount@44%2% to unsigned 
+_executeConstructors() is called for: Refund_NoSub
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Refund_NoSub.sol:20:10: 
+   |
+20 |          creator = msg.sender;
+   |          ^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Refund_NoSub.sol:82:9: 
+   |
+82 |         user = new User(address(wallet));
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Allocation is done: 
+Added _amount@157%3% to unsigned 
+Added _value@142%3% to unsigned 
+_executeConstructors() is called for: User
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Refund_NoSub.sol:54:9: 
+   |
+54 |         wallet = Refund_NoSub(_wallet);
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Refund_NoSub.sol:83:9: 
+   |
+83 |         address(user).call.value(100);
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+update msg.value: #x0000000000000064
+That might be member access: 
+Cannot find the definition: __fallback__
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Refund_NoSub.sol:84:9: 
+   |
+84 |         address(wallet).call.value(100);
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+update msg.value: #x0000000000000064
+That might be member access: 
+Cannot find the definition: __fallback__
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Refund_NoSub.sol:86:9: 
+   |
+86 |         uint old_this_balance; uint old_wallet_balance;
+   |         ^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Refund_NoSub.sol:86:32: 
+   |
+86 |         uint old_this_balance; uint old_wallet_balance;
+   |                                ^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Refund_NoSub.sol:87:9: 
+   |
+87 |         uint old_user_balance; uint old_usr_balance;
+   |         ^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Refund_NoSub.sol:87:32: 
+   |
+87 |         uint old_user_balance; uint old_usr_balance;
+   |                                ^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Refund_NoSub.sol:88:9: 
+   |
+88 |         uint new_this_balance; uint new_wallet_balance;
+   |         ^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Refund_NoSub.sol:88:32: 
+   |
+88 |         uint new_this_balance; uint new_wallet_balance;
+   |                                ^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Refund_NoSub.sol:89:9: 
+   |
+89 |         uint new_user_balance; uint new_usr_balance;
+   |         ^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Refund_NoSub.sol:89:32: 
+   |
+89 |         uint new_user_balance; uint new_usr_balance;
+   |                                ^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Refund_NoSub.sol:90:9: 
+   |
+90 |         uint pre_balance; uint post_balance;
+   |         ^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Refund_NoSub.sol:90:27: 
+   |
+90 |         uint pre_balance; uint post_balance;
+   |                           ^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Refund_NoSub.sol:91:9: 
+   |
+91 |         uint balance_returned;
+   |         ^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Refund_NoSub.sol:97:9: 
+   |
+97 |         old_wallet_balance = wallet.getBalances(address(this));
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Refund_NoSub.sol:46:9: 
+   |
+46 |         return balances[depositor];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Refund_NoSub.sol:98:9: 
+   |
+98 |         old_usr_balance = wallet.getBalances(address(user));
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Refund_NoSub.sol:46:9: 
+   |
+46 |         return balances[depositor];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Refund_NoSub.sol:100:9: 
+   |
+100 |         old_this_balance = address(this).balance + old_wallet_balance;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:101:9: 
+    |
+101 |         old_user_balance = address(user).balance + old_usr_balance;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:104:9: 
+    |
+104 |         __assume__($value > 0 && $value < 90);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:105:9: 
+    |
+105 |         __assume__(address(this).balance >= $value);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:106:9: 
+    |
+106 |         __assume__(address(user).balance >= $value);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:108:9: 
+    |
+108 |         __assume__($from_deposit == 0 || $from_deposit == 1);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:109:9: 
+    |
+109 |         __assume__($from_refund == 0 || $from_refund == 1);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:111:9: 
+    |
+111 |         if ($from_deposit == 0) {
+    |         ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+TRUE branch is feasible! Follow it.
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:111:33: 
+    |
+111 |         if ($from_deposit == 0) {
+    |                                 ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:112:13: 
+    |
+112 |             wallet.deposit.value($value)();
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+update msg.value: $value%1%
+That might be member access: 
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Refund_NoSub.sol:24:10: 
+   |
+24 |          require(balances[msg.sender] + msg.value > balances[msg.sender]);
+   |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+translating 
+printing propertyExpr: (bvugt (bvadd (select ((as const (Array Int (_ BitVec 64))) #x0000000000000000)
+                      1)
+              $value%1%)
+       (select ((as const (Array Int (_ BitVec 64))) #x0000000000000000) 1))
+======= ======= ======= ======= ======= ======= =======
+positive branch is possible! Go head with it!
+*** require() statement is satisfied!! ****
+======= ======= ======= ======= ======= ======= =======
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Refund_NoSub.sol:25:10: 
+   |
+25 |          balances[msg.sender] += msg.value;
+   |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+FALSE branch is feasible! Follow it.
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:113:16: 
+    |
+113 |         } else {
+    |                ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:114:13: 
+    |
+114 |             user.deposit($value);
+    |             ^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Refund_NoSub.sol:58:9: 
+   |
+58 |         wallet.deposit.value(_value)();
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+update msg.value: $value%1%
+That might be member access: 
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Refund_NoSub.sol:24:10: 
+   |
+24 |          require(balances[msg.sender] + msg.value > balances[msg.sender]);
+   |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+translating 
+printing propertyExpr: (bvugt (bvadd (select ((as const (Array Int (_ BitVec 64))) #x0000000000000000)
+                      3)
+              $value%1%)
+       (select ((as const (Array Int (_ BitVec 64))) #x0000000000000000) 3))
+======= ======= ======= ======= ======= ======= =======
+positive branch is possible! Go head with it!
+*** require() statement is satisfied!! ****
+======= ======= ======= ======= ======= ======= =======
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Refund_NoSub.sol:25:10: 
+   |
+25 |          balances[msg.sender] += msg.value;
+   |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:117:9: 
+    |
+117 |         if ($from_refund == 0) {
+    |         ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+TRUE branch is feasible! Follow it.
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:117:32: 
+    |
+117 |         if ($from_refund == 0) {
+    |                                ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:118:13: 
+    |
+118 |             pre_balance = address(this).balance;
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:119:13: 
+    |
+119 |             wallet.refund();
+    |             ^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Refund_NoSub.sol:36:10: 
+   |
+36 |          msg.sender.call.value(balances[msg.sender]);
+   |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+update msg.value: (let ((a!1 (store ((as const (Array Int (_ BitVec 64))) #x0000000000000000)
+                  1
+                  (bvadd (select ((as const (Array Int (_ BitVec 64)))
+                                   #x0000000000000000)
+                                 1)
+                         $value%1%))))
+  (select a!1 1))
+That might be member access: 
+Cannot find the definition: __fallback__
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:120:13: 
+    |
+120 |             post_balance = address(this).balance;
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:121:13: 
+    |
+121 |             balance_returned = post_balance - pre_balance;
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+FALSE branch is feasible! Follow it.
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:122:16: 
+    |
+122 |         } else {
+    |                ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:123:13: 
+    |
+123 |             pre_balance = address(user).balance;
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:124:13: 
+    |
+124 |             user.refund();
+    |             ^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Refund_NoSub.sol:66:9: 
+   |
+66 |         wallet.refund();
+   |         ^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Refund_NoSub.sol:36:10: 
+   |
+36 |          msg.sender.call.value(balances[msg.sender]);
+   |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+update msg.value: (let ((a!1 (store ((as const (Array Int (_ BitVec 64))) #x0000000000000000)
+                  1
+                  (bvadd (select ((as const (Array Int (_ BitVec 64)))
+                                   #x0000000000000000)
+                                 1)
+                         $value%1%))))
+  (select a!1 3))
+That might be member access: 
+Cannot find the definition: __fallback__
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:125:13: 
+    |
+125 |             post_balance = address(user).balance;
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:126:13: 
+    |
+126 |             balance_returned = post_balance - pre_balance;
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:117:9: 
+    |
+117 |         if ($from_refund == 0) {
+    |         ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+TRUE branch is feasible! Follow it.
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:117:32: 
+    |
+117 |         if ($from_refund == 0) {
+    |                                ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:118:13: 
+    |
+118 |             pre_balance = address(this).balance;
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:119:13: 
+    |
+119 |             wallet.refund();
+    |             ^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Refund_NoSub.sol:36:10: 
+   |
+36 |          msg.sender.call.value(balances[msg.sender]);
+   |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+update msg.value: (let ((a!1 (store ((as const (Array Int (_ BitVec 64))) #x0000000000000000)
+                  3
+                  (bvadd (select ((as const (Array Int (_ BitVec 64)))
+                                   #x0000000000000000)
+                                 3)
+                         $value%1%))))
+  (select a!1 1))
+That might be member access: 
+Cannot find the definition: __fallback__
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:120:13: 
+    |
+120 |             post_balance = address(this).balance;
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:121:13: 
+    |
+121 |             balance_returned = post_balance - pre_balance;
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+FALSE branch is feasible! Follow it.
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:122:16: 
+    |
+122 |         } else {
+    |                ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:123:13: 
+    |
+123 |             pre_balance = address(user).balance;
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:124:13: 
+    |
+124 |             user.refund();
+    |             ^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Refund_NoSub.sol:66:9: 
+   |
+66 |         wallet.refund();
+   |         ^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Refund_NoSub.sol:36:10: 
+   |
+36 |          msg.sender.call.value(balances[msg.sender]);
+   |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+update msg.value: (let ((a!1 (store ((as const (Array Int (_ BitVec 64))) #x0000000000000000)
+                  3
+                  (bvadd (select ((as const (Array Int (_ BitVec 64)))
+                                   #x0000000000000000)
+                                 3)
+                         $value%1%))))
+  (select a!1 3))
+That might be member access: 
+Cannot find the definition: __fallback__
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:125:13: 
+    |
+125 |             post_balance = address(user).balance;
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:126:13: 
+    |
+126 |             balance_returned = post_balance - pre_balance;
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:129:9: 
+    |
+129 |         new_wallet_balance = wallet.getBalances(address(this));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Refund_NoSub.sol:46:9: 
+   |
+46 |         return balances[depositor];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:129:9: 
+    |
+129 |         new_wallet_balance = wallet.getBalances(address(this));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Refund_NoSub.sol:46:9: 
+   |
+46 |         return balances[depositor];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:129:9: 
+    |
+129 |         new_wallet_balance = wallet.getBalances(address(this));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Refund_NoSub.sol:46:9: 
+   |
+46 |         return balances[depositor];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:129:9: 
+    |
+129 |         new_wallet_balance = wallet.getBalances(address(this));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Refund_NoSub.sol:46:9: 
+   |
+46 |         return balances[depositor];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:130:9: 
+    |
+130 |         new_usr_balance = wallet.getBalances(address(user));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Refund_NoSub.sol:46:9: 
+   |
+46 |         return balances[depositor];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:130:9: 
+    |
+130 |         new_usr_balance = wallet.getBalances(address(user));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Refund_NoSub.sol:46:9: 
+   |
+46 |         return balances[depositor];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:130:9: 
+    |
+130 |         new_usr_balance = wallet.getBalances(address(user));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Refund_NoSub.sol:46:9: 
+   |
+46 |         return balances[depositor];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:130:9: 
+    |
+130 |         new_usr_balance = wallet.getBalances(address(user));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Refund_NoSub.sol:46:9: 
+   |
+46 |         return balances[depositor];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:131:9: 
+    |
+131 |         new_this_balance = address(this).balance + new_wallet_balance;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:131:9: 
+    |
+131 |         new_this_balance = address(this).balance + new_wallet_balance;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:131:9: 
+    |
+131 |         new_this_balance = address(this).balance + new_wallet_balance;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:131:9: 
+    |
+131 |         new_this_balance = address(this).balance + new_wallet_balance;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:132:9: 
+    |
+132 |         new_user_balance = address(user).balance + new_usr_balance;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:132:9: 
+    |
+132 |         new_user_balance = address(user).balance + new_usr_balance;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:132:9: 
+    |
+132 |         new_user_balance = address(user).balance + new_usr_balance;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:132:9: 
+    |
+132 |         new_user_balance = address(user).balance + new_usr_balance;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:134:9: 
+    |
+134 |         declare_property((old_this_balance == new_this_balance && old_user_balance == new_user_balance)
+    |         ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:134:9: 
+    |
+134 |         declare_property((old_this_balance == new_this_balance && old_user_balance == new_user_balance)
+    |         ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:134:9: 
+    |
+134 |         declare_property((old_this_balance == new_this_balance && old_user_balance == new_user_balance)
+    |         ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Refund_NoSub.sol:134:9: 
+    |
+134 |         declare_property((old_this_balance == new_this_balance && old_user_balance == new_user_balance)
+    |         ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+result context [1]: 
+Is possibly reentrant: 0
+RESULT: 0
+The trace is INVALID
+$value = 1
+balance = 201
+$from_refund = 0
+$from_deposit = 0
+result context [2]: 
+Is possibly reentrant: 0
+RESULT: 1
+The trace is VALID
+$from_refund = 1
+$from_deposit = 0
+$value = 61
+balance = 33554432
+Recording summary, validCount: 1
+result context [3]: 
+Is possibly reentrant: 0
+RESULT: 1
+The trace is VALID
+$from_refund = 0
+$from_deposit = 1
+$value = 61
+balance = 33554432
+Recording summary, validCount: 2
+result context [4]: 
+Is possibly reentrant: 0
+RESULT: 0
+The trace is INVALID
+$value = 1
+balance = 201
+$from_refund = 1
+$from_deposit = 1
+./solver/solver -symexe-main ../contracts/Refund_NoSub.sol Refund_NoSub  0.50s user 0.04s system 97% cpu 0.556 total

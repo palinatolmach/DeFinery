@@ -1,0 +1,365 @@
+-> % time ./solver/solver -symexe-main ../contracts/EtherBank.sol EtherBank
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+dumping contract information: 
+Contract: _MAIN_
+	Constructor: _MAIN_()
+	FallBack Function: ()
+	State Variables:
+		$reenter
+		counter
+		bank
+	Modifiers:
+	Functions:
+		_MAIN_::__fallback__
+		_MAIN_:::function ()
+		_MAIN_::declare_property:function (bool)
+	Local Variables:
+		$value@112
+		new_wallet_balance@91
+		new_balance@88
+		old_wallet_balance@85
+		old_balance@82
+		property@68
+
+Contract: EtherBank
+	State Variables:
+		userBalances
+	Modifiers:
+	Functions:
+		EtherBank::getBalance:function (address) returns (uint256)
+		EtherBank::withdrawBalance:function ()
+		EtherBank::addToBalance:function ()
+	Local Variables:
+		balance@52
+		user@49
+		amountToWithdraw@20
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+initName: balance%1%_0_
+After state allocation: 
+Symbolic variable $value@112%1% is unsigned 
+Added new_wallet_balance@91%1% to unsigned 
+Added new_balance@88%1% to unsigned 
+Added old_wallet_balance@85%1% to unsigned 
+Added old_balance@82%1% to unsigned 
+After allocation: 
++++++++++++++ printing context +++++++++++++++
+idNum: 2, addr: 0x7fa907f08ca0
+sourceContext: nullptr
+	state variables: 
+		varName: balance%1%, value: balance%1%_0_, sort: (_ BitVec 64)
+		varName: bank%1%, value: 0, sort: Int
+		varName: counter%1%, value: #x0000000000000000, sort: (_ BitVec 64)
+		varName: $reenter%1%, value: $reenter%1%, sort: (_ BitVec 64)
+		varName: msg.value, value: msg.value_0_, sort: (_ BitVec 64)
+		varName: block.timestamp, value: block.timestamp_0_, sort: Int
+		varName: msg.sender, value: msg.sender_0_, sort: Int
+	local variables: 
+		varName: property@68%1%, value: false, sort: Bool
+		varName: old_wallet_balance@85%1%, value: #x0000000000000000, sort: (_ BitVec 64)
+		varName: old_balance@82%1%, value: #x0000000000000000, sort: (_ BitVec 64)
+		varName: new_wallet_balance@91%1%, value: #x0000000000000000, sort: (_ BitVec 64)
+		varName: new_balance@88%1%, value: #x0000000000000000, sort: (_ BitVec 64)
+		varName: $value@112%1%, value: $value@112%1%, sort: (_ BitVec 64)
+	path conditions: 
+		(bvsge $value@112%1% #x0000000000000000)
+	goHead: 1
+	current Address: 1
+	msg.sender: 0
+	current Function Scope: 
+	abnormal Termination: None
+Call Stack: 
+++++++++++++ end of printing context +++++++++++++++
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/EtherBank.sol:36:9: 
+   |
+36 |         bank = new EtherBank();
+   |         ^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Allocation is done: 
+Address of the repaired contract is 2
+EtherBank is name 
+Added balance@52%2% to unsigned 
+Added amountToWithdraw@20%2% to unsigned 
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/EtherBank.sol:38:9: 
+   |
+38 |         uint old_balance; uint old_wallet_balance; uint new_balance; uint new_wallet_balance;
+   |         ^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/EtherBank.sol:38:27: 
+   |
+38 |         uint old_balance; uint old_wallet_balance; uint new_balance; uint new_wallet_balance;
+   |                           ^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/EtherBank.sol:38:52: 
+   |
+38 |         uint old_balance; uint old_wallet_balance; uint new_balance; uint new_wallet_balance;
+   |                                                    ^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/EtherBank.sol:38:70: 
+   |
+38 |         uint old_balance; uint old_wallet_balance; uint new_balance; uint new_wallet_balance;
+   |                                                                      ^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/EtherBank.sol:39:9: 
+   |
+39 |         old_wallet_balance = bank.getBalance(address(this));
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/EtherBank.sol:23:9: 
+   |
+23 |         return userBalances[user];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/EtherBank.sol:40:9: 
+   |
+40 |         old_balance = address(this).balance + old_wallet_balance;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/EtherBank.sol:46:9: 
+   |
+46 |         uint $value; __assume__($value > 0 && $value < 100);
+   |         ^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/EtherBank.sol:46:22: 
+   |
+46 |         uint $value; __assume__($value > 0 && $value < 100);
+   |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/EtherBank.sol:47:9: 
+   |
+47 |         bank.addToBalance.value($value)();
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+update msg.value: $value@112%1%
+That might be member access: 
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/EtherBank.sol:12:3: 
+   |
+12 | 		userBalances[msg.sender] += msg.value;
+   | 		^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/EtherBank.sol:50:9: 
+   |
+50 |         __assume__($reenter == 0 || $reenter == 1);
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/EtherBank.sol:52:3: 
+   |
+52 | 		bank.withdrawBalance();
+   | 		^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/EtherBank.sol:16:3: 
+   |
+16 | 		uint amountToWithdraw;
+   | 		^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/EtherBank.sol:17:9: 
+   |
+17 |         amountToWithdraw = userBalances[msg.sender];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/EtherBank.sol:18:6: 
+   |
+18 | 	    msg.sender.call.value(amountToWithdraw);
+   | 	    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+update msg.value: (let ((a!1 (store ((as const (Array Int (_ BitVec 64))) #x0000000000000000)
+                  1
+                  (bvadd (select ((as const (Array Int (_ BitVec 64)))
+                                   #x0000000000000000)
+                                 1)
+                         $value@112%1%))))
+  (select a!1 1))
+That might be member access: 
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/EtherBank.sol:61:3: 
+   |
+61 | 		if ($reenter == 1 && counter < 1) {
+   |   ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+TRUE branch is feasible! Follow it.
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/EtherBank.sol:61:37: 
+   |
+61 | 		if ($reenter == 1 && counter < 1) {
+   |                                     ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/EtherBank.sol:62:4: 
+   |
+62 | 			counter++;
+   | 			^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/EtherBank.sol:63:4: 
+   |
+63 | 			bank.withdrawBalance();
+   | 			^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+That trace might be reentrant
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/EtherBank.sol:16:3: 
+   |
+16 | 		uint amountToWithdraw;
+   | 		^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/EtherBank.sol:17:9: 
+   |
+17 |         amountToWithdraw = userBalances[msg.sender];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/EtherBank.sol:18:6: 
+   |
+18 | 	    msg.sender.call.value(amountToWithdraw);
+   | 	    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+update msg.value: (let ((a!1 (store ((as const (Array Int (_ BitVec 64))) #x0000000000000000)
+                  1
+                  (bvadd (select ((as const (Array Int (_ BitVec 64)))
+                                   #x0000000000000000)
+                                 1)
+                         $value@112%1%))))
+  (select a!1 1))
+That might be member access: 
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/EtherBank.sol:61:3: 
+   |
+61 | 		if ($reenter == 1 && counter < 1) {
+   |   ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+TRUE branch is not feasible! Skipped.
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/EtherBank.sol:19:3: 
+   |
+19 | 		userBalances[msg.sender] = 0;
+   | 		^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/EtherBank.sol:19:3: 
+   |
+19 | 		userBalances[msg.sender] = 0;
+   | 		^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/EtherBank.sol:19:3: 
+   |
+19 | 		userBalances[msg.sender] = 0;
+   | 		^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/EtherBank.sol:54:9: 
+   |
+54 |         new_wallet_balance = bank.getBalance(address(this));
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/EtherBank.sol:23:9: 
+   |
+23 |         return userBalances[user];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/EtherBank.sol:54:9: 
+   |
+54 |         new_wallet_balance = bank.getBalance(address(this));
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/EtherBank.sol:23:9: 
+   |
+23 |         return userBalances[user];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/EtherBank.sol:55:9: 
+   |
+55 |         new_balance = address(this).balance + new_wallet_balance;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/EtherBank.sol:55:9: 
+   |
+55 |         new_balance = address(this).balance + new_wallet_balance;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/EtherBank.sol:57:9: 
+   |
+57 |         declare_property(old_balance == new_balance);
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/EtherBank.sol:57:9: 
+   |
+57 |         declare_property(old_balance == new_balance);
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+result context [1]: 
+Is possibly reentrant: 1
+RESULT: 0
+The trace is INVALID
+$value@112 = 32
+$reenter = 1
+result context [2]: 
+Is possibly reentrant: 0
+RESULT: 1
+The trace is VALID
+$value@112 = 1
+$reenter = 0
+Recording summary, validCount: 1
+./solver/solver -symexe-main ../contracts/EtherBank.sol EtherBank  0.27s user 0.03s system 97% cpu 0.305 total

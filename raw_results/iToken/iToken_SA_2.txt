@@ -1,0 +1,1490 @@
+-> % time ./solver/solver -symexe-main ../contracts/iToken.sol iToken
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+dumping contract information: 
+Contract: _MAIN_
+	Constructor: _MAIN_()
+	State Variables:
+		$to_addr
+		$var_0
+		testVal_1
+		user
+		token
+		testVal_0
+		res
+		init
+	Modifiers:
+	Functions:
+		_MAIN_:::function ()
+		_MAIN_::declare_property:function (bool)
+	Local Variables:
+		_to@358
+		property@247
+
+Contract: User
+	State Variables:
+		main
+		token
+	Modifiers:
+	Functions:
+		User::transferTo:function (address,uint256)
+		User::setToken:function (address,address)
+	Local Variables:
+		_value@233
+		_main@215
+		_to@231
+		_token@213
+
+Contract: iToken
+	Constructor: iToken()
+	State Variables:
+		allowed
+		balances
+		owner
+	Modifiers:
+	Functions:
+		iToken::getBalances:function (address) returns (uint256)
+		iToken::setBalances:function (address,uint256)
+		iToken::transferTo:function (address,uint256) returns (bool)
+		iToken::_internalTransferFrom:function (address,address,uint256,uint256) returns (bool)
+		iToken::transferFrom:function (address,address,uint256) returns (bool)
+		iToken::approve:function (address,uint256) returns (bool)
+		iToken:::function (address)
+	Local Variables:
+		balance@195
+		_user@178
+		success@104
+		_balancesToNew@162
+		_balancesTo@138
+		_balancesFromNew@150
+		_from@95
+		_allowanceAmount@101
+		res@50
+		_balancesFrom@132
+		_value@99
+		_to@97
+		_to@24
+		res@74
+		_from@67
+		_to@69
+		_value@71
+		_newOwner@14
+		_value@26
+		_user@192
+		_value@47
+		amount@180
+		approved@29
+		_to@45
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+initName: balance%1%_0_
+After state allocation: 
+After allocation: 
++++++++++++++ printing context +++++++++++++++
+idNum: 2, addr: 0x7f9ef670a360
+sourceContext: nullptr
+	state variables: 
+		varName: user%1%, value: 0, sort: Int
+		varName: res%1%, value: ((as const (Array Int (_ BitVec 64))) #x0000000000000000), sort: (Array Int (_ BitVec 64))
+		varName: testVal_1%1%, value: #x0000000000000000, sort: (_ BitVec 64)
+		varName: $var_0%1%, value: $var_0%1%, sort: (_ BitVec 64)
+		varName: testVal_0%1%, value: #x0000000000000000, sort: (_ BitVec 64)
+		varName: $to_addr%1%, value: $to_addr%1%, sort: (_ BitVec 64)
+		varName: token%1%, value: 0, sort: Int
+		varName: init%1%, value: ((as const (Array Int (_ BitVec 64))) #x0000000000000000), sort: (Array Int (_ BitVec 64))
+		varName: balance%1%, value: balance%1%_0_, sort: (_ BitVec 64)
+		varName: msg.value, value: msg.value_0_, sort: (_ BitVec 64)
+		varName: block.timestamp, value: block.timestamp_0_, sort: Int
+		varName: msg.sender, value: msg.sender_0_, sort: Int
+	local variables: 
+		varName: property@247%1%, value: false, sort: Bool
+		varName: _to@358%1%, value: 0, sort: Int
+	path conditions: 
+	goHead: 1
+	current Address: 1
+	msg.sender: 0
+	current Function Scope: 
+	abnormal Termination: None
+Call Stack: 
+++++++++++++ end of printing context +++++++++++++++
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:120:9: 
+    |
+120 |         user = new User();
+    |         ^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Allocation is done: 
+Added _value@233%2% to unsigned 
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:121:9: 
+    |
+121 |         token = new iToken(address(this));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Allocation is done: 
+Address of the repaired contract is 3
+iToken is name 
+Added balance@195%3% to unsigned 
+Added _balancesToNew@162%3% to unsigned 
+Added _balancesTo@138%3% to unsigned 
+Added _balancesFromNew@150%3% to unsigned 
+Added _allowanceAmount@101%3% to unsigned 
+Added _balancesFrom@132%3% to unsigned 
+Added _value@99%3% to unsigned 
+Added _value@71%3% to unsigned 
+Added _value@26%3% to unsigned 
+Added _value@47%3% to unsigned 
+Added amount@180%3% to unsigned 
+_executeConstructors() is called for: iToken
+-------------------------------------------------
+Executing statement: 
+ --> ../contracts/iToken.sol:10:9: 
+  |
+10 |         owner = _newOwner;
+  |         ^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:123:9: 
+    |
+123 |         token.setBalances(address(user), 1000);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:80:9: 
+   |
+80 |         balances[_user] = amount;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:124:9: 
+    |
+124 |         token.setBalances(address(this), 1000);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:80:9: 
+   |
+80 |         balances[_user] = amount;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:126:9: 
+    |
+126 |         user.setToken(address(token), address(this));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:95:9: 
+   |
+95 |         token = iToken(_token);
+   |         ^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:96:9: 
+   |
+96 |         main = _main;
+   |         ^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:128:9: 
+    |
+128 |         init[address(this)] = token.getBalances(address(this));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:84:9: 
+   |
+84 |         balance = balances[_user];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:85:9: 
+   |
+85 |         return balance;
+   |         ^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:129:9: 
+    |
+129 |         init[address(user)] = token.getBalances(address(user));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:84:9: 
+   |
+84 |         balance = balances[_user];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:85:9: 
+   |
+85 |         return balance;
+   |         ^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:130:9: 
+    |
+130 |         init[address(token)] = token.getBalances(address(token));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:84:9: 
+   |
+84 |         balance = balances[_user];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:85:9: 
+   |
+85 |         return balance;
+   |         ^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:135:9: 
+    |
+135 |         address _to;
+    |         ^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:136:9: 
+    |
+136 |         __assume__($to_addr == 0 || $to_addr == 1 || $to_addr == 2 || $to_addr == 3);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:138:9: 
+    |
+138 |         if ($to_addr == 0) {
+    |         ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+TRUE branch is feasible! Follow it.
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:138:28: 
+    |
+138 |         if ($to_addr == 0) {
+    |                            ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:139:13: 
+    |
+139 |             _to = address(this);
+    |             ^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+FALSE branch is feasible! Follow it.
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:140:16: 
+    |
+140 |         } else if ($to_addr == 1) {
+    |                ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+TRUE branch is feasible! Follow it.
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:140:35: 
+    |
+140 |         } else if ($to_addr == 1) {
+    |                                   ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:141:13: 
+    |
+141 |             _to = address(user);
+    |             ^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+FALSE branch is feasible! Follow it.
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:143:14: 
+    |
+143 |         else if ($to_addr == 2) {
+    |              ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+TRUE branch is feasible! Follow it.
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:143:33: 
+    |
+143 |         else if ($to_addr == 2) {
+    |                                 ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:144:13: 
+    |
+144 |             _to = address(token);
+    |             ^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+FALSE branch is feasible! Follow it.
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:145:16: 
+    |
+145 |         } else if ($to_addr == 3) {
+    |                ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+TRUE branch is feasible! Follow it.
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:145:35: 
+    |
+145 |         } else if ($to_addr == 3) {
+    |                                   ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:146:13: 
+    |
+146 |             _to = address(0);
+    |             ^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:149:9: 
+    |
+149 |         __assume__($var_0 > 0);
+    |         ^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:149:9: 
+    |
+149 |         __assume__($var_0 > 0);
+    |         ^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:149:9: 
+    |
+149 |         __assume__($var_0 > 0);
+    |         ^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:149:9: 
+    |
+149 |         __assume__($var_0 > 0);
+    |         ^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:150:4: 
+    |
+150 | 		 user.transferTo(_to, $var_0);
+    | 		 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:100:9: 
+   |
+100 |         token.transferTo(_to, _value);
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:26:9: 
+   |
+26 |         res = _internalTransferFrom(
+   |         ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+That trace IS NOT reentrant
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:60:9: 
+   |
+60 |         if (_allowanceAmount != 99999999) {
+   |         ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+TRUE branch is not feasible! Skipped.
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:64:9: 
+   |
+64 |         require(_to != address(0), "15");
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+translating 
+printing propertyExpr: (not (= 1 0))
+======= ======= ======= ======= ======= ======= =======
+positive branch is possible! Go head with it!
+*** require() statement is satisfied!! ****
+======= ======= ======= ======= ======= ======= =======
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:66:9: 
+   |
+66 |         uint256 _balancesFrom = balances[_from];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:67:9: 
+   |
+67 |         uint256 _balancesTo = balances[_to];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:69:9: 
+   |
+69 |         require(_balancesFrom >= _value);
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+translating 
+printing propertyExpr: (let ((a!1 (select (store (store ((as const (Array Int (_ BitVec 64)))
+                                   #x0000000000000000)
+                                 2
+                                 #x00000000000003e8)
+                          1
+                          #x00000000000003e8)
+                   2)))
+  (bvuge a!1 $var_0%1%))
+======= ======= ======= ======= ======= ======= =======
+positive branch is possible! Go head with it!
+*** require() statement is satisfied!! ****
+======= ======= ======= ======= ======= ======= =======
+======= ======= ======= ======= ======= ======= =======
+negation branch is possible! Go head with it!
+*** require() statement failed!! ****
+  --> ../contracts/iToken.sol:69:9: 
+   |
+69 |         require(_balancesFrom >= _value);
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(let ((a!1 (select (store (store ((as const (Array Int (_ BitVec 64)))
+                                   #x0000000000000000)
+                                 2
+                                 #x00000000000003e8)
+                          1
+                          #x00000000000003e8)
+                   2)))
+  (bvuge a!1 $var_0%1%))
+Stop executing this path in this context!
+======= ======= ======= ======= ======= ======= =======
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:70:9: 
+   |
+70 |         uint256 _balancesFromNew = _balancesFrom - _value;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:71:9: 
+   |
+71 |         balances[_from] = _balancesFromNew;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:73:9: 
+   |
+73 |         uint256 _balancesToNew = _balancesTo + _value;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:74:9: 
+   |
+74 |         balances[_to] = _balancesToNew;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:76:9: 
+   |
+76 |         return true;
+   |         ^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:32:9: 
+   |
+32 |         return res;
+   |         ^^^^^^^^^^
+-------------------------------------------------
+Returning to the prev context
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:150:4: 
+    |
+150 | 		 user.transferTo(_to, $var_0);
+    | 		 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:100:9: 
+   |
+100 |         token.transferTo(_to, _value);
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:26:9: 
+   |
+26 |         res = _internalTransferFrom(
+   |         ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+That trace IS NOT reentrant
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:60:9: 
+   |
+60 |         if (_allowanceAmount != 99999999) {
+   |         ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+TRUE branch is not feasible! Skipped.
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:64:9: 
+   |
+64 |         require(_to != address(0), "15");
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+translating 
+printing propertyExpr: (not (= 2 0))
+======= ======= ======= ======= ======= ======= =======
+positive branch is possible! Go head with it!
+*** require() statement is satisfied!! ****
+======= ======= ======= ======= ======= ======= =======
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:66:9: 
+   |
+66 |         uint256 _balancesFrom = balances[_from];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:67:9: 
+   |
+67 |         uint256 _balancesTo = balances[_to];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:69:9: 
+   |
+69 |         require(_balancesFrom >= _value);
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+translating 
+printing propertyExpr: (let ((a!1 (select (store (store ((as const (Array Int (_ BitVec 64)))
+                                   #x0000000000000000)
+                                 2
+                                 #x00000000000003e8)
+                          1
+                          #x00000000000003e8)
+                   2)))
+  (bvuge a!1 $var_0%1%))
+======= ======= ======= ======= ======= ======= =======
+positive branch is possible! Go head with it!
+*** require() statement is satisfied!! ****
+======= ======= ======= ======= ======= ======= =======
+======= ======= ======= ======= ======= ======= =======
+negation branch is possible! Go head with it!
+*** require() statement failed!! ****
+  --> ../contracts/iToken.sol:69:9: 
+   |
+69 |         require(_balancesFrom >= _value);
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(let ((a!1 (select (store (store ((as const (Array Int (_ BitVec 64)))
+                                   #x0000000000000000)
+                                 2
+                                 #x00000000000003e8)
+                          1
+                          #x00000000000003e8)
+                   2)))
+  (bvuge a!1 $var_0%1%))
+Stop executing this path in this context!
+======= ======= ======= ======= ======= ======= =======
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:70:9: 
+   |
+70 |         uint256 _balancesFromNew = _balancesFrom - _value;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:71:9: 
+   |
+71 |         balances[_from] = _balancesFromNew;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:73:9: 
+   |
+73 |         uint256 _balancesToNew = _balancesTo + _value;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:74:9: 
+   |
+74 |         balances[_to] = _balancesToNew;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:76:9: 
+   |
+76 |         return true;
+   |         ^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:32:9: 
+   |
+32 |         return res;
+   |         ^^^^^^^^^^
+-------------------------------------------------
+Returning to the prev context
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:150:4: 
+    |
+150 | 		 user.transferTo(_to, $var_0);
+    | 		 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:100:9: 
+   |
+100 |         token.transferTo(_to, _value);
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:26:9: 
+   |
+26 |         res = _internalTransferFrom(
+   |         ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+That trace IS NOT reentrant
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:60:9: 
+   |
+60 |         if (_allowanceAmount != 99999999) {
+   |         ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+TRUE branch is not feasible! Skipped.
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:64:9: 
+   |
+64 |         require(_to != address(0), "15");
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+translating 
+printing propertyExpr: (not (= 3 0))
+======= ======= ======= ======= ======= ======= =======
+positive branch is possible! Go head with it!
+*** require() statement is satisfied!! ****
+======= ======= ======= ======= ======= ======= =======
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:66:9: 
+   |
+66 |         uint256 _balancesFrom = balances[_from];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:67:9: 
+   |
+67 |         uint256 _balancesTo = balances[_to];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:69:9: 
+   |
+69 |         require(_balancesFrom >= _value);
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+translating 
+printing propertyExpr: (let ((a!1 (select (store (store ((as const (Array Int (_ BitVec 64)))
+                                   #x0000000000000000)
+                                 2
+                                 #x00000000000003e8)
+                          1
+                          #x00000000000003e8)
+                   2)))
+  (bvuge a!1 $var_0%1%))
+======= ======= ======= ======= ======= ======= =======
+positive branch is possible! Go head with it!
+*** require() statement is satisfied!! ****
+======= ======= ======= ======= ======= ======= =======
+======= ======= ======= ======= ======= ======= =======
+negation branch is possible! Go head with it!
+*** require() statement failed!! ****
+  --> ../contracts/iToken.sol:69:9: 
+   |
+69 |         require(_balancesFrom >= _value);
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(let ((a!1 (select (store (store ((as const (Array Int (_ BitVec 64)))
+                                   #x0000000000000000)
+                                 2
+                                 #x00000000000003e8)
+                          1
+                          #x00000000000003e8)
+                   2)))
+  (bvuge a!1 $var_0%1%))
+Stop executing this path in this context!
+======= ======= ======= ======= ======= ======= =======
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:70:9: 
+   |
+70 |         uint256 _balancesFromNew = _balancesFrom - _value;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:71:9: 
+   |
+71 |         balances[_from] = _balancesFromNew;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:73:9: 
+   |
+73 |         uint256 _balancesToNew = _balancesTo + _value;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:74:9: 
+   |
+74 |         balances[_to] = _balancesToNew;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:76:9: 
+   |
+76 |         return true;
+   |         ^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:32:9: 
+   |
+32 |         return res;
+   |         ^^^^^^^^^^
+-------------------------------------------------
+Returning to the prev context
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:150:4: 
+    |
+150 | 		 user.transferTo(_to, $var_0);
+    | 		 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:100:9: 
+   |
+100 |         token.transferTo(_to, _value);
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:26:9: 
+   |
+26 |         res = _internalTransferFrom(
+   |         ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+That trace IS NOT reentrant
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:60:9: 
+   |
+60 |         if (_allowanceAmount != 99999999) {
+   |         ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+TRUE branch is not feasible! Skipped.
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:64:9: 
+   |
+64 |         require(_to != address(0), "15");
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+translating 
+printing propertyExpr: (not (= 0 0))
+======= ======= ======= ======= ======= ======= =======
+negation branch is possible! Go head with it!
+*** require() statement failed!! ****
+  --> ../contracts/iToken.sol:64:9: 
+   |
+64 |         require(_to != address(0), "15");
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(not (= 0 0))
+Stop executing this path in this context!
+======= ======= ======= ======= ======= ======= =======
+Returning to the prev context
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:152:9: 
+    |
+152 |         res[address(this)] = token.getBalances(address(this));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:84:9: 
+   |
+84 |         balance = balances[_user];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:85:9: 
+   |
+85 |         return balance;
+   |         ^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:152:9: 
+    |
+152 |         res[address(this)] = token.getBalances(address(this));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:84:9: 
+   |
+84 |         balance = balances[_user];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:85:9: 
+   |
+85 |         return balance;
+   |         ^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:152:9: 
+    |
+152 |         res[address(this)] = token.getBalances(address(this));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:84:9: 
+   |
+84 |         balance = balances[_user];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:85:9: 
+   |
+85 |         return balance;
+   |         ^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:152:9: 
+    |
+152 |         res[address(this)] = token.getBalances(address(this));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:84:9: 
+   |
+84 |         balance = balances[_user];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:85:9: 
+   |
+85 |         return balance;
+   |         ^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:152:9: 
+    |
+152 |         res[address(this)] = token.getBalances(address(this));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:84:9: 
+   |
+84 |         balance = balances[_user];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:85:9: 
+   |
+85 |         return balance;
+   |         ^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:152:9: 
+    |
+152 |         res[address(this)] = token.getBalances(address(this));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:84:9: 
+   |
+84 |         balance = balances[_user];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:85:9: 
+   |
+85 |         return balance;
+   |         ^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:152:9: 
+    |
+152 |         res[address(this)] = token.getBalances(address(this));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:84:9: 
+   |
+84 |         balance = balances[_user];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:85:9: 
+   |
+85 |         return balance;
+   |         ^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:153:9: 
+    |
+153 |         res[address(user)] = token.getBalances(address(user));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:84:9: 
+   |
+84 |         balance = balances[_user];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:85:9: 
+   |
+85 |         return balance;
+   |         ^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:153:9: 
+    |
+153 |         res[address(user)] = token.getBalances(address(user));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:84:9: 
+   |
+84 |         balance = balances[_user];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:85:9: 
+   |
+85 |         return balance;
+   |         ^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:153:9: 
+    |
+153 |         res[address(user)] = token.getBalances(address(user));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:84:9: 
+   |
+84 |         balance = balances[_user];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:85:9: 
+   |
+85 |         return balance;
+   |         ^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:153:9: 
+    |
+153 |         res[address(user)] = token.getBalances(address(user));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:84:9: 
+   |
+84 |         balance = balances[_user];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:85:9: 
+   |
+85 |         return balance;
+   |         ^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:153:9: 
+    |
+153 |         res[address(user)] = token.getBalances(address(user));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:84:9: 
+   |
+84 |         balance = balances[_user];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:85:9: 
+   |
+85 |         return balance;
+   |         ^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:153:9: 
+    |
+153 |         res[address(user)] = token.getBalances(address(user));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:84:9: 
+   |
+84 |         balance = balances[_user];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:85:9: 
+   |
+85 |         return balance;
+   |         ^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:153:9: 
+    |
+153 |         res[address(user)] = token.getBalances(address(user));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:84:9: 
+   |
+84 |         balance = balances[_user];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:85:9: 
+   |
+85 |         return balance;
+   |         ^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:154:9: 
+    |
+154 |         res[address(token)] = token.getBalances(address(token));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:84:9: 
+   |
+84 |         balance = balances[_user];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:85:9: 
+   |
+85 |         return balance;
+   |         ^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:154:9: 
+    |
+154 |         res[address(token)] = token.getBalances(address(token));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:84:9: 
+   |
+84 |         balance = balances[_user];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:85:9: 
+   |
+85 |         return balance;
+   |         ^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:154:9: 
+    |
+154 |         res[address(token)] = token.getBalances(address(token));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:84:9: 
+   |
+84 |         balance = balances[_user];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:85:9: 
+   |
+85 |         return balance;
+   |         ^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:154:9: 
+    |
+154 |         res[address(token)] = token.getBalances(address(token));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:84:9: 
+   |
+84 |         balance = balances[_user];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:85:9: 
+   |
+85 |         return balance;
+   |         ^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:154:9: 
+    |
+154 |         res[address(token)] = token.getBalances(address(token));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:84:9: 
+   |
+84 |         balance = balances[_user];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:85:9: 
+   |
+85 |         return balance;
+   |         ^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:154:9: 
+    |
+154 |         res[address(token)] = token.getBalances(address(token));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:84:9: 
+   |
+84 |         balance = balances[_user];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:85:9: 
+   |
+85 |         return balance;
+   |         ^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:154:9: 
+    |
+154 |         res[address(token)] = token.getBalances(address(token));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:84:9: 
+   |
+84 |         balance = balances[_user];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/iToken.sol:85:9: 
+   |
+85 |         return balance;
+   |         ^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:156:9: 
+    |
+156 |         testVal_0 = res[address(this)];
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:156:9: 
+    |
+156 |         testVal_0 = res[address(this)];
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:156:9: 
+    |
+156 |         testVal_0 = res[address(this)];
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:156:9: 
+    |
+156 |         testVal_0 = res[address(this)];
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:156:9: 
+    |
+156 |         testVal_0 = res[address(this)];
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:156:9: 
+    |
+156 |         testVal_0 = res[address(this)];
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:156:9: 
+    |
+156 |         testVal_0 = res[address(this)];
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:157:9: 
+    |
+157 |         testVal_1 = res[address(user)];
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:157:9: 
+    |
+157 |         testVal_1 = res[address(user)];
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:157:9: 
+    |
+157 |         testVal_1 = res[address(user)];
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:157:9: 
+    |
+157 |         testVal_1 = res[address(user)];
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:157:9: 
+    |
+157 |         testVal_1 = res[address(user)];
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:157:9: 
+    |
+157 |         testVal_1 = res[address(user)];
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:157:9: 
+    |
+157 |         testVal_1 = res[address(user)];
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:159:9: 
+    |
+159 |         declare_property((init[address(user)] + init[address(this)] + init[address(token)])
+    |         ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:159:9: 
+    |
+159 |         declare_property((init[address(user)] + init[address(this)] + init[address(token)])
+    |         ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:159:9: 
+    |
+159 |         declare_property((init[address(user)] + init[address(this)] + init[address(token)])
+    |         ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:159:9: 
+    |
+159 |         declare_property((init[address(user)] + init[address(this)] + init[address(token)])
+    |         ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:159:9: 
+    |
+159 |         declare_property((init[address(user)] + init[address(this)] + init[address(token)])
+    |         ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:159:9: 
+    |
+159 |         declare_property((init[address(user)] + init[address(this)] + init[address(token)])
+    |         ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/iToken.sol:159:9: 
+    |
+159 |         declare_property((init[address(user)] + init[address(this)] + init[address(token)])
+    |         ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+result context [1]: 
+Is possibly reentrant: 0
+RESULT: 1
+The trace is VALID
+$var_0 = 489
+$to_addr = 0
+Recording summary, validCount: 1
+result context [2]: 
+Is possibly reentrant: 0
+RESULT: 1
+The trace is VALID
+$var_0 = 1513
+$to_addr = 0
+Recording summary, validCount: 2
+result context [3]: 
+Is possibly reentrant: 0
+RESULT: 0
+The trace is INVALID
+$var_0 = 8
+$to_addr = 1
+result context [4]: 
+Is possibly reentrant: 0
+RESULT: 1
+The trace is VALID
+$var_0 = 1513
+$to_addr = 1
+Recording summary, validCount: 3
+result context [5]: 
+Is possibly reentrant: 0
+RESULT: 1
+The trace is VALID
+$var_0 = 489
+$to_addr = 2
+Recording summary, validCount: 4
+result context [6]: 
+Is possibly reentrant: 0
+RESULT: 1
+The trace is VALID
+$var_0 = 1513
+$to_addr = 2
+Recording summary, validCount: 5
+result context [7]: 
+Is possibly reentrant: 0
+RESULT: 1
+The trace is VALID
+$var_0 = 1
+$to_addr = 3
+Recording summary, validCount: 6
+./solver/solver -symexe-main ../contracts/iToken.sol iToken  1.12s user 0.07s system 98% cpu 1.210 total

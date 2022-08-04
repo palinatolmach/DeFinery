@@ -1,0 +1,1269 @@
+-> % time python3 CLI.py --targetContractName Unprotected repair ../DeFi/SolVer/experiment/Unprotected/Unprotected.sol
+
+[2022-05-30 00:53:28.394856] INFO: CLI: Start repairing problems
+[2022-05-30 00:53:28.396754] INFO: CLI: ['0']
+[2022-05-30 00:53:28.397045] INFO: CLI: False
+[2022-05-30 00:53:28.397234] INFO: CR.py: in CR is reentrant is False
+[2022-05-30 00:53:28.402436] INFO: CR.py: Executing REPAIR
+[2022-05-30 00:53:28.402777] INFO: CR.py: Evaluating the population in CR
+Path source is (PosixPath('/Users/hidden/DeFi/SolVer/experiment/Unprotected/Unprotected.sol'),)
+tcPath ../DeFi/SolVer/experiment/Unprotected
+[2022-05-30 00:53:28.406079] INFO: SolVer.py: Start executing 6 test cases using SolVer with symbex
+[2022-05-30 00:53:28.407197] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpnpnhprzf/valid_2_Unprotected.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_2 and (PosixPath('/Users/hidden/DeFi/SolVer/experiment/Unprotected/Unprotected.sol'),)
+[2022-05-30 00:53:28.420161] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpnpnhprzf/valid_3_Unprotected.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_3 and (PosixPath('/Users/hidden/DeFi/SolVer/experiment/Unprotected/Unprotected.sol'),)
+[2022-05-30 00:53:28.427685] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpnpnhprzf/invalid_1_Unprotected.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/invalid_1 and (PosixPath('/Users/hidden/DeFi/SolVer/experiment/Unprotected/Unprotected.sol'),)
+[2022-05-30 00:53:28.436449] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpnpnhprzf/invalid_0_Unprotected.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/invalid_0 and (PosixPath('/Users/hidden/DeFi/SolVer/experiment/Unprotected/Unprotected.sol'),)
+[2022-05-30 00:53:28.449514] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpnpnhprzf/valid_1_Unprotected.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_1 and (PosixPath('/Users/hidden/DeFi/SolVer/experiment/Unprotected/Unprotected.sol'),)
+[2022-05-30 00:53:28.461511] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpnpnhprzf/valid_0_Unprotected.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_0 and (PosixPath('/Users/hidden/DeFi/SolVer/experiment/Unprotected/Unprotected.sol'),)
+[2022-05-30 00:53:28.832847] INFO: SolVer.py: Results for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_3 are []
+[2022-05-30 00:53:28.886665] INFO: SolVer.py: Results for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_0 are []
+[2022-05-30 00:53:28.957249] INFO: SolVer.py: Results for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/invalid_1 are []
+[2022-05-30 00:53:28.964755] INFO: SolVer.py: Results for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/invalid_0 are []
+[2022-05-30 00:53:28.966336] INFO: SolVer.py: Results for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_2 are []
+[2022-05-30 00:53:28.981302] INFO: SolVer.py: Results for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_1 are []
+The test cases execution result for Unprotected.sol is [PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_2', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_3', additionalInfo=None), FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/invalid_1', additionalInfo=None), FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/invalid_0', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_1', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_0', additionalInfo=None)]
+[2022-05-30 00:53:28.983233] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 00:53:28.983728] INFO: CR.py: Calling fitnessFn_ProblemDection function
+[2022-05-30 00:53:28.984190] INFO: CR.py: Initial subject contract has the following targeted vulnerabilities:
+{'SolVer': [FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/invalid_1', additionalInfo=None), FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/invalid_0', additionalInfo=None)]}
+[2022-05-30 00:53:28.984548] INFO: CR.py: Generated init fault space specifier: TYPE:Unprotected.changeOwner-Block;
+[2022-05-30 00:53:28.984846] INFO: SolidityM.py: Constructed base args for sm: ['/Users/hidden/DeFinery/sm/build/main/utils/bin.js', 'iter-gen-mutations', '--only-compilable=true', '/Users/hidden/DeFi/SolVer/experiment/Unprotected/Unprotected.sol', '--mutation-space=TYPE:Unprotected.changeOwner-Block;']
+[2022-05-30 00:53:28.985042] INFO: SolidityM.py: Start sm for space ('InsertionM',) with args: ['/Users/hidden/DeFinery/sm/build/main/utils/bin.js', 'iter-gen-mutations', '--only-compilable=true', '/Users/hidden/DeFi/SolVer/experiment/Unprotected/Unprotected.sol', '--mutation-space=TYPE:Unprotected.changeOwner-Block;', '--patched-src-dir=/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo', '--mutation_types', 'InsertionM', '--must-include-mutation-types', 'InsertionM']
+[2022-05-30 00:53:28.997837] INFO: SolidityM.py: Start sm for space ('ReplacementM',) with args: ['/Users/hidden/DeFinery/sm/build/main/utils/bin.js', 'iter-gen-mutations', '--only-compilable=true', '/Users/hidden/DeFi/SolVer/experiment/Unprotected/Unprotected.sol', '--mutation-space=TYPE:Unprotected.changeOwner-Block;', '--patched-src-dir=/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp_7g62ekv', '--mutation_types', 'ReplacementM', '--must-include-mutation-types', 'ReplacementM']
+[2022-05-30 00:53:29.012111] INFO: SolidityM.py: Start sm for space ('InsertionM', 'ReplacementM') with args: ['/Users/hidden/DeFinery/sm/build/main/utils/bin.js', 'iter-gen-mutations', '--only-compilable=true', '/Users/hidden/DeFi/SolVer/experiment/Unprotected/Unprotected.sol', '--mutation-space=TYPE:Unprotected.changeOwner-Block;', '--patched-src-dir=/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpzpc0u0k0', '--mutation_types', 'InsertionM', 'ReplacementM', '--must-include-mutation-types', 'InsertionM', 'ReplacementM']
+[2022-05-30 00:53:29.021625] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:30.805Z info:     Using seed "lucky-seed" as type string
+2022-05-30T00:53:30.811Z info:     Using seed "lucky-seed" as type string
+2022-05-30T00:53:30.822Z info:     Using seed "lucky-seed" as type string
+(node:74615) Warning: Accessing non-existent property 'INVALID_ALT_NUMBER' of module exports inside circular dependency
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:74615) Warning: Accessing non-existent property 'INVALID_ALT_NUMBER' of module exports inside circular dependency
+(node:74616) Warning: Accessing non-existent property 'INVALID_ALT_NUMBER' of module exports inside circular dependency
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:74616) Warning: Accessing non-existent property 'INVALID_ALT_NUMBER' of module exports inside circular dependency
+2022-05-30T00:53:32.270Z info:     Patch search space exhausted.
+(node:74617) Warning: Accessing non-existent property 'INVALID_ALT_NUMBER' of module exports inside circular dependency
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:74617) Warning: Accessing non-existent property 'INVALID_ALT_NUMBER' of module exports inside circular dependency
+2022-05-30T00:53:32.288Z info:     Termination requested
+2022-05-30T00:53:32.328Z info:     Termination requested
+[2022-05-30 00:53:32.330581] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:32.331Z info:     Patch search space exhausted.
+2022-05-30T00:53:32.333Z info:     Termination requested
+2022-05-30T00:53:32.406Z info:     Termination requested
+[2022-05-30 00:53:32.407040] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:32.407Z info:     Patch search space exhausted.
+2022-05-30T00:53:32.409Z info:     Termination requested
+2022-05-30T00:53:32.463Z info:     Termination requested
+[2022-05-30 00:53:32.464635] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:32.465Z info:     Patch search space exhausted.
+2022-05-30T00:53:32.512Z info:     Termination requested
+2022-05-30T00:53:32.520Z info:     Termination requested
+[2022-05-30 00:53:32.521853] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:32.522Z info:     Patch search space exhausted.
+2022-05-30T00:53:32.566Z info:     Termination requested
+2022-05-30T00:53:32.573Z info:     Termination requested
+[2022-05-30 00:53:32.580805] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:32.581Z info:     Patch search space exhausted.
+2022-05-30T00:53:32.621Z info:     Termination requested
+2022-05-30T00:53:32.630Z info:     Termination requested
+[2022-05-30 00:53:32.631598] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:32.632Z info:     Patch search space exhausted.
+2022-05-30T00:53:32.659Z info:     Termination requested
+2022-05-30T00:53:32.666Z info:     Termination requested
+[2022-05-30 00:53:32.667785] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:32.669Z info:     Patch search space exhausted.
+2022-05-30T00:53:32.699Z info:     Termination requested
+2022-05-30T00:53:32.713Z info:     Termination requested
+[2022-05-30 00:53:32.713915] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:32.714Z info:     Patch search space exhausted.
+2022-05-30T00:53:32.743Z info:     Termination requested
+2022-05-30T00:53:32.758Z info:     Termination requested
+[2022-05-30 00:53:32.759080] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:32.759Z info:     Patch search space exhausted.
+2022-05-30T00:53:32.785Z info:     Termination requested
+2022-05-30T00:53:32.789Z info:     Termination requested
+[2022-05-30 00:53:32.790734] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:32.791Z info:     Patch search space exhausted.
+2022-05-30T00:53:32.824Z info:     Termination requested
+2022-05-30T00:53:32.826Z info:     Termination requested
+[2022-05-30 00:53:32.826782] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:32.827Z info:     Patch search space exhausted.
+2022-05-30T00:53:32.856Z info:     Termination requested
+2022-05-30T00:53:32.860Z info:     Termination requested
+[2022-05-30 00:53:32.860923] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:32.861Z info:     Patch search space exhausted.
+2022-05-30T00:53:32.894Z info:     Termination requested
+2022-05-30T00:53:32.901Z info:     Termination requested
+[2022-05-30 00:53:32.903255] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:32.904Z info:     Patch search space exhausted.
+2022-05-30T00:53:32.927Z info:     Termination requested
+2022-05-30T00:53:32.933Z info:     Termination requested
+[2022-05-30 00:53:32.934778] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:32.936Z info:     Patch search space exhausted.
+2022-05-30T00:53:32.960Z info:     Termination requested
+2022-05-30T00:53:32.962Z info:     Termination requested
+[2022-05-30 00:53:32.963056] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:32.963Z info:     Patch search space exhausted.
+2022-05-30T00:53:32.987Z info:     Termination requested
+2022-05-30T00:53:33.152Z info:     Generated 1 patches for current task
+2022-05-30T00:53:33.163Z info:     Patched source file #0 written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/0.sol
+2022-05-30T00:53:33.163Z info:     Mutation sequence file #0 for /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/0.sol written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/0.sol.mutation.json
+[2022-05-30 00:53:33.165992] INFO: CR.py: Evaluating the population in CR
+Path source is ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/0.sol',)
+[2022-05-30 00:53:33.167290] INFO: SolVer.py: Start executing 6 test cases using SolVer with symbex
+[2022-05-30 00:53:33.167996] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpqckqsv6y/valid_2_0.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_2 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/0.sol',)
+[2022-05-30 00:53:33.172498] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpqckqsv6y/valid_3_0.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_3 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/0.sol',)
+[2022-05-30 00:53:33.176950] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpqckqsv6y/invalid_1_0.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/invalid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/0.sol',)
+[2022-05-30 00:53:33.181727] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpqckqsv6y/invalid_0_0.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/invalid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/0.sol',)
+[2022-05-30 00:53:33.186171] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpqckqsv6y/valid_1_0.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/0.sol',)
+[2022-05-30 00:53:33.191791] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpqckqsv6y/valid_0_0.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/0.sol',)
+The test cases execution result for 0.sol is [PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_2', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_3', additionalInfo=None), FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/invalid_1', additionalInfo=None), FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/invalid_0', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_1', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_0', additionalInfo=None)]
+[2022-05-30 00:53:33.515919] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 00:53:33.516119] INFO: CR.py: Calling fitnessFn_ProblemDection function
+[2022-05-30 00:53:33.516726] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:33.517Z info:     Patch search space exhausted.
+2022-05-30T00:53:33.544Z info:     Termination requested
+2022-05-30T00:53:33.547Z info:     Termination requested
+[2022-05-30 00:53:33.548540] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:33.549Z info:     Patch search space exhausted.
+2022-05-30T00:53:33.574Z info:     Termination requested
+2022-05-30T00:53:33.578Z info:     Termination requested
+[2022-05-30 00:53:33.579007] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:33.579Z info:     Patch search space exhausted.
+2022-05-30T00:53:33.598Z info:     Termination requested
+2022-05-30T00:53:33.606Z info:     Termination requested
+[2022-05-30 00:53:33.606738] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:33.607Z info:     Patch search space exhausted.
+2022-05-30T00:53:33.633Z info:     Termination requested
+2022-05-30T00:53:33.635Z info:     Termination requested
+[2022-05-30 00:53:33.636042] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:33.636Z info:     Patch search space exhausted.
+2022-05-30T00:53:33.663Z info:     Termination requested
+2022-05-30T00:53:33.830Z info:     Termination requested
+[2022-05-30 00:53:33.831080] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:33.831Z info:     Patch search space exhausted.
+2022-05-30T00:53:33.856Z info:     Termination requested
+2022-05-30T00:53:33.932Z info:     Generated 1 patches for current task
+2022-05-30T00:53:33.939Z info:     Patched source file #1 written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/1.sol
+2022-05-30T00:53:33.940Z info:     Mutation sequence file #1 for /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/1.sol written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/1.sol.mutation.json
+[2022-05-30 00:53:33.943905] INFO: CR.py: Evaluating the population in CR
+[2022-05-30 00:53:33.944123] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+Path source is ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/1.sol',)
+2022-05-30T00:53:33.944Z info:     Patch search space exhausted.
+[2022-05-30 00:53:33.944915] INFO: SolVer.py: Start executing 6 test cases using SolVer with symbex
+[2022-05-30 00:53:33.945629] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp9l6v9gx3/valid_2_1.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_2 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/1.sol',)
+[2022-05-30 00:53:33.950712] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp9l6v9gx3/valid_3_1.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_3 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/1.sol',)
+[2022-05-30 00:53:33.954988] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp9l6v9gx3/invalid_1_1.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/invalid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/1.sol',)
+[2022-05-30 00:53:33.959904] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp9l6v9gx3/invalid_0_1.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/invalid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/1.sol',)
+[2022-05-30 00:53:33.976320] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp9l6v9gx3/valid_1_1.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/1.sol',)
+[2022-05-30 00:53:33.985177] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp9l6v9gx3/valid_0_1.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/1.sol',)
+2022-05-30T00:53:34.000Z info:     Termination requested
+2022-05-30T00:53:34.013Z info:     Termination requested
+[2022-05-30 00:53:34.021806] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:34.024Z info:     Patch search space exhausted.
+2022-05-30T00:53:34.056Z info:     Termination requested
+2022-05-30T00:53:34.067Z info:     Termination requested
+[2022-05-30 00:53:34.069843] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:34.071Z info:     Patch search space exhausted.
+2022-05-30T00:53:34.118Z info:     Termination requested
+2022-05-30T00:53:34.256Z info:     Termination requested
+[2022-05-30 00:53:34.257655] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:34.258Z info:     Patch search space exhausted.
+2022-05-30T00:53:34.260Z info:     Termination requested
+2022-05-30T00:53:34.292Z info:     Termination requested
+[2022-05-30 00:53:34.293401] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:34.294Z info:     Patch search space exhausted.
+2022-05-30T00:53:34.335Z info:     Termination requested
+2022-05-30T00:53:34.339Z info:     Termination requested
+[2022-05-30 00:53:34.342263] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:34.343Z info:     Patch search space exhausted.
+2022-05-30T00:53:34.378Z info:     Termination requested
+The test cases execution result for 1.sol is [PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_2', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_3', additionalInfo=None), FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/invalid_1', additionalInfo=None), FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/invalid_0', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_1', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_0', additionalInfo=None)]
+[2022-05-30 00:53:34.390611] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 00:53:34.390893] INFO: CR.py: Calling fitnessFn_ProblemDection function
+2022-05-30T00:53:34.449Z info:     Generated 1 patches for current task
+2022-05-30T00:53:34.458Z info:     Patched source file #2 written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/2.sol
+2022-05-30T00:53:34.458Z info:     Mutation sequence file #2 for /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/2.sol written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/2.sol.mutation.json
+[2022-05-30 00:53:34.460519] INFO: CR.py: Evaluating the population in CR
+[2022-05-30 00:53:34.460824] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:34.461Z info:     Patch search space exhausted.
+Path source is ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/2.sol',)
+[2022-05-30 00:53:34.461805] INFO: SolVer.py: Start executing 6 test cases using SolVer with symbex
+[2022-05-30 00:53:34.462559] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpyh6hg478/valid_2_2.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_2 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/2.sol',)
+[2022-05-30 00:53:34.467137] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpyh6hg478/valid_3_2.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_3 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/2.sol',)
+[2022-05-30 00:53:34.471313] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpyh6hg478/invalid_1_2.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/invalid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/2.sol',)
+[2022-05-30 00:53:34.475831] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpyh6hg478/invalid_0_2.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/invalid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/2.sol',)
+[2022-05-30 00:53:34.480881] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpyh6hg478/valid_1_2.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/2.sol',)
+[2022-05-30 00:53:34.492955] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpyh6hg478/valid_0_2.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/2.sol',)
+2022-05-30T00:53:34.521Z info:     Termination requested
+2022-05-30T00:53:34.529Z info:     Termination requested
+[2022-05-30 00:53:34.532195] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:34.539Z info:     Patch search space exhausted.
+2022-05-30T00:53:34.596Z info:     Termination requested
+2022-05-30T00:53:34.600Z info:     Termination requested
+[2022-05-30 00:53:34.601473] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:34.602Z info:     Patch search space exhausted.
+2022-05-30T00:53:34.604Z info:     Termination requested
+2022-05-30T00:53:34.633Z info:     Termination requested
+[2022-05-30 00:53:34.636927] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:34.637Z info:     Patch search space exhausted.
+2022-05-30T00:53:34.660Z info:     Termination requested
+2022-05-30T00:53:34.670Z info:     Termination requested
+[2022-05-30 00:53:34.671175] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:34.671Z info:     Patch search space exhausted.
+2022-05-30T00:53:34.716Z info:     Termination requested
+2022-05-30T00:53:34.718Z info:     Termination requested
+[2022-05-30 00:53:34.719860] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:34.720Z info:     Patch search space exhausted.
+2022-05-30T00:53:34.724Z info:     Termination requested
+2022-05-30T00:53:34.762Z info:     Termination requested
+[2022-05-30 00:53:34.771044] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:34.790Z info:     Patch search space exhausted.
+2022-05-30T00:53:34.831Z info:     Termination requested
+2022-05-30T00:53:34.842Z info:     Termination requested
+[2022-05-30 00:53:34.843160] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:34.843Z info:     Patch search space exhausted.
+2022-05-30T00:53:34.864Z info:     Termination requested
+The test cases execution result for 2.sol is [PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_2', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_3', additionalInfo=None), PassedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/invalid_1', additionalInfo=None, detected=False), PassedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/invalid_0', additionalInfo=None, detected=False), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_1', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_0', additionalInfo=None)]
+[2022-05-30 00:53:34.869599] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 00:53:34.869770] INFO: CR.py: Calling fitnessFn_ProblemDection function
+2022-05-30T00:53:34.936Z info:     Termination requested
+[2022-05-30 00:53:34.937131] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:34.937Z info:     Patch search space exhausted.
+2022-05-30T00:53:34.959Z info:     Termination requested
+2022-05-30T00:53:34.960Z info:     Termination requested
+[2022-05-30 00:53:34.961803] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:34.962Z info:     Patch search space exhausted.
+2022-05-30T00:53:34.981Z info:     Termination requested
+2022-05-30T00:53:34.982Z info:     Termination requested
+[2022-05-30 00:53:34.983754] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:34.984Z info:     Patch search space exhausted.
+2022-05-30T00:53:35.001Z info:     Termination requested
+2022-05-30T00:53:35.057Z info:     Generated 1 patches for current task
+2022-05-30T00:53:35.063Z info:     Patched source file #3 written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/3.sol
+2022-05-30T00:53:35.063Z info:     Mutation sequence file #3 for /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/3.sol written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/3.sol.mutation.json
+[2022-05-30 00:53:35.065342] INFO: CR.py: Evaluating the population in CR
+[2022-05-30 00:53:35.065586] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+Path source is ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/3.sol',)
+2022-05-30T00:53:35.066Z info:     Patch search space exhausted.
+[2022-05-30 00:53:35.066352] INFO: SolVer.py: Start executing 6 test cases using SolVer with symbex
+[2022-05-30 00:53:35.067017] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpzrv26_6p/valid_2_3.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_2 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/3.sol',)
+[2022-05-30 00:53:35.071086] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpzrv26_6p/valid_3_3.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_3 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/3.sol',)
+[2022-05-30 00:53:35.077422] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpzrv26_6p/invalid_1_3.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/invalid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/3.sol',)
+[2022-05-30 00:53:35.083069] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpzrv26_6p/invalid_0_3.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/invalid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/3.sol',)
+[2022-05-30 00:53:35.089770] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpzrv26_6p/valid_1_3.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/3.sol',)
+[2022-05-30 00:53:35.097720] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpzrv26_6p/valid_0_3.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/3.sol',)
+2022-05-30T00:53:35.121Z info:     Termination requested
+2022-05-30T00:53:35.221Z info:     Termination requested
+[2022-05-30 00:53:35.223003] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:35.223Z info:     Patch search space exhausted.
+2022-05-30T00:53:35.225Z info:     Termination requested
+2022-05-30T00:53:35.260Z info:     Termination requested
+[2022-05-30 00:53:35.261743] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:35.262Z info:     Patch search space exhausted.
+2022-05-30T00:53:35.296Z info:     Termination requested
+2022-05-30T00:53:35.299Z info:     Termination requested
+[2022-05-30 00:53:35.300574] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:35.301Z info:     Patch search space exhausted.
+2022-05-30T00:53:35.335Z info:     Termination requested
+2022-05-30T00:53:35.340Z info:     Termination requested
+[2022-05-30 00:53:35.343375] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:35.344Z info:     Patch search space exhausted.
+2022-05-30T00:53:35.387Z info:     Termination requested
+2022-05-30T00:53:35.395Z info:     Termination requested
+[2022-05-30 00:53:35.398843] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:35.399Z info:     Patch search space exhausted.
+2022-05-30T00:53:35.426Z info:     Termination requested
+2022-05-30T00:53:35.434Z info:     Termination requested
+[2022-05-30 00:53:35.435957] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:35.437Z info:     Patch search space exhausted.
+2022-05-30T00:53:35.442Z info:     Termination requested
+2022-05-30T00:53:35.474Z info:     Termination requested
+[2022-05-30 00:53:35.475575] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:35.476Z info:     Patch search space exhausted.
+2022-05-30T00:53:35.506Z info:     Termination requested
+The test cases execution result for 3.sol is [PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_2', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_3', additionalInfo=None), FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/invalid_1', additionalInfo=None), FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/invalid_0', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_1', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_0', additionalInfo=None)]
+[2022-05-30 00:53:35.512239] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 00:53:35.512859] INFO: CR.py: Calling fitnessFn_ProblemDection function
+2022-05-30T00:53:35.565Z info:     Generated 1 patches for current task
+2022-05-30T00:53:35.574Z info:     Patched source file #4 written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/4.sol
+2022-05-30T00:53:35.575Z info:     Mutation sequence file #4 for /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/4.sol written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/4.sol.mutation.json
+[2022-05-30 00:53:35.577442] INFO: CR.py: Evaluating the population in CR
+[2022-05-30 00:53:35.577916] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:35.579Z info:     Patch search space exhausted.
+Path source is ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/4.sol',)
+[2022-05-30 00:53:35.579933] INFO: SolVer.py: Start executing 6 test cases using SolVer with symbex
+[2022-05-30 00:53:35.581022] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpykzjt1jz/valid_2_4.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_2 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/4.sol',)
+[2022-05-30 00:53:35.586580] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpykzjt1jz/valid_3_4.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_3 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/4.sol',)
+[2022-05-30 00:53:35.594920] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpykzjt1jz/invalid_1_4.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/invalid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/4.sol',)
+[2022-05-30 00:53:35.600486] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpykzjt1jz/invalid_0_4.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/invalid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/4.sol',)
+[2022-05-30 00:53:35.606584] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpykzjt1jz/valid_1_4.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/4.sol',)
+[2022-05-30 00:53:35.622411] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpykzjt1jz/valid_0_4.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/4.sol',)
+2022-05-30T00:53:35.699Z info:     Termination requested
+2022-05-30T00:53:35.811Z info:     Generated 1 patches for current task
+2022-05-30T00:53:35.824Z info:     Patched source file #5 written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/5.sol
+2022-05-30T00:53:35.824Z info:     Mutation sequence file #5 for /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/5.sol written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/5.sol.mutation.json
+[2022-05-30 00:53:35.831775] INFO: CR.py: Evaluating the population in CR
+[2022-05-30 00:53:35.832243] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+Path source is ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/5.sol',)
+[2022-05-30 00:53:35.835136] INFO: SolVer.py: Start executing 6 test cases using SolVer with symbex
+2022-05-30T00:53:35.836Z info:     Patch search space exhausted.
+[2022-05-30 00:53:35.844581] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpxrkwx5fa/valid_2_5.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_2 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/5.sol',)
+[2022-05-30 00:53:35.879565] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpxrkwx5fa/valid_3_5.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_3 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/5.sol',)
+[2022-05-30 00:53:35.903719] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpxrkwx5fa/invalid_1_5.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/invalid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/5.sol',)
+[2022-05-30 00:53:35.926305] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpxrkwx5fa/invalid_0_5.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/invalid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/5.sol',)
+[2022-05-30 00:53:35.940902] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpxrkwx5fa/valid_1_5.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/5.sol',)
+[2022-05-30 00:53:35.949272] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpxrkwx5fa/valid_0_5.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/5.sol',)
+2022-05-30T00:53:36.025Z info:     Termination requested
+2022-05-30T00:53:36.140Z info:     Generated 1 patches for current task
+2022-05-30T00:53:36.150Z info:     Patched source file #6 written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/6.sol
+2022-05-30T00:53:36.151Z info:     Mutation sequence file #6 for /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/6.sol written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/6.sol.mutation.json
+[2022-05-30 00:53:36.154287] INFO: CR.py: Evaluating the population in CR
+[2022-05-30 00:53:36.154879] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:36.155Z info:     Patch search space exhausted.
+Path source is ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/6.sol',)
+[2022-05-30 00:53:36.156079] INFO: SolVer.py: Start executing 6 test cases using SolVer with symbex
+[2022-05-30 00:53:36.157317] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmphtt7p65i/valid_2_6.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_2 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/6.sol',)
+[2022-05-30 00:53:36.166333] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmphtt7p65i/valid_3_6.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_3 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/6.sol',)
+[2022-05-30 00:53:36.176044] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmphtt7p65i/invalid_1_6.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/invalid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/6.sol',)
+[2022-05-30 00:53:36.184293] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmphtt7p65i/invalid_0_6.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/invalid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/6.sol',)
+[2022-05-30 00:53:36.194932] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmphtt7p65i/valid_1_6.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/6.sol',)
+[2022-05-30 00:53:36.206425] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmphtt7p65i/valid_0_6.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/6.sol',)
+2022-05-30T00:53:36.342Z info:     Termination requested
+The test cases execution result for 4.sol is [PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_2', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_3', additionalInfo=None), FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/invalid_1', additionalInfo=None), FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/invalid_0', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_1', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_0', additionalInfo=None)]
+[2022-05-30 00:53:36.414666] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 00:53:36.415114] INFO: CR.py: Calling fitnessFn_ProblemDection function
+2022-05-30T00:53:36.446Z info:     Termination requested
+[2022-05-30 00:53:36.448159] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:36.449Z info:     Patch search space exhausted.
+2022-05-30T00:53:36.460Z info:     Termination requested
+2022-05-30T00:53:36.482Z info:     Termination requested
+[2022-05-30 00:53:36.484577] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:36.485Z info:     Patch search space exhausted.
+2022-05-30T00:53:36.721Z info:     Generated 1 patches for current task
+2022-05-30T00:53:36.731Z info:     Patched source file #7 written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/7.sol
+2022-05-30T00:53:36.752Z info:     Mutation sequence file #7 for /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/7.sol written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/7.sol.mutation.json
+2022-05-30T00:53:36.822Z info:     Termination requested
+[2022-05-30 00:53:36.823208] INFO: CR.py: Evaluating the population in CR
+[2022-05-30 00:53:36.823517] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:36.824Z info:     Patch search space exhausted.
+Path source is ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/7.sol',)
+[2022-05-30 00:53:36.825017] INFO: SolVer.py: Start executing 6 test cases using SolVer with symbex
+[2022-05-30 00:53:36.826049] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpmtmogdcl/valid_2_7.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_2 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/7.sol',)
+[2022-05-30 00:53:36.834151] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpmtmogdcl/valid_3_7.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_3 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/7.sol',)
+[2022-05-30 00:53:36.843981] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpmtmogdcl/invalid_1_7.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/invalid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/7.sol',)
+[2022-05-30 00:53:36.854561] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpmtmogdcl/invalid_0_7.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/invalid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/7.sol',)
+[2022-05-30 00:53:36.862290] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpmtmogdcl/valid_1_7.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/7.sol',)
+[2022-05-30 00:53:36.871460] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpmtmogdcl/valid_0_7.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/7.sol',)
+The test cases execution result for 5.sol is [PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_2', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_3', additionalInfo=None), FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/invalid_1', additionalInfo=None), PassedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/invalid_0', additionalInfo=None, detected=False), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_1', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_0', additionalInfo=None)]
+[2022-05-30 00:53:36.986543] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 00:53:36.986990] INFO: CR.py: Calling fitnessFn_ProblemDection function
+2022-05-30T00:53:37.142Z info:     Termination requested
+The test cases execution result for 6.sol is [PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_2', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_3', additionalInfo=None), PassedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/invalid_1', additionalInfo=None, detected=False), PassedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/invalid_0', additionalInfo=None, detected=False), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_1', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_0', additionalInfo=None)]
+[2022-05-30 00:53:37.143263] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 00:53:37.143615] INFO: CR.py: Calling fitnessFn_ProblemDection function
+2022-05-30T00:53:37.173Z info:     Generated 1 patches for current task
+2022-05-30T00:53:37.194Z info:     Patched source file #8 written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/8.sol
+2022-05-30T00:53:37.195Z info:     Mutation sequence file #8 for /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/8.sol written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/8.sol.mutation.json
+[2022-05-30 00:53:37.205593] INFO: CR.py: Evaluating the population in CR
+[2022-05-30 00:53:37.205971] INFO: SolidityM.py: sm input: {'type': 'random', 'num_mutations': 1}
+2022-05-30T00:53:37.206Z info:     Patch search space exhausted.
+Path source is ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/8.sol',)
+[2022-05-30 00:53:37.207593] INFO: SolVer.py: Start executing 6 test cases using SolVer with symbex
+[2022-05-30 00:53:37.208631] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmprc0qs_mw/valid_2_8.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_2 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/8.sol',)
+[2022-05-30 00:53:37.219800] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmprc0qs_mw/valid_3_8.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_3 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/8.sol',)
+[2022-05-30 00:53:37.228714] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmprc0qs_mw/invalid_1_8.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/invalid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/8.sol',)
+[2022-05-30 00:53:37.239122] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmprc0qs_mw/invalid_0_8.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/invalid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/8.sol',)
+[2022-05-30 00:53:37.250355] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmprc0qs_mw/valid_1_8.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/8.sol',)
+[2022-05-30 00:53:37.263358] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmprc0qs_mw/valid_0_8.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/8.sol',)
+2022-05-30T00:53:37.397Z info:     Termination requested
+2022-05-30T00:53:37.609Z info:     Generated 1 patches for current task
+2022-05-30T00:53:37.624Z info:     Patched source file #9 written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/9.sol
+2022-05-30T00:53:37.625Z info:     Mutation sequence file #9 for /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/9.sol written to /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/9.sol.mutation.json
+[2022-05-30 00:53:37.628714] INFO: CR.py: Evaluating the population in CR
+Path source is ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/9.sol',)
+[2022-05-30 00:53:37.632006] INFO: SolVer.py: Start executing 6 test cases using SolVer with symbex
+[2022-05-30 00:53:37.633824] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpqjhtje5a/valid_2_9.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_2 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/9.sol',)
+[2022-05-30 00:53:37.644024] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpqjhtje5a/valid_3_9.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_3 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/9.sol',)
+[2022-05-30 00:53:37.706064] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpqjhtje5a/invalid_1_9.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/invalid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/9.sol',)
+[2022-05-30 00:53:37.727215] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpqjhtje5a/invalid_0_9.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/invalid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/9.sol',)
+[2022-05-30 00:53:37.741406] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpqjhtje5a/valid_1_9.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_1 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/9.sol',)
+[2022-05-30 00:53:37.749547] INFO: SolVer.py: Args are ../DeFi/SolVer/build/solver/solver -symexe-check /var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmpqjhtje5a/valid_0_9.sol Unprotected for /Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_0 and ('/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/9.sol',)
+The test cases execution result for 7.sol is [PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_2', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_3', additionalInfo=None), FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/invalid_1', additionalInfo=None), FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/invalid_0', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_1', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_0', additionalInfo=None)]
+[2022-05-30 00:53:37.865306] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 00:53:37.866607] INFO: CR.py: Calling fitnessFn_ProblemDection function
+The test cases execution result for 8.sol is [PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_2', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_3', additionalInfo=None), PassedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/invalid_1', additionalInfo=None, detected=False), FailedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/invalid_0', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_1', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_0', additionalInfo=None)]
+[2022-05-30 00:53:38.099856] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 00:53:38.100236] INFO: CR.py: Calling fitnessFn_ProblemDection function
+The test cases execution result for 9.sol is [PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_2', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_3', additionalInfo=None), PassedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/invalid_1', additionalInfo=None, detected=False), PassedInvalidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/invalid_0', additionalInfo=None, detected=False), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_1', additionalInfo=None), PassedValidCase(name='/Users/hidden/DeFinery/../DeFi/SolVer/experiment/Unprotected/valid_0', additionalInfo=None)]
+[2022-05-30 00:53:38.281742] INFO: CR.py: Calculating the Fitness function values
+[2022-05-30 00:53:38.281997] INFO: CR.py: Calling fitnessFn_ProblemDection function
+[2022-05-30 00:53:38.282620] INFO: CR.py: Currently done evaluating generation 0
+[2022-05-30 00:53:38.283164] INFO: CR.py:    	     	                                                                            	    	                                   vulnerabilities                                    
+   	     	                                                                            	    	--------------------------------------------------------------------------------------
+   	     	                               fitness values                               	    	                                 	                                              
+   	     	----------------------------------------------------------------------------	    	                                 	                                              
+gen	evals	min                                  	max                                 	op  	#targetedVuls                    	#targetedVuls(detailed)vuls-best-patch(max: 3)
+0  	11   	{'hard': '(-2.0,)', 'soft': '(1.0,)'}	{'hard': '(0.0,)', 'soft': '(1.0,)'}	init	(2, 2, 0, 2, 2, 1, 0, 2, 1, 0, 2)	                                              
+[2022-05-30 00:53:38.285099] INFO: CR.py: ParetoFront: 
+{'fitness values': {'min': FitnessMultiMin_improved(Hard: (0.0,) Soft: (1.0,)), 'max': FitnessMultiMin_improved(Hard: (0.0,) Soft: (1.0,))}, 'vulnerabilities': {'vuls-best-patch(max: 3)': {}, '#targetedVuls': (0, 0, 0)}}
+[2022-05-30 00:53:38.285252] INFO: CR.py: Evaluated 10 patches
+[2022-05-30 00:53:38.285562] INFO: CR.py:                   	     	                                                                            	    	                                   vulnerabilities                                    
+                  	     	                                                                            	    	--------------------------------------------------------------------------------------
+                  	     	                               fitness values                               	    	                                 	                                              
+                  	     	----------------------------------------------------------------------------	    	                                 	                                              
+gen               	evals	min                                  	max                                 	op  	#targetedVuls                    	#targetedVuls(detailed)vuls-best-patch(max: 3)
+0                 	11   	{'hard': '(-2.0,)', 'soft': '(1.0,)'}	{'hard': '(0.0,)', 'soft': '(1.0,)'}	init	(2, 2, 0, 2, 2, 1, 0, 2, 1, 0, 2)	                                              
+plausible-last-gen	3    	{'hard': '(0.0,)', 'soft': '(1.0,)'} 	{'hard': '(0.0,)', 'soft': '(1.0,)'}	init	(0, 0, 0)                        	                                              
+[2022-05-30 00:53:38.286110] INFO: CR.py: Plausible patches details:
+[Individual(MutationSequence=[{'targetNodePath': ['children', '0', 'subNodes', '4', 'body'], 'targetPropertyPath': ['children', '0', 'subNodes', '4', 'body', 'statements'], 'insertIndex': 0, 'newNode': {'type': 'ExpressionStatement', 'expression': {'type': 'BinaryOperation', 'left': {'type': 'Identifier', 'name': '_newOwner'}, 'right': {'type': 'Identifier', 'name': 'owner'}, 'operator': '='}}, 'mutationType': 'InsertionM'}], PatchedFilePath='/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/2.sol', ModifiedLocations=[{'start': {'line': 24, 'column': 5}, 'end': {'line': 26, 'column': 5}}]), Individual(MutationSequence=[{'targetNodePath': ['children', '0', 'subNodes', '4', 'body'], 'targetPropertyPath': ['children', '0', 'subNodes', '4', 'body', 'statements'], 'insertIndex': 0, 'newNode': {'type': 'ExpressionStatement', 'expression': {'type': 'FunctionCall', 'expression': {'type': 'Identifier', 'name': 'require'}, 'arguments': [{'type': 'BinaryOperation', 'left': {'type': 'Identifier', 'name': 'owner'}, 'right': {'type': 'MemberAccess', 'expression': {'type': 'Identifier', 'name': 'msg'}, 'memberName': 'sender'}, 'operator': '=='}], 'names': []}}, 'mutationType': 'InsertionM'}], PatchedFilePath='/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/6.sol', ModifiedLocations=[{'start': {'line': 24, 'column': 5}, 'end': {'line': 26, 'column': 5}}]), Individual(MutationSequence=[{'targetNodePath': ['children', '0', 'subNodes', '4', 'body'], 'targetPropertyPath': ['children', '0', 'subNodes', '4', 'body', 'statements'], 'insertIndex': 1, 'newNode': {'type': 'ExpressionStatement', 'expression': {'type': 'FunctionCall', 'expression': {'type': 'Identifier', 'name': 'require'}, 'arguments': [{'type': 'BinaryOperation', 'left': {'type': 'Identifier', 'name': 'owner'}, 'right': {'type': 'Identifier', 'name': '_newOwner'}, 'operator': '!='}], 'names': []}}, 'mutationType': 'InsertionM'}], PatchedFilePath='/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/9.sol', ModifiedLocations=[{'start': {'line': 24, 'column': 5}, 'end': {'line': 26, 'column': 5}}])]
+[2022-05-30 00:53:38.286354] INFO: CR.py: Evaluated 10 patches
+Testing equivalence... 9
+There're 4 arguments, skippedVar is _newOwner
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
++++++++++++++ printing context +++++++++++++++
+idNum: 2, addr: 0x7f9f60104520
+sourceContext: nullptr
+	state variables: 
+		varName: user%1%, value: 0, sort: Int
+		varName: $from_change%1%, value: $from_change%1%, sort: (_ BitVec 64)
+		varName: $to_change%1%, value: $to_change%1%, sort: (_ BitVec 64)
+		varName: balance%1%, value: balance%1%_0_, sort: (_ BitVec 64)
+		varName: msg.value, value: msg.value_0_, sort: (_ BitVec 64)
+		varName: wallet%1%, value: 0, sort: Int
+		varName: anotherUser%1%, value: 0, sort: Int
+		varName: block.timestamp, value: block.timestamp_0_, sort: Int
+		varName: msg.sender, value: msg.sender_0_, sort: Int
+	local variables: 
+		varName: old_balance@218%1%, value: #x0000000000000000, sort: (_ BitVec 64)
+		varName: usr@184%1%, value: 0, sort: Int
+		varName: trusted@187%1%, value: false, sort: Bool
+		varName: new_wallet_balance@227%1%, value: #x0000000000000000, sort: (_ BitVec 64)
+		varName: old_wallet_balance@221%1%, value: #x0000000000000000, sort: (_ BitVec 64)
+		varName: trusted@396%1%, value: false, sort: Bool
+		varName: oldOwner@248%1%, value: 0, sort: Int
+		varName: property@178%1%, value: false, sort: Bool
+		varName: new_balance@224%1%, value: #x0000000000000000, sort: (_ BitVec 64)
+		varName: newOwner@387%1%, value: 0, sort: Int
+	path conditions: 
+	goHead: 1
+	current Address: 1
+	msg.sender: 0
+	current Function Scope: 
+	abnormal Termination: None
+Call Stack: 
+++++++++++++ end of printing context +++++++++++++++
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:64:9: 
+   |
+64 |         wallet = new Unprotected();
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Allocation is done: 
+Address of the repaired contract is 2
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:14:9: 
+   |
+14 |         owner = msg.sender;
+   |         ^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:65:9: 
+   |
+65 |         user = new User(address(wallet));
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Allocation is done: 
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:43:9: 
+   |
+43 |         wallet = Unprotected(_wallet);
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:66:9: 
+   |
+66 |         anotherUser = new User(address(wallet));
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Allocation is done: 
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:43:9: 
+   |
+43 |         wallet = Unprotected(_wallet);
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:68:9: 
+   |
+68 |         uint old_balance; uint old_wallet_balance;
+   |         ^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:68:27: 
+   |
+68 |         uint old_balance; uint old_wallet_balance;
+   |                           ^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:69:9: 
+   |
+69 |         uint new_balance; uint new_wallet_balance;
+   |         ^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:69:27: 
+   |
+69 |         uint new_balance; uint new_wallet_balance;
+   |                           ^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:70:9: 
+   |
+70 |         old_wallet_balance = wallet.s_getBalances(address(user));
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:37:9: 
+   |
+37 |         return balances[depositor];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:71:9: 
+   |
+71 |         old_balance = address(user).balance + old_wallet_balance;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:73:9: 
+   |
+73 |         address oldOwner; oldOwner = wallet.getOwner();
+   |         ^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:73:27: 
+   |
+73 |         address oldOwner; oldOwner = wallet.getOwner();
+   |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:30:9: 
+   |
+30 |         return owner;
+   |         ^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:74:9: 
+   |
+74 |         address(wallet).call.value(1000);
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:81:9: 
+   |
+81 |         __assume__($from_change == 0 || $from_change == 1 || $from_change == 2);
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:82:9: 
+   |
+82 |         __assume__($to_change == 0 || $to_change == 1 || $to_change == 2);
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:84:9: 
+   |
+84 |         if ($from_change == 0) {
+   |         ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:84:32: 
+   |
+84 |         if ($from_change == 0) {
+   |                                ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:85:13: 
+   |
+85 |             if ($to_change == 0) {
+   |             ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:85:34: 
+   |
+85 |             if ($to_change == 0) {
+   |                                  ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:86:17: 
+   |
+86 |                 wallet.changeOwner(address(this));
+   |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:18:9: 
+   |
+18 |         _newOwner = owner;
+   |         ^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:19:9: 
+   |
+19 |         owner = _newOwner;
+   |         ^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+FALSE branch is feasible! Follow it.
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:87:20: 
+   |
+87 |             } else if ($to_change == 1) {
+   |                    ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:87:41: 
+   |
+87 |             } else if ($to_change == 1) {
+   |                                         ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:88:17: 
+   |
+88 |                 wallet.changeOwner(address(user));
+   |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:18:9: 
+   |
+18 |         _newOwner = owner;
+   |         ^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:19:9: 
+   |
+19 |         owner = _newOwner;
+   |         ^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+FALSE branch is feasible! Follow it.
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:89:20: 
+   |
+89 |             } else {
+   |                    ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:90:17: 
+   |
+90 |                 wallet.changeOwner(address(anotherUser));
+   |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:18:9: 
+   |
+18 |         _newOwner = owner;
+   |         ^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:19:9: 
+   |
+19 |         owner = _newOwner;
+   |         ^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+FALSE branch is feasible! Follow it.
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:92:16: 
+   |
+92 |         } else {
+   |                ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:93:13: 
+   |
+93 |             if ($to_change == 0) {
+   |             ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:93:34: 
+   |
+93 |             if ($to_change == 0) {
+   |                                  ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:94:17: 
+   |
+94 |                 user.changeOwner(address(this));
+   |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:49:9: 
+   |
+49 |         wallet.changeOwner(_to);
+   |         ^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:18:9: 
+   |
+18 |         _newOwner = owner;
+   |         ^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:19:9: 
+   |
+19 |         owner = _newOwner;
+   |         ^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+FALSE branch is feasible! Follow it.
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:95:20: 
+   |
+95 |             } else if ($to_change == 1) {
+   |                    ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:95:41: 
+   |
+95 |             } else if ($to_change == 1) {
+   |                                         ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:96:17: 
+   |
+96 |                 user.changeOwner(address(user));
+   |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:49:9: 
+   |
+49 |         wallet.changeOwner(_to);
+   |         ^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:18:9: 
+   |
+18 |         _newOwner = owner;
+   |         ^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:19:9: 
+   |
+19 |         owner = _newOwner;
+   |         ^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+FALSE branch is feasible! Follow it.
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:97:20: 
+   |
+97 |             } else {
+   |                    ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:98:17: 
+   |
+98 |                 user.changeOwner(address(anotherUser));
+   |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:49:9: 
+   |
+49 |         wallet.changeOwner(_to);
+   |         ^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:18:9: 
+   |
+18 |         _newOwner = owner;
+   |         ^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:19:9: 
+   |
+19 |         owner = _newOwner;
+   |         ^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:102:9: 
+    |
+102 |         new_wallet_balance = wallet.s_getBalances(address(user));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:37:9: 
+   |
+37 |         return balances[depositor];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:102:9: 
+    |
+102 |         new_wallet_balance = wallet.s_getBalances(address(user));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:37:9: 
+   |
+37 |         return balances[depositor];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:102:9: 
+    |
+102 |         new_wallet_balance = wallet.s_getBalances(address(user));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:37:9: 
+   |
+37 |         return balances[depositor];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:102:9: 
+    |
+102 |         new_wallet_balance = wallet.s_getBalances(address(user));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:37:9: 
+   |
+37 |         return balances[depositor];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:102:9: 
+    |
+102 |         new_wallet_balance = wallet.s_getBalances(address(user));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:37:9: 
+   |
+37 |         return balances[depositor];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:102:9: 
+    |
+102 |         new_wallet_balance = wallet.s_getBalances(address(user));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:37:9: 
+   |
+37 |         return balances[depositor];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:103:9: 
+    |
+103 |         new_balance = address(user).balance + new_wallet_balance;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:103:9: 
+    |
+103 |         new_balance = address(user).balance + new_wallet_balance;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:103:9: 
+    |
+103 |         new_balance = address(user).balance + new_wallet_balance;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:103:9: 
+    |
+103 |         new_balance = address(user).balance + new_wallet_balance;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:103:9: 
+    |
+103 |         new_balance = address(user).balance + new_wallet_balance;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:103:9: 
+    |
+103 |         new_balance = address(user).balance + new_wallet_balance;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:105:9: 
+    |
+105 |         address newOwner; newOwner = wallet.getOwner();
+    |         ^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:105:9: 
+    |
+105 |         address newOwner; newOwner = wallet.getOwner();
+    |         ^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:105:9: 
+    |
+105 |         address newOwner; newOwner = wallet.getOwner();
+    |         ^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:105:9: 
+    |
+105 |         address newOwner; newOwner = wallet.getOwner();
+    |         ^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:105:9: 
+    |
+105 |         address newOwner; newOwner = wallet.getOwner();
+    |         ^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:105:9: 
+    |
+105 |         address newOwner; newOwner = wallet.getOwner();
+    |         ^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:105:27: 
+    |
+105 |         address newOwner; newOwner = wallet.getOwner();
+    |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:30:9: 
+   |
+30 |         return owner;
+   |         ^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:105:27: 
+    |
+105 |         address newOwner; newOwner = wallet.getOwner();
+    |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:30:9: 
+   |
+30 |         return owner;
+   |         ^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:105:27: 
+    |
+105 |         address newOwner; newOwner = wallet.getOwner();
+    |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:30:9: 
+   |
+30 |         return owner;
+   |         ^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:105:27: 
+    |
+105 |         address newOwner; newOwner = wallet.getOwner();
+    |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:30:9: 
+   |
+30 |         return owner;
+   |         ^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:105:27: 
+    |
+105 |         address newOwner; newOwner = wallet.getOwner();
+    |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:30:9: 
+   |
+30 |         return owner;
+   |         ^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:105:27: 
+    |
+105 |         address newOwner; newOwner = wallet.getOwner();
+    |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:30:9: 
+   |
+30 |         return owner;
+   |         ^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:107:9: 
+    |
+107 |         bool trusted; trusted = is_trusted(newOwner);
+    |         ^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:107:9: 
+    |
+107 |         bool trusted; trusted = is_trusted(newOwner);
+    |         ^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:107:9: 
+    |
+107 |         bool trusted; trusted = is_trusted(newOwner);
+    |         ^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:107:9: 
+    |
+107 |         bool trusted; trusted = is_trusted(newOwner);
+    |         ^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:107:9: 
+    |
+107 |         bool trusted; trusted = is_trusted(newOwner);
+    |         ^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:107:9: 
+    |
+107 |         bool trusted; trusted = is_trusted(newOwner);
+    |         ^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:107:23: 
+    |
+107 |         bool trusted; trusted = is_trusted(newOwner);
+    |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:107:23: 
+    |
+107 |         bool trusted; trusted = is_trusted(newOwner);
+    |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:107:23: 
+    |
+107 |         bool trusted; trusted = is_trusted(newOwner);
+    |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:107:23: 
+    |
+107 |         bool trusted; trusted = is_trusted(newOwner);
+    |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:107:23: 
+    |
+107 |         bool trusted; trusted = is_trusted(newOwner);
+    |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:107:23: 
+    |
+107 |         bool trusted; trusted = is_trusted(newOwner);
+    |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:108:9: 
+    |
+108 |         declare_property((oldOwner == newOwner) || trusted);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:108:9: 
+    |
+108 |         declare_property((oldOwner == newOwner) || trusted);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:108:9: 
+    |
+108 |         declare_property((oldOwner == newOwner) || trusted);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:108:9: 
+    |
+108 |         declare_property((oldOwner == newOwner) || trusted);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:108:9: 
+    |
+108 |         declare_property((oldOwner == newOwner) || trusted);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../DeFi/SolVer/experiment/Unprotected/patched/patched_9.sol:108:9: 
+    |
+108 |         declare_property((oldOwner == newOwner) || trusted);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+RESULT: 1
+The trace is VALID
+INVALID trace is found/Users/hidden/DeFi/Solver/experiment/Unprotected/invalid_1
+SAT / The input is valid
+Negated formula added to a summary
+INVALID trace is found/Users/hidden/DeFi/Solver/experiment/Unprotected/invalid_0
+SAT / The input is valid
+Negated formula added to a summary
+RESULT: 1
+The trace is VALID
+INVALID trace is found/Users/hidden/DeFi/Solver/experiment/Unprotected/invalid_1
+SAT / The input is valid
+Negated formula added to a summary
+INVALID trace is found/Users/hidden/DeFi/Solver/experiment/Unprotected/invalid_0
+SAT / The input is valid
+Negated formula added to a summary
+RESULT: 1
+The trace is VALID
+INVALID trace is found/Users/hidden/DeFi/Solver/experiment/Unprotected/invalid_1
+SAT / The input is valid
+Negated formula added to a summary
+INVALID trace is found/Users/hidden/DeFi/Solver/experiment/Unprotected/invalid_0
+SAT / The input is valid
+Negated formula added to a summary
+RESULT: 1
+The trace is VALID
+INVALID trace is found/Users/hidden/DeFi/Solver/experiment/Unprotected/invalid_1
+SAT / The input is valid
+Negated formula added to a summary
+INVALID trace is found/Users/hidden/DeFi/Solver/experiment/Unprotected/invalid_0
+SAT / The input is valid
+Negated formula added to a summary
+RESULT: 1
+The trace is VALID
+INVALID trace is found/Users/hidden/DeFi/Solver/experiment/Unprotected/invalid_1
+SAT / The input is valid
+Negated formula added to a summary
+INVALID trace is found/Users/hidden/DeFi/Solver/experiment/Unprotected/invalid_0
+UNSAT / That's an invalid path
+RESULT: 1
+The trace is VALID
+INVALID trace is found/Users/hidden/DeFi/Solver/experiment/Unprotected/invalid_1
+UNSAT / That's an invalid path
+Not Equivalent 
+
+Testing equivalence... 10
+The valid implementation is EQUIVALENT: ../DeFi/SolVer/experiment/Unprotected/patched/patched_10.sol
+Testing equivalence... 11
+[2022-05-30 00:53:40.932784] INFO: CR.py: Terminating...
+Source files after applying plausible patches are in:
+/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/2.sol
+/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/6.sol
+/var/folders/z_/6bhzyn8x0nggbqbs5pty3s4h0000gp/T/tmp639tj0oo/9.sol
+python3 CLI.py --targetContractName Unprotected repair   44.77s user 3.83s system 369% cpu 13.149 total

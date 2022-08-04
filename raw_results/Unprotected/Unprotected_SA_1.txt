@@ -1,0 +1,923 @@
+-> % time ./solver/solver -symexe-main ../contracts/Unprotected.sol Unprotected
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+dumping contract information: 
+Contract: _MAIN_
+	Constructor: _MAIN_()
+	State Variables:
+		$to_change
+		$from_change
+		anotherUser
+		user
+		wallet
+	Modifiers:
+	Functions:
+		_MAIN_:::function ()
+		_MAIN_::is_trusted:function (address) returns (bool)
+		_MAIN_::declare_property:function (bool)
+	Local Variables:
+		oldOwner@244
+		trusted@392
+		new_wallet_balance@223
+		old_wallet_balance@217
+		old_balance@214
+		trusted@183
+		newOwner@383
+		usr@180
+		new_balance@220
+		property@174
+
+Contract: User
+	Constructor: User()
+	State Variables:
+		wallet
+	Modifiers:
+	Functions:
+		User::migrateTo:function (address)
+		User::changeOwner:function (address)
+		User::deposit:function (uint256)
+		User:::function (address)
+	Local Variables:
+		_to@151
+		_to@139
+		_value@124
+		_wallet@112
+
+Contract: Unprotected
+	Constructor: Unprotected()
+	State Variables:
+		balances
+		owner
+	Modifiers:
+		onlyowner
+	Functions:
+		Unprotected::s_getBalances:function (address) returns (uint256)
+		Unprotected::getOwner:function () returns (address)
+		Unprotected::migrateTo:function (address)
+		Unprotected::deposit:function ()
+		Unprotected::changeOwner:function (address)
+		Unprotected:::function ()
+	Local Variables:
+		balance@100
+		depositor@97
+		_owner@90
+		to@65
+		_newOwner@28
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+initName: balance%1%_0_
+After state allocation: 
+Added new_wallet_balance@223%1% to unsigned 
+Added old_wallet_balance@217%1% to unsigned 
+Added old_balance@214%1% to unsigned 
+Added new_balance@220%1% to unsigned 
+After allocation: 
++++++++++++++ printing context +++++++++++++++
+idNum: 2, addr: 0x7ff2a2704c90
+sourceContext: nullptr
+	state variables: 
+		varName: user%1%, value: 0, sort: Int
+		varName: $from_change%1%, value: $from_change%1%, sort: (_ BitVec 64)
+		varName: $to_change%1%, value: $to_change%1%, sort: (_ BitVec 64)
+		varName: balance%1%, value: balance%1%_0_, sort: (_ BitVec 64)
+		varName: msg.value, value: msg.value_0_, sort: (_ BitVec 64)
+		varName: wallet%1%, value: 0, sort: Int
+		varName: anotherUser%1%, value: 0, sort: Int
+		varName: block.timestamp, value: block.timestamp_0_, sort: Int
+		varName: msg.sender, value: msg.sender_0_, sort: Int
+	local variables: 
+		varName: property@174%1%, value: false, sort: Bool
+		varName: new_balance@220%1%, value: #x0000000000000000, sort: (_ BitVec 64)
+		varName: usr@180%1%, value: 0, sort: Int
+		varName: trusted@183%1%, value: false, sort: Bool
+		varName: newOwner@383%1%, value: 0, sort: Int
+		varName: trusted@392%1%, value: false, sort: Bool
+		varName: old_wallet_balance@217%1%, value: #x0000000000000000, sort: (_ BitVec 64)
+		varName: old_balance@214%1%, value: #x0000000000000000, sort: (_ BitVec 64)
+		varName: new_wallet_balance@223%1%, value: #x0000000000000000, sort: (_ BitVec 64)
+		varName: oldOwner@244%1%, value: 0, sort: Int
+	path conditions: 
+	goHead: 1
+	current Address: 1
+	msg.sender: 0
+	current Function Scope: 
+	abnormal Termination: None
+Call Stack: 
+++++++++++++ end of printing context +++++++++++++++
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Unprotected.sol:76:9: 
+   |
+76 |         wallet = new Unprotected();
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Allocation is done: 
+Address of the repaired contract is 2
+Unprotected is name 
+Added balance@100%2% to unsigned 
+_executeConstructors() is called for: Unprotected
+that's constructor!
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Unprotected.sol:18:10: 
+   |
+18 |          owner = msg.sender;
+   |          ^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Unprotected.sol:77:9: 
+   |
+77 |         user = new User(address(wallet));
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Allocation is done: 
+Added _value@124%3% to unsigned 
+_executeConstructors() is called for: User
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Unprotected.sol:51:9: 
+   |
+51 |         wallet = Unprotected(_wallet);
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Unprotected.sol:78:9: 
+   |
+78 |         anotherUser = new User(address(wallet));
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Allocation is done: 
+Added _value@124%4% to unsigned 
+_executeConstructors() is called for: User
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Unprotected.sol:51:9: 
+   |
+51 |         wallet = Unprotected(_wallet);
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Unprotected.sol:80:9: 
+   |
+80 |         uint old_balance; uint old_wallet_balance;
+   |         ^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Unprotected.sol:80:27: 
+   |
+80 |         uint old_balance; uint old_wallet_balance;
+   |                           ^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Unprotected.sol:81:9: 
+   |
+81 |         uint new_balance; uint new_wallet_balance;
+   |         ^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Unprotected.sol:81:27: 
+   |
+81 |         uint new_balance; uint new_wallet_balance;
+   |                           ^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Unprotected.sol:82:9: 
+   |
+82 |         old_wallet_balance = wallet.s_getBalances(address(user));
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Unprotected.sol:43:9: 
+   |
+43 |         return balances[depositor];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Unprotected.sol:83:9: 
+   |
+83 |         old_balance = address(user).balance + old_wallet_balance;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Unprotected.sol:85:9: 
+   |
+85 |         address oldOwner; oldOwner = wallet.getOwner();
+   |         ^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Unprotected.sol:85:27: 
+   |
+85 |         address oldOwner; oldOwner = wallet.getOwner();
+   |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+getOwner:function () returns (address) is full name 
+getOwner is shortName 
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Unprotected.sol:39:9: 
+   |
+39 |         return owner;
+   |         ^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Unprotected.sol:86:9: 
+   |
+86 |         address(wallet).call.value(1000);
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+update msg.value: #x00000000000003e8
+That might be member access: 
+Cannot find the definition: __fallback__
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Unprotected.sol:93:9: 
+   |
+93 |         __assume__($from_change == 0 || $from_change == 1 || $from_change == 2);
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Unprotected.sol:94:9: 
+   |
+94 |         __assume__($to_change == 0 || $to_change == 1 || $to_change == 2);
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Unprotected.sol:96:9: 
+   |
+96 |         if ($from_change == 0) {
+   |         ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+TRUE branch is feasible! Follow it.
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Unprotected.sol:96:32: 
+   |
+96 |         if ($from_change == 0) {
+   |                                ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Unprotected.sol:97:13: 
+   |
+97 |             if ($to_change == 0) {
+   |             ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+TRUE branch is feasible! Follow it.
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Unprotected.sol:97:34: 
+   |
+97 |             if ($to_change == 0) {
+   |                                  ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Unprotected.sol:98:17: 
+   |
+98 |                 wallet.changeOwner(address(this));
+   |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+changeOwner:function (address) is full name 
+changeOwner is shortName 
+changeOwner pushed 
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Unprotected.sol:25:9: 
+   |
+25 |         owner = _newOwner;
+   |         ^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+FALSE branch is feasible! Follow it.
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Unprotected.sol:99:20: 
+   |
+99 |             } else if ($to_change == 1) {
+   |                    ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+TRUE branch is feasible! Follow it.
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Unprotected.sol:99:41: 
+   |
+99 |             } else if ($to_change == 1) {
+   |                                         ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Unprotected.sol:100:17: 
+   |
+100 |                 wallet.changeOwner(address(user));
+   |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+changeOwner:function (address) is full name 
+changeOwner is shortName 
+changeOwner pushed 
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Unprotected.sol:25:9: 
+   |
+25 |         owner = _newOwner;
+   |         ^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+FALSE branch is feasible! Follow it.
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:101:20: 
+    |
+101 |             } else {
+    |                    ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:102:17: 
+    |
+102 |                 wallet.changeOwner(address(anotherUser));
+    |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+changeOwner:function (address) is full name 
+changeOwner is shortName 
+changeOwner pushed 
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Unprotected.sol:25:9: 
+   |
+25 |         owner = _newOwner;
+   |         ^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+FALSE branch is feasible! Follow it.
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:104:16: 
+    |
+104 |         } else {
+    |                ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:105:13: 
+    |
+105 |             if ($to_change == 0) {
+    |             ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+TRUE branch is feasible! Follow it.
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:105:34: 
+    |
+105 |             if ($to_change == 0) {
+    |                                  ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:106:17: 
+    |
+106 |                 user.changeOwner(address(this));
+    |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Unprotected.sol:59:9: 
+   |
+59 |         wallet.changeOwner(_to);
+   |         ^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+changeOwner:function (address) is full name 
+changeOwner is shortName 
+changeOwner pushed 
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Unprotected.sol:25:9: 
+   |
+25 |         owner = _newOwner;
+   |         ^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+FALSE branch is feasible! Follow it.
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:107:20: 
+    |
+107 |             } else if ($to_change == 1) {
+    |                    ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+TRUE branch is feasible! Follow it.
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:107:41: 
+    |
+107 |             } else if ($to_change == 1) {
+    |                                         ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:108:17: 
+    |
+108 |                 user.changeOwner(address(user));
+    |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Unprotected.sol:59:9: 
+   |
+59 |         wallet.changeOwner(_to);
+   |         ^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+changeOwner:function (address) is full name 
+changeOwner is shortName 
+changeOwner pushed 
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Unprotected.sol:25:9: 
+   |
+25 |         owner = _newOwner;
+   |         ^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+FALSE branch is feasible! Follow it.
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:109:20: 
+    |
+109 |             } else {
+    |                    ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:110:17: 
+    |
+110 |                 user.changeOwner(address(anotherUser));
+    |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Unprotected.sol:59:9: 
+   |
+59 |         wallet.changeOwner(_to);
+   |         ^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+changeOwner:function (address) is full name 
+changeOwner is shortName 
+changeOwner pushed 
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Unprotected.sol:25:9: 
+   |
+25 |         owner = _newOwner;
+   |         ^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:114:9: 
+    |
+114 |         new_wallet_balance = wallet.s_getBalances(address(user));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Unprotected.sol:43:9: 
+   |
+43 |         return balances[depositor];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:114:9: 
+    |
+114 |         new_wallet_balance = wallet.s_getBalances(address(user));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Unprotected.sol:43:9: 
+   |
+43 |         return balances[depositor];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:114:9: 
+    |
+114 |         new_wallet_balance = wallet.s_getBalances(address(user));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Unprotected.sol:43:9: 
+   |
+43 |         return balances[depositor];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:114:9: 
+    |
+114 |         new_wallet_balance = wallet.s_getBalances(address(user));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Unprotected.sol:43:9: 
+   |
+43 |         return balances[depositor];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:114:9: 
+    |
+114 |         new_wallet_balance = wallet.s_getBalances(address(user));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Unprotected.sol:43:9: 
+   |
+43 |         return balances[depositor];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:114:9: 
+    |
+114 |         new_wallet_balance = wallet.s_getBalances(address(user));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Unprotected.sol:43:9: 
+   |
+43 |         return balances[depositor];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:115:9: 
+    |
+115 |         new_balance = address(user).balance + new_wallet_balance;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:115:9: 
+    |
+115 |         new_balance = address(user).balance + new_wallet_balance;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:115:9: 
+    |
+115 |         new_balance = address(user).balance + new_wallet_balance;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:115:9: 
+    |
+115 |         new_balance = address(user).balance + new_wallet_balance;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:115:9: 
+    |
+115 |         new_balance = address(user).balance + new_wallet_balance;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:115:9: 
+    |
+115 |         new_balance = address(user).balance + new_wallet_balance;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:117:9: 
+    |
+117 |         address newOwner; newOwner = wallet.getOwner();
+    |         ^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:117:9: 
+    |
+117 |         address newOwner; newOwner = wallet.getOwner();
+    |         ^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:117:9: 
+    |
+117 |         address newOwner; newOwner = wallet.getOwner();
+    |         ^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:117:9: 
+    |
+117 |         address newOwner; newOwner = wallet.getOwner();
+    |         ^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:117:9: 
+    |
+117 |         address newOwner; newOwner = wallet.getOwner();
+    |         ^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:117:9: 
+    |
+117 |         address newOwner; newOwner = wallet.getOwner();
+    |         ^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:117:27: 
+    |
+117 |         address newOwner; newOwner = wallet.getOwner();
+    |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+getOwner:function () returns (address) is full name 
+getOwner is shortName 
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Unprotected.sol:39:9: 
+   |
+39 |         return owner;
+   |         ^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:117:27: 
+    |
+117 |         address newOwner; newOwner = wallet.getOwner();
+    |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+getOwner:function () returns (address) is full name 
+getOwner is shortName 
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Unprotected.sol:39:9: 
+   |
+39 |         return owner;
+   |         ^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:117:27: 
+    |
+117 |         address newOwner; newOwner = wallet.getOwner();
+    |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+getOwner:function () returns (address) is full name 
+getOwner is shortName 
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Unprotected.sol:39:9: 
+   |
+39 |         return owner;
+   |         ^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:117:27: 
+    |
+117 |         address newOwner; newOwner = wallet.getOwner();
+    |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+getOwner:function () returns (address) is full name 
+getOwner is shortName 
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Unprotected.sol:39:9: 
+   |
+39 |         return owner;
+   |         ^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:117:27: 
+    |
+117 |         address newOwner; newOwner = wallet.getOwner();
+    |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+getOwner:function () returns (address) is full name 
+getOwner is shortName 
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Unprotected.sol:39:9: 
+   |
+39 |         return owner;
+   |         ^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:117:27: 
+    |
+117 |         address newOwner; newOwner = wallet.getOwner();
+    |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+getOwner:function () returns (address) is full name 
+getOwner is shortName 
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Unprotected.sol:39:9: 
+   |
+39 |         return owner;
+   |         ^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:119:9: 
+    |
+119 |         bool trusted; trusted = is_trusted(newOwner);
+    |         ^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:119:9: 
+    |
+119 |         bool trusted; trusted = is_trusted(newOwner);
+    |         ^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:119:9: 
+    |
+119 |         bool trusted; trusted = is_trusted(newOwner);
+    |         ^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:119:9: 
+    |
+119 |         bool trusted; trusted = is_trusted(newOwner);
+    |         ^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:119:9: 
+    |
+119 |         bool trusted; trusted = is_trusted(newOwner);
+    |         ^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:119:9: 
+    |
+119 |         bool trusted; trusted = is_trusted(newOwner);
+    |         ^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:119:23: 
+    |
+119 |         bool trusted; trusted = is_trusted(newOwner);
+    |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Address is: 1
+The address is trusted 
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:119:23: 
+    |
+119 |         bool trusted; trusted = is_trusted(newOwner);
+    |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Address is: 3
+The address is trusted 
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:119:23: 
+    |
+119 |         bool trusted; trusted = is_trusted(newOwner);
+    |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Address is: 4
+The address is trusted 
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:119:23: 
+    |
+119 |         bool trusted; trusted = is_trusted(newOwner);
+    |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Address is: 1
+The address is trusted 
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:119:23: 
+    |
+119 |         bool trusted; trusted = is_trusted(newOwner);
+    |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Address is: 3
+The address is NOT trusted 
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:119:23: 
+    |
+119 |         bool trusted; trusted = is_trusted(newOwner);
+    |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Address is: 4
+The address is NOT trusted 
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:120:9: 
+    |
+120 |         declare_property((oldOwner == newOwner) || trusted);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:120:9: 
+    |
+120 |         declare_property((oldOwner == newOwner) || trusted);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:120:9: 
+    |
+120 |         declare_property((oldOwner == newOwner) || trusted);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:120:9: 
+    |
+120 |         declare_property((oldOwner == newOwner) || trusted);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:120:9: 
+    |
+120 |         declare_property((oldOwner == newOwner) || trusted);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/Unprotected.sol:120:9: 
+    |
+120 |         declare_property((oldOwner == newOwner) || trusted);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+result context [1]: 
+Is possibly reentrant: 0
+RESULT: 1
+The trace is VALID
+$to_change = 0
+$from_change = 0
+Recording summary, validCount: 1
+result context [2]: 
+Is possibly reentrant: 0
+RESULT: 1
+The trace is VALID
+$to_change = 1
+$from_change = 0
+Recording summary, validCount: 2
+result context [3]: 
+Is possibly reentrant: 0
+RESULT: 1
+The trace is VALID
+$to_change = 2
+$from_change = 0
+Recording summary, validCount: 3
+result context [4]: 
+Is possibly reentrant: 0
+RESULT: 1
+The trace is VALID
+$to_change = 0
+$from_change = 1
+Recording summary, validCount: 4
+result context [5]: 
+Is possibly reentrant: 0
+RESULT: 0
+The trace is INVALID
+$from_change = 2
+$to_change = 1
+result context [6]: 
+Is possibly reentrant: 0
+RESULT: 0
+The trace is INVALID
+$from_change = 2
+$to_change = 2
+./solver/solver -symexe-main ../contracts/Unprotected.sol Unprotected  0.47s user 0.05s system 98% cpu 0.520 total

@@ -1,0 +1,343 @@
+-> % time ./solver/solver -symexe-main ../contracts/Confused_Sign.sol Confused_Sign
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+dumping contract information: 
+Contract: _MAIN_
+	Constructor: _MAIN_()
+	State Variables:
+		$withdraw_amt
+		$value
+		wallet
+	Modifiers:
+	Functions:
+		_MAIN_:::function ()
+		_MAIN_::declare_property:function (bool)
+	Local Variables:
+		withdrawn@160
+		after_withdrawal@157
+		deposited@154
+		after_deposit@151
+		before_deposit@148
+		property@117
+
+Contract: Confused_Sign
+	Constructor: Confused_Sign()
+	State Variables:
+		balances
+		creator
+	Modifiers:
+	Functions:
+		Confused_Sign::getBalances:function (address) returns (uint256)
+		Confused_Sign::migrateTo:function (address payable)
+		Confused_Sign::deposit:function ()
+		Confused_Sign::withdraw:function (uint256)
+		Confused_Sign:::function ()
+	Local Variables:
+		balance@101
+		depositor@98
+		to@76
+		amount@44
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+initName: balance%1%_0_
+After state allocation: 
+Added withdrawn@160%1% to unsigned 
+Added after_withdrawal@157%1% to unsigned 
+Added deposited@154%1% to unsigned 
+Added after_deposit@151%1% to unsigned 
+Added before_deposit@148%1% to unsigned 
+After allocation: 
++++++++++++++ printing context +++++++++++++++
+idNum: 2, addr: 0x7fab2e808a70
+sourceContext: nullptr
+	state variables: 
+		varName: msg.sender, value: msg.sender_0_, sort: Int
+		varName: $withdraw_amt%1%, value: $withdraw_amt%1%, sort: (_ BitVec 64)
+		varName: balance%1%, value: balance%1%_0_, sort: (_ BitVec 64)
+		varName: $value%1%, value: $value%1%, sort: (_ BitVec 64)
+		varName: msg.value, value: msg.value_0_, sort: (_ BitVec 64)
+		varName: wallet%1%, value: 0, sort: Int
+		varName: block.timestamp, value: block.timestamp_0_, sort: Int
+	local variables: 
+		varName: property@117%1%, value: false, sort: Bool
+		varName: before_deposit@148%1%, value: #x0000000000000000, sort: (_ BitVec 64)
+		varName: withdrawn@160%1%, value: #x0000000000000000, sort: (_ BitVec 64)
+		varName: after_deposit@151%1%, value: #x0000000000000000, sort: (_ BitVec 64)
+		varName: deposited@154%1%, value: #x0000000000000000, sort: (_ BitVec 64)
+		varName: after_withdrawal@157%1%, value: #x0000000000000000, sort: (_ BitVec 64)
+	path conditions: 
+	goHead: 1
+	current Address: 1
+	msg.sender: 0
+	current Function Scope: 
+	abnormal Termination: None
+Call Stack: 
+++++++++++++ end of printing context +++++++++++++++
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Confused_Sign.sol:40:9: 
+   |
+40 |         wallet = new Confused_Sign();
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Allocation is done: 
+Address of the repaired contract is 2
+Confused_Sign is name 
+Added balance@101%2% to unsigned 
+Added amount@44%2% to unsigned 
+_executeConstructors() is called for: Confused_Sign
+-------------------------------------------------
+Executing statement: 
+ --> ../contracts/Confused_Sign.sol:7:10: 
+  |
+7 |          creator = msg.sender;
+  |          ^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Confused_Sign.sol:42:9: 
+   |
+42 |         __assume__(address(this).balance == 10000);
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Confused_Sign.sol:43:9: 
+   |
+43 |         address(wallet).call.value(3000);
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+update msg.value: #x0000000000000bb8
+That might be member access: 
+Cannot find the definition: __fallback__
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Confused_Sign.sol:48:9: 
+   |
+48 |         uint before_deposit; uint after_deposit; uint deposited;
+   |         ^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Confused_Sign.sol:48:30: 
+   |
+48 |         uint before_deposit; uint after_deposit; uint deposited;
+   |                              ^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Confused_Sign.sol:48:50: 
+   |
+48 |         uint before_deposit; uint after_deposit; uint deposited;
+   |                                                  ^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Confused_Sign.sol:49:9: 
+   |
+49 |         uint after_withdrawal; uint withdrawn;
+   |         ^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Confused_Sign.sol:49:32: 
+   |
+49 |         uint after_withdrawal; uint withdrawn;
+   |                                ^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Confused_Sign.sol:51:9: 
+   |
+51 |         before_deposit = address(this).balance;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Confused_Sign.sol:53:9: 
+   |
+53 |         __assume__($value > 0 && $value < 7000);
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Confused_Sign.sol:54:9: 
+   |
+54 |         wallet.deposit.value($value)();
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+update msg.value: $value%1%
+That might be member access: 
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Confused_Sign.sol:11:10: 
+   |
+11 |          require(balances[msg.sender] + msg.value > balances[msg.sender]);
+   |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+translating 
+printing propertyExpr: (bvugt (bvadd (select ((as const (Array Int (_ BitVec 64))) #x0000000000000000)
+                      1)
+              $value%1%)
+       (select ((as const (Array Int (_ BitVec 64))) #x0000000000000000) 1))
+======= ======= ======= ======= ======= ======= =======
+positive branch is possible! Go head with it!
+*** require() statement is satisfied!! ****
+======= ======= ======= ======= ======= ======= =======
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Confused_Sign.sol:12:10: 
+   |
+12 |          balances[msg.sender] += msg.value;
+   |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Confused_Sign.sol:56:9: 
+   |
+56 |         after_deposit = address(this).balance;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Confused_Sign.sol:58:9: 
+   |
+58 |         __assume__($withdraw_amt > 0 && $withdraw_amt < address(wallet).balance);
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Confused_Sign.sol:59:9: 
+   |
+59 |         wallet.withdraw($withdraw_amt);
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Confused_Sign.sol:16:10: 
+   |
+16 |          require(amount >= balances[msg.sender]);
+   |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+translating 
+printing propertyExpr: (let ((a!1 (store ((as const (Array Int (_ BitVec 64))) #x0000000000000000)
+                  1
+                  (bvadd (select ((as const (Array Int (_ BitVec 64)))
+                                   #x0000000000000000)
+                                 1)
+                         $value%1%))))
+  (bvuge $withdraw_amt%1% (select a!1 1)))
+======= ======= ======= ======= ======= ======= =======
+positive branch is possible! Go head with it!
+*** require() statement is satisfied!! ****
+======= ======= ======= ======= ======= ======= =======
+======= ======= ======= ======= ======= ======= =======
+negation branch is possible! Go head with it!
+*** require() statement failed!! ****
+  --> ../contracts/Confused_Sign.sol:16:10: 
+   |
+16 |          require(amount >= balances[msg.sender]);
+   |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(let ((a!1 (store ((as const (Array Int (_ BitVec 64))) #x0000000000000000)
+                  1
+                  (bvadd (select ((as const (Array Int (_ BitVec 64)))
+                                   #x0000000000000000)
+                                 1)
+                         $value%1%))))
+  (bvuge $withdraw_amt%1% (select a!1 1)))
+Stop executing this path in this context!
+======= ======= ======= ======= ======= ======= =======
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Confused_Sign.sol:17:10: 
+   |
+17 |          msg.sender.call.value(amount);
+   |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+update msg.value: $withdraw_amt%1%
+That might be member access: 
+Cannot find the definition: __fallback__
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Confused_Sign.sol:18:10: 
+   |
+18 |          balances[msg.sender] -= amount;
+   |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Returning to the prev context
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Confused_Sign.sol:61:9: 
+   |
+61 |         after_withdrawal = address(this).balance;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Confused_Sign.sol:61:9: 
+   |
+61 |         after_withdrawal = address(this).balance;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Confused_Sign.sol:63:9: 
+   |
+63 |         deposited = before_deposit - after_deposit;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Confused_Sign.sol:63:9: 
+   |
+63 |         deposited = before_deposit - after_deposit;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Confused_Sign.sol:64:9: 
+   |
+64 |         withdrawn = after_withdrawal - after_deposit;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Confused_Sign.sol:64:9: 
+   |
+64 |         withdrawn = after_withdrawal - after_deposit;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Confused_Sign.sol:66:9: 
+   |
+66 |         declare_property(withdrawn <= deposited && (withdrawn > 0 || !($value >= $withdraw_amt)));
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/Confused_Sign.sol:66:9: 
+   |
+66 |         declare_property(withdrawn <= deposited && (withdrawn > 0 || !($value >= $withdraw_amt)));
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+result context [1]: 
+Is possibly reentrant: 0
+RESULT: 1
+RESULT: 0
+The trace is VALID
+$value = 5696
+balance = 10000
+$withdraw_amt = 5696
+Recording summary, validCount: 1
+The trace is INVALID
+$value = 5696
+balance = 10000
+$withdraw_amt = 5697
+result context [2]: 
+Is possibly reentrant: 0
+RESULT: 0
+The trace is INVALID
+$value = 7
+$withdraw_amt = 2
+balance = 10000
+./solver/solver -symexe-main ../contracts/Confused_Sign.sol Confused_Sign  0.30s user 0.03s system 97% cpu 0.337 total

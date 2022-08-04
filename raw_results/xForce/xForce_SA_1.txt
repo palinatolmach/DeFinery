@@ -1,0 +1,1013 @@
+-> % time ./solver/solver -symexe-main ../contracts/xForce.sol xForce                                  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+dumping contract information: 
+Contract: User
+	State Variables:
+		xforce
+		force
+	Modifiers:
+	Functions:
+		User::xForce_withdraw:function (uint256)
+		User::xForce_deposit:function (uint256)
+		User::Force_approve:function (uint256)
+		User::setForce:function (address,address)
+	Local Variables:
+		amount@775
+		_xforce@727
+		amount@763
+		amount@745
+		_force@725
+
+Contract: _MAIN_
+	Constructor: _MAIN_()
+	State Variables:
+		user
+		xforce
+		$var_0
+		$var_1
+		force
+	Modifiers:
+	Functions:
+		_MAIN_::declare_property:function (bool)
+		_MAIN_:::function ()
+		_MAIN_::declare_path:function (uint256,string)
+	Local Variables:
+		resUserForce@941
+		resUserxForce@929
+		path@788
+		initUserxForce@862
+		property@796
+		method@790
+		initUserForce@865
+
+Contract: Force
+	Constructor: Force()
+	State Variables:
+		controller
+		totalSupply
+		transfersEnabled
+		allowed
+		balances
+	Modifiers:
+	Functions:
+		Force::balanceOfAt:function (address,uint256) returns (uint256)
+		Force::setBalances_Force:function (address,uint256)
+		Force::doTransfer:function (address,address,uint256) returns (bool)
+		Force::approve:function (address,address,uint256) returns (bool)
+		Force::balanceOf:function (address) returns (uint256)
+		Force::getBalanceOf:function (address) returns (uint256)
+		Force::updateValueAtNow:function (address,uint256) returns (uint256)
+		Force::_transfer:function (address,uint256) returns (bool)
+		Force::transferFrom:function (address,address,uint256) returns (bool)
+		Force::getTotalSupply:function () returns (uint256)
+		Force:::function ()
+	Local Variables:
+		amount@708
+		_user@706
+		balance@695
+		balance@681
+		_block@678
+		_value@692
+		_owner@690
+		_owner@676
+		_owner@659
+		previousBalanceTo@630
+		success@580
+		success@502
+		_amount@577
+		previousBalanceFrom@606
+		_from@573
+		_to@524
+		_amount@526
+		_to@575
+		_amount@475
+		_from@522
+		_amount@499
+		balance@662
+		success@529
+		success@478
+		_owner@471
+		_to@497
+		tS@464
+		usr@451
+		balance@454
+		_spender@473
+
+Contract: xForce
+	Constructor: xForce()
+	State Variables:
+		force
+		allowance
+		totalSupply
+		balanceOf
+	Modifiers:
+	Functions:
+		xForce::deposit:function (uint256)
+		xForce::setBalances_xForce:function (address,uint256)
+		xForce::_mint:function (address,uint256)
+		xForce::transfer:function (address,uint256) returns (bool)
+		xForce::approve:function (address,uint256) returns (bool)
+		xForce::getBalanceOf:function (address) returns (uint256)
+		xForce::_burn:function (address,uint256)
+		xForce::transferFrom:function (address,address,uint256) returns (bool)
+		xForce::getTotalSupply:function () returns (uint256)
+		xForce::withdraw:function (uint256)
+		xForce:::function (address)
+	Local Variables:
+		amount@398
+		what@368
+		totalShares@269
+		what@287
+		balance@111
+		totalForce@257
+		forceBalance@356
+		guy@128
+		amount@253
+		success@177
+		wad@174
+		account@321
+		_underlying@92
+		dst@172
+		appr@133
+		user@396
+		numberOfShares@348
+		amount@241
+		_user@239
+		wad@130
+		success@154
+		totalShares@352
+		dst@149
+		amount@323
+		tS@121
+		res@304
+		src@170
+		wad@151
+		usr@108
+
+Contract: IERC20
+	State Variables:
+	Modifiers:
+	Functions:
+		IERC20::transferFrom:function (address,address,uint256) returns (bool)
+		IERC20::approve:function (address,uint256) returns (bool)
+		IERC20::allowance:function (address,address) returns (uint256)
+		IERC20::_transfer:function (address,uint256) returns (bool)
+		IERC20::transfer:function (address,uint256) returns (bool)
+		IERC20::balanceOf:function (address) returns (uint256)
+		IERC20::totalSupply:function () returns (uint256)
+	Local Variables:
+		spender@71
+		owner@69
+		ret_0@57
+		spender@41
+		sender@50
+		from@61
+		ret_0@37
+		recipient@23
+		spender@34
+		value@73
+		owner@32
+		ret_0@28
+		recipient@52
+		ret_0@3
+		amount@54
+		amount@25
+		ret_0@46
+		amount@16
+		value@65
+		recipient@14
+		ret_0@10
+		amount@43
+		ret_0@19
+		to@63
+		account@7
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+initName: balance%1%_0_
+After state allocation: 
+Added resUserForce@941%1% to unsigned 
+Added resUserxForce@929%1% to unsigned 
+Added path@788%1% to unsigned 
+Added initUserxForce@862%1% to unsigned 
+Added initUserForce@865%1% to unsigned 
+After allocation: 
++++++++++++++ printing context +++++++++++++++
+idNum: 2, addr: 0x7f848c706d80
+sourceContext: nullptr
+	state variables: 
+		varName: $var_0%1%, value: $var_0%1%, sort: (_ BitVec 64)
+		varName: xforce%1%, value: 0, sort: Int
+		varName: balance%1%, value: balance%1%_0_, sort: (_ BitVec 64)
+		varName: $var_1%1%, value: $var_1%1%, sort: (_ BitVec 64)
+		varName: msg.value, value: msg.value_0_, sort: (_ BitVec 64)
+		varName: force%1%, value: 0, sort: Int
+		varName: user%1%, value: 0, sort: Int
+		varName: block.timestamp, value: block.timestamp_0_, sort: Int
+		varName: msg.sender, value: msg.sender_0_, sort: Int
+	local variables: 
+		varName: initUserForce@865%1%, value: #x0000000000000000, sort: (_ BitVec 64)
+		varName: property@796%1%, value: false, sort: Bool
+		varName: initUserxForce@862%1%, value: #x0000000000000000, sort: (_ BitVec 64)
+		varName: method@790%1%, value: "", sort: String
+		varName: resUserxForce@929%1%, value: #x0000000000000000, sort: (_ BitVec 64)
+		varName: path@788%1%, value: #x0000000000000000, sort: (_ BitVec 64)
+		varName: resUserForce@941%1%, value: #x0000000000000000, sort: (_ BitVec 64)
+	path conditions: 
+	goHead: 1
+	current Address: 1
+	msg.sender: 0
+	current Function Scope: 
+	abnormal Termination: None
+Call Stack: 
+++++++++++++ end of printing context +++++++++++++++
+Is already reentrant? [0] 
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:304:9: 
+    |
+304 |         user = new User();
+    |         ^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Allocation is done: 
+Added amount@775%2% to unsigned 
+Added amount@763%2% to unsigned 
+Added amount@745%2% to unsigned 
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:305:9: 
+    |
+305 |         force = new Force();
+    |         ^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Allocation is done: 
+Added amount@708%3% to unsigned 
+Added balance@695%3% to unsigned 
+Added balance@681%3% to unsigned 
+Added _block@678%3% to unsigned 
+Added _value@692%3% to unsigned 
+Added previousBalanceTo@630%3% to unsigned 
+Added _amount@577%3% to unsigned 
+Added previousBalanceFrom@606%3% to unsigned 
+Added _amount@526%3% to unsigned 
+Added _amount@475%3% to unsigned 
+Added _amount@499%3% to unsigned 
+Added balance@662%3% to unsigned 
+Added tS@464%3% to unsigned 
+Added balance@454%3% to unsigned 
+_executeConstructors() is called for: Force
+Is already reentrant? [0] 
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:183:9: 
+    |
+183 |         totalSupply = 1500;
+    |         ^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:184:9: 
+    |
+184 |         transfersEnabled = true;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:306:9: 
+    |
+306 |         xforce = new xForce(address(force));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Allocation is done: 
+Address of the repaired contract is 4
+xForce is name 
+Added amount@398%4% to unsigned 
+Added what@368%4% to unsigned 
+Added totalShares@269%4% to unsigned 
+Added what@287%4% to unsigned 
+Added balance@111%4% to unsigned 
+Added totalForce@257%4% to unsigned 
+Added forceBalance@356%4% to unsigned 
+Added amount@253%4% to unsigned 
+Added wad@174%4% to unsigned 
+Added numberOfShares@348%4% to unsigned 
+Added amount@241%4% to unsigned 
+Added wad@130%4% to unsigned 
+Added totalShares@352%4% to unsigned 
+Added amount@323%4% to unsigned 
+Added tS@121%4% to unsigned 
+Added wad@151%4% to unsigned 
+_executeConstructors() is called for: xForce
+Is already reentrant? [0] 
+that's constructor!
+Added to trusted: 3
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/xForce.sol:85:9: 
+   |
+85 |         force = IERC20(_underlying);
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/xForce.sol:86:9: 
+   |
+86 |         totalSupply = 1500;
+   |         ^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:308:9: 
+    |
+308 |         force.setBalances_Force(address(xforce), 1000);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Is already reentrant? [0] 
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:265:9: 
+    |
+265 |         balances[_user] = amount;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:309:9: 
+    |
+309 |         force.setBalances_Force(address(user), 100);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Is already reentrant? [0] 
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:265:9: 
+    |
+265 |         balances[_user] = amount;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:310:9: 
+    |
+310 |         xforce.setBalances_xForce(address(user), 0);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Is already reentrant? [0] 
+setBalances_xForce:function (address,uint256) is full name 
+setBalances_xForce is shortName 
+Added to trusted: 2
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:124:9: 
+    |
+124 |         balanceOf[_user] = amount;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:312:9: 
+    |
+312 |         uint initUserxForce; uint initUserForce;
+    |         ^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:312:30: 
+    |
+312 |         uint initUserxForce; uint initUserForce;
+    |                              ^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:313:9: 
+    |
+313 |         initUserxForce = xforce.getBalanceOf(address(user));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Is already reentrant? [0] 
+getBalanceOf:function (address) returns (uint256) is full name 
+getBalanceOf is shortName 
+Added to trusted: 2
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/xForce.sol:90:9: 
+   |
+90 |         return balanceOf[usr];
+   |         ^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:314:9: 
+    |
+314 |         initUserForce = force.balanceOf(address(user));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Is already reentrant? [0] 
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:252:9: 
+    |
+252 |         balance = balanceOfAt(_owner, 0);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Is already reentrant? [0] 
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:257:9: 
+    |
+257 |         return balances[_owner];
+    |         ^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:253:9: 
+    |
+253 |         return balance;
+    |         ^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:316:9: 
+    |
+316 |         __assume__($var_1 > 0 && $var_1 < 100);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:317:9: 
+    |
+317 |         __assume__($var_0 >= 0 && $var_0 <= $var_1);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:323:9: 
+    |
+323 |         user.setForce(address(force), address(xforce));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Is already reentrant? [0] 
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:275:9: 
+    |
+275 |         force = Force(_force);
+    |         ^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:276:9: 
+    |
+276 |         xforce = xForce(_xforce);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:325:3: 
+    |
+325 | 		user.Force_approve($var_0);
+    | 		^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Is already reentrant? [0] 
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:280:7: 
+    |
+280 |       force.approve(address(this), address(xforce), amount);
+    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Is already reentrant? [0] 
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:196:9: 
+    |
+196 |         require(transfersEnabled);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+translating 
+printing propertyExpr: true
+======= ======= ======= ======= ======= ======= =======
+positive branch is possible! Go head with it!
+*** require() statement is satisfied!! ****
+======= ======= ======= ======= ======= ======= =======
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:198:9: 
+    |
+198 |         allowed[_owner][_spender] = _amount;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:199:9: 
+    |
+199 |         return true;
+    |         ^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:326:3: 
+    |
+326 | 		user.xForce_deposit($var_1);
+    | 		^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Is already reentrant? [0] 
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:284:7: 
+    |
+284 |       xforce.deposit(amount);
+    |       ^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Is already reentrant? [0] 
+deposit:function (uint256) is full name 
+deposit is shortName 
+deposit pushed 
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:129:9: 
+    |
+129 |         uint256 totalForce;
+    |         ^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:130:9: 
+    |
+130 |         totalForce = force.balanceOf(address(this));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Is already reentrant? [0] 
+This call is [Force] 
+The previous call is [xForce] 
+The call before that is [User] 
+That trace IS NOT reentrant
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:252:9: 
+    |
+252 |         balance = balanceOfAt(_owner, 0);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Is already reentrant? [0] 
+This call is [Force] 
+The previous call is [Force] 
+The call before that is [xForce] 
+That trace IS NOT reentrant
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:257:9: 
+    |
+257 |         return balances[_owner];
+    |         ^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:253:9: 
+    |
+253 |         return balance;
+    |         ^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:132:9: 
+    |
+132 |         uint256 totalShares = totalSupply; // ()
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:134:9: 
+    |
+134 |         if (totalShares == 0 || totalForce == 0) {
+    |         ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+TRUE branch is not feasible! Skipped.
+FALSE branch is feasible! Follow it.
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:138:14: 
+    |
+138 |         else {
+    |              ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:139:13: 
+    |
+139 |             uint256 what = (amount * totalShares) / totalForce;
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:140:13: 
+    |
+140 |             _mint(msg.sender, what);
+    |             ^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Is already reentrant? [0] 
+This call is [xForce] 
+The previous call is [xForce] 
+The call before that is [User] 
+That trace IS NOT reentrant
+_mint:function (address,uint256) is full name 
+_mint is shortName 
+_mint pushed 
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:148:9: 
+    |
+148 |         require(account != address(0), "ERC20: mint to the zero address");
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+translating 
+printing propertyExpr: (not (= 2 0))
+======= ======= ======= ======= ======= ======= =======
+positive branch is possible! Go head with it!
+*** require() statement is satisfied!! ****
+======= ======= ======= ======= ======= ======= =======
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:150:9: 
+    |
+150 |         totalSupply += amount;
+    |         ^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:151:9: 
+    |
+151 |         balanceOf[account] += amount;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:143:9: 
+    |
+143 |         bool res;
+    |         ^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:144:9: 
+    |
+144 |         res = force.transferFrom(msg.sender, address(this), amount);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Is already reentrant? [0] 
+This call is [Force] 
+The previous call is [xForce] 
+The call before that is [User] 
+That trace IS NOT reentrant
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:214:9: 
+    |
+214 |         if (msg.sender != controller) {
+    |         ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+TRUE branch is feasible! Follow it.
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:214:39: 
+    |
+214 |         if (msg.sender != controller) {
+    |                                       ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:215:13: 
+    |
+215 |             require(transfersEnabled);
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+translating 
+printing propertyExpr: true
+======= ======= ======= ======= ======= ======= =======
+positive branch is possible! Go head with it!
+*** require() statement is satisfied!! ****
+======= ======= ======= ======= ======= ======= =======
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:217:13: 
+    |
+217 |             if (allowed[_from][_to] < _amount) {
+    |             ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+TRUE branch is feasible! Follow it.
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:217:48: 
+    |
+217 |             if (allowed[_from][_to] < _amount) {
+    |                                                ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:218:17: 
+    |
+218 |                 return false;
+    |                 ^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:220:13: 
+    |
+220 |             allowed[_from][_to] -= _amount;
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:222:9: 
+    |
+222 |         success = doTransfer(_from, _to, _amount);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Is already reentrant? [0] 
+This call is [Force] 
+The previous call is [Force] 
+The call before that is [xForce] 
+That trace IS NOT reentrant
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:227:9: 
+    |
+227 |         if (_amount == 0) {
+    |         ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+TRUE branch is not feasible! Skipped.
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:230:9: 
+    |
+230 |         require((_to != address(0)) && (_to != address(this)));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+translating 
+printing propertyExpr: (and (not (= 4 0)) (not (= 4 3)))
+======= ======= ======= ======= ======= ======= =======
+positive branch is possible! Go head with it!
+*** require() statement is satisfied!! ****
+======= ======= ======= ======= ======= ======= =======
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:233:9: 
+    |
+233 |         uint previousBalanceFrom;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:234:9: 
+    |
+234 |         previousBalanceFrom = balanceOfAt(_from, 0);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Is already reentrant? [0] 
+This call is [Force] 
+The previous call is [Force] 
+The call before that is [Force] 
+That trace IS NOT reentrant
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:257:9: 
+    |
+257 |         return balances[_owner];
+    |         ^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:235:9: 
+    |
+235 |         if (previousBalanceFrom < _amount) {
+    |         ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+TRUE branch is not feasible! Skipped.
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:241:9: 
+    |
+241 |         updateValueAtNow(_from, previousBalanceFrom - _amount);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Is already reentrant? [0] 
+This call is [Force] 
+The previous call is [Force] 
+The call before that is [Force] 
+That trace IS NOT reentrant
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:261:9: 
+    |
+261 |         balances[_owner] = _value;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:244:9: 
+    |
+244 |         uint previousBalanceTo;
+    |         ^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:245:9: 
+    |
+245 |         previousBalanceTo = balanceOfAt(_to, 0);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Is already reentrant? [0] 
+This call is [Force] 
+The previous call is [Force] 
+The call before that is [Force] 
+That trace IS NOT reentrant
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:257:9: 
+    |
+257 |         return balances[_owner];
+    |         ^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:246:9: 
+    |
+246 |         require(previousBalanceTo + _amount >= previousBalanceTo); // Check for overflow
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+translating 
+printing propertyExpr: (let ((a!1 (select (store (store ((as const (Array Int (_ BitVec 64)))
+                                   #x0000000000000000)
+                                 4
+                                 #x00000000000003e8)
+                          2
+                          #x0000000000000064)
+                   2)))
+(let ((a!2 (store (store (store ((as const (Array Int (_ BitVec 64)))
+                                  #x0000000000000000)
+                                4
+                                #x00000000000003e8)
+                         2
+                         #x0000000000000064)
+                  2
+                  (bvsub a!1 $var_1%1%))))
+  (bvuge (bvadd (select a!2 4) $var_1%1%) (select a!2 4))))
+======= ======= ======= ======= ======= ======= =======
+positive branch is possible! Go head with it!
+*** require() statement is satisfied!! ****
+======= ======= ======= ======= ======= ======= =======
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:247:9: 
+    |
+247 |         updateValueAtNow(_to, previousBalanceTo + _amount);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Is already reentrant? [0] 
+This call is [Force] 
+The previous call is [Force] 
+The call before that is [Force] 
+That trace IS NOT reentrant
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:261:9: 
+    |
+261 |         balances[_owner] = _value;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:248:9: 
+    |
+248 |         return true;
+    |         ^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:223:9: 
+    |
+223 |         return success;
+    |         ^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:328:9: 
+    |
+328 |         uint resUserxForce; resUserxForce = xforce.getBalanceOf(address(user));
+    |         ^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:328:9: 
+    |
+328 |         uint resUserxForce; resUserxForce = xforce.getBalanceOf(address(user));
+    |         ^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:328:29: 
+    |
+328 |         uint resUserxForce; resUserxForce = xforce.getBalanceOf(address(user));
+    |                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Is already reentrant? [0] 
+getBalanceOf:function (address) returns (uint256) is full name 
+getBalanceOf is shortName 
+Added to trusted: 2
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/xForce.sol:90:9: 
+   |
+90 |         return balanceOf[usr];
+   |         ^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:328:29: 
+    |
+328 |         uint resUserxForce; resUserxForce = xforce.getBalanceOf(address(user));
+    |                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Is already reentrant? [0] 
+getBalanceOf:function (address) returns (uint256) is full name 
+getBalanceOf is shortName 
+Added to trusted: 2
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/xForce.sol:90:9: 
+   |
+90 |         return balanceOf[usr];
+   |         ^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:330:9: 
+    |
+330 |         uint resUserForce; resUserForce = force.getBalanceOf(address(user));
+    |         ^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:330:9: 
+    |
+330 |         uint resUserForce; resUserForce = force.getBalanceOf(address(user));
+    |         ^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:330:28: 
+    |
+330 |         uint resUserForce; resUserForce = force.getBalanceOf(address(user));
+    |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Is already reentrant? [0] 
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:188:9: 
+    |
+188 |         return balances[usr];
+    |         ^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:330:28: 
+    |
+330 |         uint resUserForce; resUserForce = force.getBalanceOf(address(user));
+    |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Is already reentrant? [0] 
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:188:9: 
+    |
+188 |         return balances[usr];
+    |         ^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:332:9: 
+    |
+332 |         declare_property((resUserForce < initUserForce) || !(resUserxForce > initUserxForce));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/xForce.sol:332:9: 
+    |
+332 |         declare_property((resUserForce < initUserForce) || !(resUserxForce > initUserxForce));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+result context [1]: 
+Is possibly reentrant: 0
+RESULT: 0
+The trace is INVALID
+$var_0 = 0
+$var_1 = 99
+result context [2]: 
+Is possibly reentrant: 0
+RESULT: 1
+The trace is VALID
+$var_0 = 37
+$var_1 = 37
+Recording summary, validCount: 1
+./solver/solver -symexe-main ../contracts/xForce.sol xForce  0.72s user 0.05s system 95% cpu 0.803 total

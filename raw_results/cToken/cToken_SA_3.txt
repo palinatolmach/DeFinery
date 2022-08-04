@@ -1,0 +1,1769 @@
+-> % time ./solver/solver -symexe-main ../contracts/cToken.sol cToken
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+dumping contract information: 
+Contract: _MAIN_
+	Constructor: _MAIN_()
+	State Variables:
+		$reenter
+		res
+		init
+	Modifiers:
+	Functions:
+		_MAIN_:::function ()
+		_MAIN_::declare_property:function (bool)
+	Local Variables:
+		usr@1194
+		crAMP_addr@1176
+		ampImpl@1110
+		ethImpl@1107
+		eth@1142
+		amp@1145
+		user@1104
+		crETH_addr@1179
+		_crAMP@1098
+		_crETH@1101
+		val_1@1341
+		property@1080
+
+Contract: cToken
+	Constructor: cToken()
+	State Variables:
+		crEth
+		amp
+		eth
+		accountTokens
+		locked
+		borrowBalance
+		totalSupply
+	Modifiers:
+		noReentrancy
+	Functions:
+		cToken::setCreamETH:function (address)
+		cToken::borrowFresh:function (address,uint256) returns (uint256)
+		cToken::getBorrowBalance:function (address) returns (uint256)
+		cToken:::function (address,address)
+		cToken::setBalances:function (address,uint256)
+		cToken::getBalances:function (address) returns (uint256)
+	Local Variables:
+		borrows_crETH@857
+		sumBorrowPlusEffects@851
+		_crETH@921
+		tokens_crETH@823
+		sumCollateral@833
+		oraclePrice@805
+		exchangeRate@798
+		collateralFactor@791
+		tokensToDenom@812
+		retBorrow@785
+		borrowAmount@780
+		_user@740
+		_user@766
+		borrower@778
+		allowed@788
+		amount@754
+		_user@752
+		balance@743
+		balances@877
+		balance@769
+		_amp@722
+		_weth@720
+
+Contract: crETH
+	Constructor: crETH()
+	State Variables:
+		amp
+		crAmp
+		locked
+		eth
+		accountTokens_crETH
+		borrowBalance
+		totalSupply_crETH
+	Modifiers:
+		noReentrancy
+	Functions:
+		crETH::setCreamAMP:function (address)
+		crETH::getBalances:function (address) returns (uint256)
+		crETH::getBorrowBalance:function (address) returns (uint256)
+		crETH::borrowFresh:function (address,uint256) returns (uint256)
+		crETH::declare_path:function (int256,string)
+		crETH::mintFresh:function (address,uint256) returns (uint256)
+		crETH::setBalances:function (address,uint256)
+		crETH:::function (address,address)
+	Local Variables:
+		balance@675
+		_user@672
+		_crAMP@660
+		balance@637
+		_user@634
+		sumBorrowPlusEffects@564
+		amount@648
+		func@387
+		tokens_crAMP@546
+		oraclePrice@524
+		sumCollateral@536
+		mintTokens@483
+		tokensToDenom@528
+		borrowAmount@507
+		exchangeRate@520
+		allowed@513
+		retBorrow@510
+		path@385
+		borrower@505
+		_user@646
+		borrows_crAMP@570
+		balancesEth@456
+		mintAmount@450
+		exchangeRateMantissa@469
+		retMintAmount@453
+		minter@448
+		collateralFactor@516
+		_weth@428
+		_amp@430
+		balanceEth@590
+
+Contract: User
+	Constructor: User()
+	State Variables:
+		reenter
+		eth
+		weth
+		amp
+	Modifiers:
+	Functions:
+		User::crETH_borrowFresh:function (uint256)
+		User::crETH_mintFresh:function (uint256)
+		User::tokensReceived:function (address,uint256)
+		User::approveWETH:function (address,uint256)
+		User::setWETH:function (address)
+		User::setCream_ETH:function (address)
+		User::setCream_AMP:function (address)
+		User:::function (uint256)
+		User::crAMP_borrowFresh:function (uint256)
+		User::declare_path:function (int256,string)
+	Local Variables:
+		amount@1059
+		borrower@1057
+		amount@1027
+		_weth@984
+		_reenter@950
+		amount@998
+		amount@1012
+		_crEth@972
+		func@936
+		_crAmp@960
+		amount@1042
+		spender@996
+		path@934
+
+Contract: AMP
+	Constructor: AMP()
+	State Variables:
+		_allowances
+		_balances
+		_totalSupply
+	Modifiers:
+	Functions:
+		AMP::getBalances_AMP:function (address) returns (uint256)
+		AMP::setBalances_AMP:function (address,uint256)
+		AMP::transferFrom:function (address,address,uint256) returns (bool)
+		AMP::transfer:function (address,uint256) returns (bool)
+		AMP::approve:function (address,uint256) returns (bool)
+		AMP::balanceOf:function (address) returns (uint256)
+		AMP::totalSupply:function () returns (uint256)
+		AMP:::function ()
+	Local Variables:
+		_user@372
+		amount@360
+		success@288
+		wad@285
+		success@269
+		src@281
+		wad@266
+		appr@248
+		dst@264
+		guy@243
+		balance@375
+		wad@245
+		_user@358
+		dst@283
+		balance@234
+		_tokenHolder@231
+		tS@224
+
+Contract: WETH
+	State Variables:
+		allowance
+		balanceOf
+	Modifiers:
+	Functions:
+		WETH::setBalances_ETH:function (address,uint256)
+		WETH::transfer:function (address,uint256) returns (bool)
+		WETH::approve:function (address,uint256) returns (bool)
+		WETH::totalSupply:function () returns (uint256)
+		WETH::withdraw:function (uint256)
+		WETH::getBalances_ETH:function (address) returns (uint256)
+		WETH::transferFrom:function (address,address,uint256) returns (bool)
+		WETH::deposit:function ()
+		WETH::getBalanceOf:function (address) returns (uint256)
+	Local Variables:
+		_user@190
+		_user@176
+		dst@109
+		wad@111
+		wad@36
+		success@95
+		balance@193
+		balance@15
+		appr@74
+		wad@71
+		guy@69
+		tS@59
+		success@114
+		wad@92
+		dst@90
+		src@107
+		amount@178
+		usr@12
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+initName: balance%1%_0_
+After state allocation: 
+Added val_1@1341%1% to unsigned 
+After allocation: 
++++++++++++++ printing context +++++++++++++++
+idNum: 2, addr: 0x7f91368041f0
+sourceContext: nullptr
+	state variables: 
+		varName: res%1%, value: ((as const (Array Int (_ BitVec 64))) #x0000000000000000), sort: (Array Int (_ BitVec 64))
+		varName: balance%1%, value: balance%1%_0_, sort: (_ BitVec 64)
+		varName: $reenter%1%, value: $reenter%1%, sort: (_ BitVec 64)
+		varName: init%1%, value: ((as const (Array Int (_ BitVec 64))) #x0000000000000000), sort: (Array Int (_ BitVec 64))
+		varName: msg.value, value: msg.value_0_, sort: (_ BitVec 64)
+		varName: block.timestamp, value: block.timestamp_0_, sort: Int
+		varName: msg.sender, value: msg.sender_0_, sort: Int
+	local variables: 
+		varName: property@1080%1%, value: false, sort: Bool
+		varName: val_1@1341%1%, value: #x0000000000000000, sort: (_ BitVec 64)
+		varName: _crETH@1101%1%, value: 0, sort: Int
+		varName: user@1104%1%, value: 0, sort: Int
+		varName: ampImpl@1110%1%, value: 0, sort: Int
+		varName: amp@1145%1%, value: 0, sort: Int
+		varName: eth@1142%1%, value: 0, sort: Int
+		varName: _crAMP@1098%1%, value: 0, sort: Int
+		varName: crAMP_addr@1176%1%, value: 0, sort: Int
+		varName: ethImpl@1107%1%, value: 0, sort: Int
+		varName: crETH_addr@1179%1%, value: 0, sort: Int
+		varName: usr@1194%1%, value: 0, sort: Int
+	path conditions: 
+	goHead: 1
+	current Address: 1
+	msg.sender: 0
+	current Function Scope: 
+	abnormal Termination: None
+Call Stack: 
+++++++++++++ end of printing context +++++++++++++++
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:341:9: 
+    |
+341 |         cToken _crAMP;
+    |         ^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:342:9: 
+    |
+342 |         crETH _crETH;
+    |         ^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:343:9: 
+    |
+343 |         User user;
+    |         ^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:344:9: 
+    |
+344 |         WETH ethImpl;
+    |         ^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:345:9: 
+    |
+345 |         AMP ampImpl;
+    |         ^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:348:9: 
+    |
+348 |         __assume__($reenter == 0 || $reenter == 1);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:351:9: 
+    |
+351 |         user = new User($reenter);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Allocation is done: 
+Added amount@1059%2% to unsigned 
+Added amount@1027%2% to unsigned 
+Added _reenter@950%2% to unsigned 
+Added amount@998%2% to unsigned 
+Added amount@1012%2% to unsigned 
+Added amount@1042%2% to unsigned 
+_executeConstructors() is called for: User
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:294:9: 
+    |
+294 |         reenter = _reenter;
+    |         ^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:352:9: 
+    |
+352 |         ethImpl = new WETH();
+    |         ^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Allocation is done: 
+Added wad@111%3% to unsigned 
+Added wad@36%3% to unsigned 
+Added balance@193%3% to unsigned 
+Added balance@15%3% to unsigned 
+Added wad@71%3% to unsigned 
+Added tS@59%3% to unsigned 
+Added wad@92%3% to unsigned 
+Added amount@178%3% to unsigned 
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:353:9: 
+    |
+353 |         ampImpl = new AMP();
+    |         ^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Allocation is done: 
+Added amount@360%4% to unsigned 
+Added wad@285%4% to unsigned 
+Added wad@266%4% to unsigned 
+Added balance@375%4% to unsigned 
+Added wad@245%4% to unsigned 
+Added balance@234%4% to unsigned 
+Added tS@224%4% to unsigned 
+_executeConstructors() is called for: AMP
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/cToken.sol:63:9: 
+   |
+63 |         _totalSupply = 1000;
+   |         ^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:355:9: 
+    |
+355 |         address eth; address amp;
+    |         ^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:355:22: 
+    |
+355 |         address eth; address amp;
+    |                      ^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:356:9: 
+    |
+356 |         eth = address(ethImpl);
+    |         ^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:357:9: 
+    |
+357 |         amp = address(ampImpl);
+    |         ^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:359:9: 
+    |
+359 |         _crAMP = new cToken(eth, amp);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Allocation is done: 
+Address of the repaired contract is 5
+cToken is name 
+Added borrows_crETH@857%5% to unsigned 
+Added sumBorrowPlusEffects@851%5% to unsigned 
+Added tokens_crETH@823%5% to unsigned 
+Added sumCollateral@833%5% to unsigned 
+Added oraclePrice@805%5% to unsigned 
+Added exchangeRate@798%5% to unsigned 
+Added collateralFactor@791%5% to unsigned 
+Added tokensToDenom@812%5% to unsigned 
+Added retBorrow@785%5% to unsigned 
+Added borrowAmount@780%5% to unsigned 
+Added allowed@788%5% to unsigned 
+Added amount@754%5% to unsigned 
+Added balance@743%5% to unsigned 
+Added balances@877%5% to unsigned 
+Added balance@769%5% to unsigned 
+_executeConstructors() is called for: cToken
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:225:9: 
+    |
+225 |         eth = WETH(_weth);
+    |         ^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:226:9: 
+    |
+226 |         amp = AMP(_amp);
+    |         ^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:360:9: 
+    |
+360 |         _crETH = new crETH(eth, amp);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+Allocation is done: 
+Added balance@675%6% to unsigned 
+Added balance@637%6% to unsigned 
+Added sumBorrowPlusEffects@564%6% to unsigned 
+Added amount@648%6% to unsigned 
+Added tokens_crAMP@546%6% to unsigned 
+Added oraclePrice@524%6% to unsigned 
+Added sumCollateral@536%6% to unsigned 
+Added mintTokens@483%6% to unsigned 
+Added tokensToDenom@528%6% to unsigned 
+Added borrowAmount@507%6% to unsigned 
+Added exchangeRate@520%6% to unsigned 
+Added allowed@513%6% to unsigned 
+Added retBorrow@510%6% to unsigned 
+Added borrows_crAMP@570%6% to unsigned 
+Added balancesEth@456%6% to unsigned 
+Added mintAmount@450%6% to unsigned 
+Added exchangeRateMantissa@469%6% to unsigned 
+Added retMintAmount@453%6% to unsigned 
+Added collateralFactor@516%6% to unsigned 
+Added balanceEth@590%6% to unsigned 
+_executeConstructors() is called for: crETH
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:132:9: 
+    |
+132 |         eth = WETH(_weth);
+    |         ^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:133:9: 
+    |
+133 |         amp = AMP(_amp);
+    |         ^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:362:9: 
+    |
+362 |         address crAMP_addr; address crETH_addr;
+    |         ^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:362:29: 
+    |
+362 |         address crAMP_addr; address crETH_addr;
+    |                             ^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:363:9: 
+    |
+363 |         crAMP_addr = address(_crAMP);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:364:9: 
+    |
+364 |         crETH_addr = address(_crETH);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:366:9: 
+    |
+366 |         address usr;
+    |         ^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:367:9: 
+    |
+367 |         usr = address(user);
+    |         ^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:369:9: 
+    |
+369 |         user.setCream_AMP(crAMP_addr);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:298:9: 
+    |
+298 |         amp = cToken(_crAmp);
+    |         ^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:370:9: 
+    |
+370 |         user.setCream_ETH(crETH_addr);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:302:9: 
+    |
+302 |         eth = crETH(_crEth);
+    |         ^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:371:9: 
+    |
+371 |         user.setWETH(address(ethImpl));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:306:9: 
+    |
+306 |         weth = WETH(_weth);
+    |         ^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:372:9: 
+    |
+372 |         _crAMP.setCreamETH(crETH_addr);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:281:9: 
+    |
+281 |         crEth = crETH(_crETH);
+    |         ^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:373:9: 
+    |
+373 |         _crETH.setCreamAMP(crAMP_addr);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:199:9: 
+    |
+199 |         crAmp = cToken(_crAMP);
+    |         ^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:375:9: 
+    |
+375 |         ethImpl.setBalances_ETH(usr, 100);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/cToken.sol:48:9: 
+   |
+48 |         balanceOf[_user] = amount;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:376:9: 
+    |
+376 |         ethImpl.setBalances_ETH(crETH_addr, 1000);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/cToken.sol:48:9: 
+   |
+48 |         balanceOf[_user] = amount;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:377:9: 
+    |
+377 |         ampImpl.setBalances_AMP(crAMP_addr, 1000);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:104:9: 
+    |
+104 |         _balances[_user] = amount;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:380:9: 
+    |
+380 |         init[usr] = ampImpl.balanceOf(usr);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/cToken.sol:71:9: 
+   |
+71 |         return _balances[_tokenHolder];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:381:9: 
+    |
+381 |         init[usr] += ethImpl.getBalanceOf(usr);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+ --> ../contracts/cToken.sol:6:9: 
+  |
+6 |         return balanceOf[usr];
+  |         ^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:382:9: 
+    |
+382 |         init[usr] += _crAMP.getBalances(usr);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:230:9: 
+    |
+230 |         return accountTokens[_user];
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:383:9: 
+    |
+383 |         init[usr] += _crETH.getBalances(usr);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:191:9: 
+    |
+191 |         return accountTokens_crETH[_user];
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:385:9: 
+    |
+385 |         init[crETH_addr] = ampImpl.balanceOf(crAMP_addr);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/cToken.sol:71:9: 
+   |
+71 |         return _balances[_tokenHolder];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:386:9: 
+    |
+386 |         init[crETH_addr] += ethImpl.getBalanceOf(crETH_addr);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+ --> ../contracts/cToken.sol:6:9: 
+  |
+6 |         return balanceOf[usr];
+  |         ^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:387:9: 
+    |
+387 |         init[crETH_addr] += _crAMP.getBalances(crAMP_addr);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:230:9: 
+    |
+230 |         return accountTokens[_user];
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:388:9: 
+    |
+388 |         init[crETH_addr] += _crETH.getBalances(crETH_addr);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:191:9: 
+    |
+191 |         return accountTokens_crETH[_user];
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:390:9: 
+    |
+390 |         user.approveWETH(crETH_addr, 99999999);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:310:9: 
+    |
+310 |         WETH(weth).approve(spender, amount);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/cToken.sol:22:9: 
+   |
+22 |         allowance[msg.sender][guy] = wad;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/cToken.sol:23:9: 
+   |
+23 |         return true;
+   |         ^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:394:9: 
+    |
+394 |         user.crETH_mintFresh(100);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:314:9: 
+    |
+314 |         eth.mintFresh(address(this), amount);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:138:9: 
+    |
+138 |         uint balancesEth;
+    |         ^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:139:9: 
+    |
+139 |         balancesEth = eth.getBalanceOf(minter);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+That trace IS NOT reentrant
+-------------------------------------------------
+Executing statement: 
+ --> ../contracts/cToken.sol:6:9: 
+  |
+6 |         return balanceOf[usr];
+  |         ^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:140:9: 
+    |
+140 |         if (balancesEth >= mintAmount) {
+    |         ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+TRUE branch is feasible! Follow it.
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:140:40: 
+    |
+140 |         if (balancesEth >= mintAmount) {
+    |                                        ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:141:13: 
+    |
+141 |             uint exchangeRateMantissa = 1; // exchangeRateStoredInternal();
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:142:13: 
+    |
+142 |             eth.transferFrom(minter, address(this), mintAmount);
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+That trace IS NOT reentrant
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/cToken.sol:34:9: 
+   |
+34 |         require(balanceOf[src] >= wad);
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+translating 
+printing propertyExpr: (let ((a!1 (select (store (store ((as const (Array Int (_ BitVec 64)))
+                                   #x0000000000000000)
+                                 2
+                                 #x0000000000000064)
+                          6
+                          #x00000000000003e8)
+                   2)))
+  (bvuge a!1 #x0000000000000064))
+======= ======= ======= ======= ======= ======= =======
+positive branch is possible! Go head with it!
+*** require() statement is satisfied!! ****
+======= ======= ======= ======= ======= ======= =======
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/cToken.sol:36:9: 
+   |
+36 |         if (src != msg.sender && allowance[src][msg.sender] != 99999999) {
+   |         ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+TRUE branch is not feasible! Skipped.
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/cToken.sol:41:9: 
+   |
+41 |         balanceOf[src] -= wad;
+   |         ^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/cToken.sol:42:9: 
+   |
+42 |         balanceOf[dst] += wad;
+   |         ^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/cToken.sol:44:9: 
+   |
+44 |         return true;
+   |         ^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:143:13: 
+    |
+143 |             uint mintTokens = mintAmount / exchangeRateMantissa;
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:146:13: 
+    |
+146 |             totalSupply_crETH += mintTokens;
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:147:13: 
+    |
+147 |             accountTokens_crETH[minter] += mintTokens;
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:149:13: 
+    |
+149 |             return mintAmount;
+    |             ^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:395:9: 
+    |
+395 |         uint val_1; val_1 = 100 * 3 / 5;
+    |         ^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:395:21: 
+    |
+395 |         uint val_1; val_1 = 100 * 3 / 5;
+    |                     ^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:396:9: 
+    |
+396 |         user.crAMP_borrowFresh(val_1);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:318:9: 
+    |
+318 |         amp.borrowFresh(address(this), amount);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+executeModifier() is executed!
+modifierIndex: 0
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:218:9: 
+    |
+218 |         require(!locked);
+    |         ^^^^^^^^^^^^^^^^
+-------------------------------------------------
+translating 
+printing propertyExpr: (not false)
+======= ======= ======= ======= ======= ======= =======
+positive branch is possible! Go head with it!
+*** require() statement is satisfied!! ****
+======= ======= ======= ======= ======= ======= =======
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:219:9: 
+    |
+219 |         locked = true;
+    |         ^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:220:9: 
+    |
+220 |         _;
+    |         ^
+-------------------------------------------------
+executeModifier() is executed!
+modifierIndex: 1
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:248:9: 
+    |
+248 |         uint allowed;
+    |         ^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:250:9: 
+    |
+250 |         uint collateralFactor;
+    |         ^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:251:9: 
+    |
+251 |         collateralFactor = 75;
+    |         ^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:252:9: 
+    |
+252 |         uint exchangeRate;
+    |         ^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:253:9: 
+    |
+253 |         exchangeRate = 1;
+    |         ^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:254:9: 
+    |
+254 |         uint oraclePrice;
+    |         ^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:255:9: 
+    |
+255 |         oraclePrice = 1;
+    |         ^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:256:9: 
+    |
+256 |         uint tokensToDenom;
+    |         ^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:257:9: 
+    |
+257 |         tokensToDenom = collateralFactor * exchangeRate * oraclePrice;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:259:9: 
+    |
+259 |         uint tokens_crETH; tokens_crETH = crEth.getBalances(borrower);
+    |         ^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:259:28: 
+    |
+259 |         uint tokens_crETH; tokens_crETH = crEth.getBalances(borrower);
+    |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+That trace IS NOT reentrant
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:191:9: 
+    |
+191 |         return accountTokens_crETH[_user];
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:260:9: 
+    |
+260 |         uint sumCollateral = tokensToDenom * tokens_crETH / 100; // + sumCollateral
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:261:9: 
+    |
+261 |         sumCollateral += tokensToDenom * accountTokens[borrower] / 100;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:263:9: 
+    |
+263 |         uint sumBorrowPlusEffects = borrowBalance[borrower];
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:264:9: 
+    |
+264 |         uint borrows_crETH; borrows_crETH = crEth.getBorrowBalance(borrower);
+    |         ^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:264:29: 
+    |
+264 |         uint borrows_crETH; borrows_crETH = crEth.getBorrowBalance(borrower);
+    |                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+That trace IS NOT reentrant
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:203:9: 
+    |
+203 |         return borrowBalance[_user];
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:265:9: 
+    |
+265 |         sumBorrowPlusEffects += borrows_crETH;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:266:9: 
+    |
+266 |         sumBorrowPlusEffects += oraclePrice * borrowAmount;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:269:9: 
+    |
+269 |         uint balances;
+    |         ^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:270:9: 
+    |
+270 |         balances = amp.balanceOf(address(this));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+That trace IS NOT reentrant
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/cToken.sol:71:9: 
+   |
+71 |         return _balances[_tokenHolder];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:271:9: 
+    |
+271 |         if (sumCollateral > sumBorrowPlusEffects && balances >= borrowAmount) {
+    |         ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+TRUE branch is feasible! Follow it.
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:271:79: 
+    |
+271 |         if (sumCollateral > sumBorrowPlusEffects && balances >= borrowAmount) {
+    |                                                                               ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:272:13: 
+    |
+272 |             amp.transferFrom(address(this), borrower, borrowAmount);
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+That trace IS NOT reentrant
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/cToken.sol:88:9: 
+   |
+88 |         require(_balances[src] >= wad);
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+translating 
+printing propertyExpr: (bvuge (select (store ((as const (Array Int (_ BitVec 64))) #x0000000000000000)
+                      5
+                      #x00000000000003e8)
+               5)
+       (bvudiv (bvmul #x0000000000000064 #x0000000000000003) #x0000000000000005))
+======= ======= ======= ======= ======= ======= =======
+positive branch is possible! Go head with it!
+*** require() statement is satisfied!! ****
+======= ======= ======= ======= ======= ======= =======
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/cToken.sol:90:9: 
+   |
+90 |         if (src != msg.sender && _allowances[src][msg.sender] != 99999999) {
+   |         ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+TRUE branch is not feasible! Skipped.
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/cToken.sol:95:9: 
+   |
+95 |         _balances[src] -= wad;
+   |         ^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/cToken.sol:96:9: 
+   |
+96 |         _balances[dst] += wad;
+   |         ^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/cToken.sol:98:9: 
+   |
+98 |         User(dst).tokensReceived(dst, wad);
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+That trace IS NOT reentrant
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:326:9: 
+    |
+326 |         if (reenter == 1) {
+    |         ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+TRUE branch is feasible! Follow it.
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:326:27: 
+    |
+326 |         if (reenter == 1) {
+    |                           ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:327:13: 
+    |
+327 |             eth.borrowFresh(address(this), amount);
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+That trace might be reentrant
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:158:9: 
+    |
+158 |         uint allowed;
+    |         ^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:160:9: 
+    |
+160 |         uint collateralFactor = 75;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:161:9: 
+    |
+161 |         uint exchangeRate = 1;
+    |         ^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:162:9: 
+    |
+162 |         uint oraclePrice = 1;
+    |         ^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:163:9: 
+    |
+163 |         uint tokensToDenom = collateralFactor * exchangeRate * oraclePrice;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:166:9: 
+    |
+166 |         uint sumCollateral = tokensToDenom * accountTokens_crETH[borrower] / 100; // + sumCollateral
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:167:9: 
+    |
+167 |         uint tokens_crAMP; tokens_crAMP = crAmp.getBalances(borrower);
+    |         ^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:167:28: 
+    |
+167 |         uint tokens_crAMP; tokens_crAMP = crAmp.getBalances(borrower);
+    |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:230:9: 
+    |
+230 |         return accountTokens[_user];
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:168:9: 
+    |
+168 |         sumCollateral += tokensToDenom * tokens_crAMP / 100;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:170:9: 
+    |
+170 |         uint sumBorrowPlusEffects = borrowBalance[borrower];
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:171:9: 
+    |
+171 |         uint borrows_crAMP; borrows_crAMP = crAmp.getBorrowBalance(borrower);
+    |         ^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:171:29: 
+    |
+171 |         uint borrows_crAMP; borrows_crAMP = crAmp.getBorrowBalance(borrower);
+    |                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:238:9: 
+    |
+238 |         return borrowBalance[_user];
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:172:9: 
+    |
+172 |         sumBorrowPlusEffects += borrows_crAMP;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:173:9: 
+    |
+173 |         sumBorrowPlusEffects += oraclePrice * borrowAmount;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:175:9: 
+    |
+175 |         uint balanceEth;
+    |         ^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:176:9: 
+    |
+176 |         balanceEth = eth.getBalanceOf(address(this));
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+ --> ../contracts/cToken.sol:6:9: 
+  |
+6 |         return balanceOf[usr];
+  |         ^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:178:9: 
+    |
+178 |         if (sumCollateral > sumBorrowPlusEffects && balanceEth >= borrowAmount) {
+    |         ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+TRUE branch is feasible! Follow it.
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:178:81: 
+    |
+178 |         if (sumCollateral > sumBorrowPlusEffects && balanceEth >= borrowAmount) {
+    |                                                                                 ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:179:13: 
+    |
+179 |             eth.transferFrom(address(this), borrower, borrowAmount);
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/cToken.sol:34:9: 
+   |
+34 |         require(balanceOf[src] >= wad);
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+translating 
+printing propertyExpr: (let ((a!1 (select (store (store ((as const (Array Int (_ BitVec 64)))
+                                   #x0000000000000000)
+                                 2
+                                 #x0000000000000064)
+                          6
+                          #x00000000000003e8)
+                   2)))
+(let ((a!2 (store (store (store ((as const (Array Int (_ BitVec 64)))
+                                  #x0000000000000000)
+                                2
+                                #x0000000000000064)
+                         6
+                         #x00000000000003e8)
+                  2
+                  (bvsub a!1 #x0000000000000064))))
+(let ((a!3 (select (store a!2 6 (bvadd (select a!2 6) #x0000000000000064)) 6)))
+  (bvuge a!3
+         (bvudiv (bvmul #x0000000000000064 #x0000000000000003)
+                 #x0000000000000005)))))
+======= ======= ======= ======= ======= ======= =======
+positive branch is possible! Go head with it!
+*** require() statement is satisfied!! ****
+======= ======= ======= ======= ======= ======= =======
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/cToken.sol:36:9: 
+   |
+36 |         if (src != msg.sender && allowance[src][msg.sender] != 99999999) {
+   |         ^ (Relevant source part starts here and spans across multiple lines).
+-------------------------------------------------
+TRUE branch is not feasible! Skipped.
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/cToken.sol:41:9: 
+   |
+41 |         balanceOf[src] -= wad;
+   |         ^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/cToken.sol:42:9: 
+   |
+42 |         balanceOf[dst] += wad;
+   |         ^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/cToken.sol:44:9: 
+   |
+44 |         return true;
+   |         ^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:182:13: 
+    |
+182 |             borrowBalance[borrower] += borrowAmount;
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:184:13: 
+    |
+184 |             return 0;
+    |             ^^^^^^^^
+-------------------------------------------------
+FALSE branch is not feasible! Skipped.
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/cToken.sol:100:9: 
+   |
+100 |         return true;
+   |         ^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/cToken.sol:100:9: 
+   |
+100 |         return true;
+   |         ^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:273:13: 
+    |
+273 |             borrowBalance[borrower] += borrowAmount;
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:273:13: 
+    |
+273 |             borrowBalance[borrower] += borrowAmount;
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:274:13: 
+    |
+274 |             return 0;
+    |             ^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:274:13: 
+    |
+274 |             return 0;
+    |             ^^^^^^^^
+-------------------------------------------------
+FALSE branch is not feasible! Skipped.
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:221:9: 
+    |
+221 |         locked = false;
+    |         ^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:221:9: 
+    |
+221 |         locked = false;
+    |         ^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:399:9: 
+    |
+399 |         res[usr] = ampImpl.balanceOf(usr);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/cToken.sol:71:9: 
+   |
+71 |         return _balances[_tokenHolder];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:399:9: 
+    |
+399 |         res[usr] = ampImpl.balanceOf(usr);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/cToken.sol:71:9: 
+   |
+71 |         return _balances[_tokenHolder];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:400:9: 
+    |
+400 |         res[usr] += ethImpl.getBalanceOf(usr);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+ --> ../contracts/cToken.sol:6:9: 
+  |
+6 |         return balanceOf[usr];
+  |         ^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:400:9: 
+    |
+400 |         res[usr] += ethImpl.getBalanceOf(usr);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+ --> ../contracts/cToken.sol:6:9: 
+  |
+6 |         return balanceOf[usr];
+  |         ^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:401:9: 
+    |
+401 |         res[usr] += _crAMP.getBalances(usr);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:230:9: 
+    |
+230 |         return accountTokens[_user];
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:401:9: 
+    |
+401 |         res[usr] += _crAMP.getBalances(usr);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:230:9: 
+    |
+230 |         return accountTokens[_user];
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:402:9: 
+    |
+402 |         res[usr] += _crETH.getBalances(usr);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:191:9: 
+    |
+191 |         return accountTokens_crETH[_user];
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:402:9: 
+    |
+402 |         res[usr] += _crETH.getBalances(usr);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:191:9: 
+    |
+191 |         return accountTokens_crETH[_user];
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:404:9: 
+    |
+404 |         res[crETH_addr] = ampImpl.balanceOf(crAMP_addr);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/cToken.sol:71:9: 
+   |
+71 |         return _balances[_tokenHolder];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:404:9: 
+    |
+404 |         res[crETH_addr] = ampImpl.balanceOf(crAMP_addr);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+  --> ../contracts/cToken.sol:71:9: 
+   |
+71 |         return _balances[_tokenHolder];
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:405:9: 
+    |
+405 |         res[crETH_addr] += ethImpl.getBalanceOf(crETH_addr);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+ --> ../contracts/cToken.sol:6:9: 
+  |
+6 |         return balanceOf[usr];
+  |         ^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:405:9: 
+    |
+405 |         res[crETH_addr] += ethImpl.getBalanceOf(crETH_addr);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+ --> ../contracts/cToken.sol:6:9: 
+  |
+6 |         return balanceOf[usr];
+  |         ^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:406:9: 
+    |
+406 |         res[crETH_addr] += _crAMP.getBalances(crAMP_addr);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:230:9: 
+    |
+230 |         return accountTokens[_user];
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:406:9: 
+    |
+406 |         res[crETH_addr] += _crAMP.getBalances(crAMP_addr);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:230:9: 
+    |
+230 |         return accountTokens[_user];
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:407:9: 
+    |
+407 |         res[crETH_addr] += _crETH.getBalances(crETH_addr);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:191:9: 
+    |
+191 |         return accountTokens_crETH[_user];
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:407:9: 
+    |
+407 |         res[crETH_addr] += _crETH.getBalances(crETH_addr);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:191:9: 
+    |
+191 |         return accountTokens_crETH[_user];
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:409:9: 
+    |
+409 |         declare_property(res[crETH_addr] >= init[crETH_addr]);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+-------------------------------------------------
+Executing statement: 
+   --> ../contracts/cToken.sol:409:9: 
+    |
+409 |         declare_property(res[crETH_addr] >= init[crETH_addr]);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
+result context [1]: 
+Is possibly reentrant: 1
+RESULT: 0
+The trace is INVALID
+$reenter = 1
+result context [2]: 
+Is possibly reentrant: 0
+RESULT: 1
+The trace is VALID
+$reenter = 0
+Recording summary, validCount: 1
+./solver/solver -symexe-main ../contracts/cToken.sol cToken  0.76s user 0.05s system 98% cpu 0.821 total
