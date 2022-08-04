@@ -19,9 +19,6 @@ cd ..
 
 cd ../../..
 
-git clone https://github.com/polinatolmach/DeFinery.git
-cd DeFinery
-
 unzip definery-see.zip
 chmod +x ./definery-see
 
